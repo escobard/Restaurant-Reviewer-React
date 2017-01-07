@@ -21,7 +21,7 @@ class BookDetail extends Component {
 		// the inital state to not be null. this happens because we have not yet selected a book to generate that state
 		// to fix this, we need to create a statement which catches the error, and does something instead if state=null
 		// this is one workaround
-		if (!this.props.book){
+		if (!this.props.restaurant){
 			return (
 			
 				<div>Select a book to get started.</div>
@@ -34,8 +34,8 @@ class BookDetail extends Component {
 			<h3>
 			Details for: 
 			</h3>
-			<h4> Title: {this.props.book.title}</h4>
-			<span>Pages: {this.props.book.pages}</span>
+			<h4> Title: {this.props.restaurant.title}</h4>
+			<span>Pages: {this.props.restaurant.pages}</span>
 		</div>
 		);
 	}
@@ -48,7 +48,7 @@ function mapStateToProps(state){
 	// again, whatever we return from here is usable by the BookDetails class, under props
 	return {
 		
-		book: state.activeBook
+		restaurant: state.activeRestaurant
 
 	};
 
