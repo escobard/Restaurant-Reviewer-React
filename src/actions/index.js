@@ -9,7 +9,7 @@
 
 // note, action creator functions within react must contain objects within their scope, otherwise it returns an error
 // book is passed from book_list.js thanks to the connect function
-function selectBook(restaurant){
+function selectRestaurant(restaurant){
 
 	// selectBook is an ActionCreator it needs to return an action, an object with a type property
 	// each action usually contains a type, and a payload.
@@ -29,4 +29,4 @@ function selectBook(restaurant){
 };
 
 // this needs to be attached over to book_list.js and the rest of the app, so we export
-export default selectBook;
+export default selectRestaurant;

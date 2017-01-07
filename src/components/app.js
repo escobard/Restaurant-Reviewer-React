@@ -3,17 +3,17 @@ import React from 'react';
 import { Component } from 'react';
 
 // imports our booklist
-import BookList from '../containers/book_list';
+import RestaurantList from '../containers/restaurant_list';
 
 // imports our bookdetail
-import BookDetail from '../containers/book_detail';
+import RestaurantDetail from '../containers/restaurant_detail';
 
 export default class App extends Component {
   render() {
     return (
       <div>
-		<BookList />
-      	<BookDetail />
+		<RestaurantList />
+      	<RestaurantDetail />
       </div>
     );
   };

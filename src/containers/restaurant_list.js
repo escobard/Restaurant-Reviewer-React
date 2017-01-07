@@ -17,11 +17,11 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 // imports action creators
-import selectBook from '../actions/index'
+import selectRestaurant from '../actions/index'
 
 
 // THESE CLASSES MUST HAVE A CAPITAL AT THE BEGINNING OR THE CLASS WILL NOT WORK
-class BookList extends Component {
+class RestaurantList extends Component {
 
 	// this will set up the function to render our list
 	// we will be adding the list of books to our props object later
@@ -35,7 +35,7 @@ class BookList extends Component {
 			// to the selectBook action reducer
 			return (
 				<li 
-				onClick={() => this.props.selectBook(restaurant)}
+				onClick={() => this.props.selectRestaurant(restaurant)}
 				key={restaurant.title} 
 				className="list-group-item">
 					
@@ -93,10 +93,10 @@ function mapDispatchToProps(dispatch) {
 
 		// this is the KEY the function selectBook is bound to
 		// thanks to this key, the property from the action creator gets passed on to this.book
-		selectBook: 
+		selectRestaurant: 
 
 		// this is the actual selectBook function
-		selectBook },
+		selectRestaurant },
 
 		// this is the argument
 		// 
@@ -114,4 +114,4 @@ function mapDispatchToProps(dispatch) {
 // 
 // essentially this promotes BookList from a component to a container - react needs to know 
 // about this new component selection method, selectBook.
-export default connect(mapStateToProps, mapDispatchToProps) (BookList);
+export default connect(mapStateToProps, mapDispatchToProps) (RestaurantList);

@@ -12,7 +12,7 @@ import React, { Component } from 'react';
 // since this component is a container, the connect function must be included
 import { connect } from 'react-redux';
 
-class BookDetail extends Component {
+class RestaurantDetail extends Component {
 
     // in short this returns the details of the activeBook
 	render(){
@@ -55,4 +55,4 @@ function mapStateToProps(state){
 }
 
 // connects the activeBook reducer to this component, making it a container by definition
-export default connect (mapStateToProps) (BookDetail);
+export default connect (mapStateToProps) (RestaurantDetail);
