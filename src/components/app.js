@@ -12,8 +12,8 @@ export default class App extends Component {
   render() {
     return (
       <div>
-		<RestaurantList />
       	<RestaurantDetail />
+      	<RestaurantList />
       </div>
     );
   };
