@@ -18,7 +18,7 @@ function selectBook(book){
 
 		// defines the type of action
 		// TYPE key value is alway required by Redux
-		type: 'BOOK_SELECTED',
+		type: 'RESTAURANT_SELECTED',
 
 		// defines the value of the action, or the payload
 		// in this case it would be a single book object from the books json
