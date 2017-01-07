@@ -10,7 +10,7 @@
 // good to keep in mind that each piece of the app should be named after the folder its in, to be concise
 
 // create the JS to hold the book data
-function booksReducer() {
+function restaurantReducer() {
 	
 	// returns an array with our data
 	return [
@@ -23,4 +23,4 @@ function booksReducer() {
 	];
 };
 
-export default booksReducer;
+export default restaurantReducer;

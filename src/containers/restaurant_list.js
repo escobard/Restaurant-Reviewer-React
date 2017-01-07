@@ -17,29 +17,29 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 // imports action creators
-import selectBook from '../actions/index'
+import selectRestaurant from '../actions/index'
 
 
 // THESE CLASSES MUST HAVE A CAPITAL AT THE BEGINNING OR THE CLASS WILL NOT WORK
-class BookList extends Component {
+class RestaurantList extends Component {
 
 	// this will set up the function to render our list
 	// we will be adding the list of books to our props object later
 	renderList() {
 
 		// creates the map of the books array, setting up an object for each index and calling it 'book'
-		return this.props.books.map((book) => {
+		return this.props.restaurants.map((restaurant) => {
 
 			// returns our book properties within an li
 			// on this.props.selectBook, it passes the value of the book that was clicked (or in other words the individual book object)
 			// to the selectBook action reducer
 			return (
 				<li 
-				onClick={() => this.props.selectBook(book)}
-				key={book.title} 
+				onClick={() => this.props.selectRestaurant(restaurant)}
+				key={restaurant.title} 
 				className="list-group-item">
 					
-					{book.title}
+					{restaurant.title}
 
 				</li>
 			);
@@ -74,10 +74,10 @@ function mapStateToProps(state) {
 	// this defines the state of this component
 	return {
 		// this is the KEY or what we want to call what is attached to this component's .props
-		books: 
+		restaurants: 
 		// this is the actual DATA of the KEY books within reducers.js, which contains the JSON info
 		// within reducer_books.js
-		state.books
+		state.restaurants
 
 	};
 
@@ -93,10 +93,10 @@ function mapDispatchToProps(dispatch) {
 
 		// this is the KEY the function selectBook is bound to
 		// thanks to this key, the property from the action creator gets passed on to this.book
-		selectBook: 
+		selectRestaurant: 
 
 		// this is the actual selectBook function
-		selectBook },
+		selectRestaurant },
 
 		// this is the argument
 		// 
@@ -114,4 +114,4 @@ function mapDispatchToProps(dispatch) {
 // 
 // essentially this promotes BookList from a component to a container - react needs to know 
 // about this new component selection method, selectBook.
-export default connect(mapStateToProps, mapDispatchToProps) (BookList);
+export default connect(mapStateToProps, mapDispatchToProps) (RestaurantList);
