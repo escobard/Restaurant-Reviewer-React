@@ -1,7 +1,7 @@
 ** Changelog for Capstone project
 
 v0.2
-- prototype to create the appropriate restaurant data
+- base restaurant data created
 - prototype to begin adding bootstrap material design
 - prototype to begin cleaning up semantics
 
