@@ -18,7 +18,7 @@ export default class App extends Component {
     return (
       <div>
 		<Nav />
-		<main>
+		<main className="container">
       	<RestaurantDetail />
       	<RestaurantList />
       	</main>
