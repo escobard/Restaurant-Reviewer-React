@@ -32,9 +32,15 @@ class RestaurantDetail extends Component {
 		return (
 		<div>
 			<h3>
-			Details for: 
+			Extended Description for: 
 			</h3>
-			<h4> Title: {this.props.restaurant.title}</h4>
+			<img src={this.props.restaurant.image} />
+			<h4> {this.props.restaurant.category} </h4>
+			<h3> {this.props.restaurant.title} </h3>
+			<span> {this.props.restaurant.rating} </span>
+			<span> {this.props.restaurant.description} </span>
+			<span> {this.props.restaurant.price} </span>
+			<span> {this.props.restaurant.ldescription} </span>
 			<span>Pages: {this.props.restaurant.pages}</span>
 		</div>
 		);

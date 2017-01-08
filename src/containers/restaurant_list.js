@@ -39,7 +39,12 @@ class RestaurantList extends Component {
 				key={restaurant.title} 
 				className="list-group-item">
 					
-					{restaurant.title}
+			<img src={restaurant.image} />
+			<h4> {restaurant.category} </h4>
+			<h3> {restaurant.title} </h3>
+			<span> {restaurant.rating} </span>
+			<span> {restaurant.description} </span>
+			<span> {restaurant.price} </span>
 
 				</li>
 			);

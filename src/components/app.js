@@ -8,12 +8,21 @@ import RestaurantList from '../containers/restaurant_list';
 // imports our bookdetail
 import RestaurantDetail from '../containers/restaurant_detail';
 
+// custom components
+import Nav from './nav';
+import Footer from './footer';
+
+
 export default class App extends Component {
   render() {
     return (
       <div>
-		<RestaurantList />
+		<Nav />
+		<main className="container">
       	<RestaurantDetail />
+      	<RestaurantList />
+      	</main>
+		<Footer />
       </div>
     );
   };
