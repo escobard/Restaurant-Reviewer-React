@@ -18,6 +18,7 @@ body {
   position: relative;
   padding-bottom: 6rem;
   min-height: 100%;
+  max-height: auto;
 }
 footer {
     padding-top: 0 !important;
@@ -44,6 +45,9 @@ main.container {
 }
 .hidden {
   display: none !important;
+}
+.heightHidden {
+  height: 0;
 }
 /*===========================================================
 
