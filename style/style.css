@@ -66,3 +66,7 @@ nav {
     margin-top: 2%;
     padding-top: 2%;
 }
+
+.restaurantTitle {
+    padding: 0 !important;
+}
