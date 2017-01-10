@@ -24,24 +24,42 @@ class RestaurantDetail extends Component {
 		if (!this.props.restaurant){
 			return (
 			
-				<div>Select a book to get started.</div>
+				<div className="col-md-12 mainTitle ">
+                    <h1 className="h1-responsive">Select a restaurant
+                        <small className="text-muted"> to get started</small>
+                    </h1>
+                </div>
 
 			);
 		}
 
 		return (
 		<div>
-			<h3>
-			Extended Description for: 
-			</h3>
+			
+			<div className="card restaurantDetails animated slideInDown">
+
+			    <img className="img-fluid" src="http://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%282%29.jpg" alt="Card image cap" />
+
+			    <div className="card-block">
+
+			        <div className="col-md-12 mainTitle">
+                <h1 className="h1-responsive">{this.props.restaurant.title} 
+                    <small className="text-muted"> {this.props.restaurant.category}</small>
+                </h1>
+            </div>
 			<img src={this.props.restaurant.image} />
-			<h4> {this.props.restaurant.category} </h4>
-			<h3> {this.props.restaurant.title} </h3>
 			<span> {this.props.restaurant.rating} </span>
-			<span> {this.props.restaurant.description} </span>
 			<span> {this.props.restaurant.price} </span>
 			<span> {this.props.restaurant.ldescription} </span>
 			<span>Pages: {this.props.restaurant.pages}</span>
+			        <a href="#" className="btn btn-primary">Button</a>
+			    </div>
+
+
+			</div>
+
+
+			
 		</div>
 		);
 	}

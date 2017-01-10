@@ -1,0 +1,62 @@
+/*===========================================================
+
+    Main Application Styles
+
+===========================================================*/
+
+/*===========================================================
+
+    DOM Component Styles
+
+===========================================================*/
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  padding-bottom: 6rem;
+  min-height: 100%;
+}
+footer {
+    padding-top: 0 !important;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #efefef;
+    text-align: center;
+}
+
+section {
+    display: inline-block !important;
+}
+nav {
+	background-color: #c3362b;
+}
+.mainTitle {
+    margin: 2% 0;
+}
+/*===========================================================
+
+    Restaurant Card Styles
+
+===========================================================*/
+
+.restaurantCard {
+    padding: 0.5%;
+    float: left;
+    display: block;
+    margin: 0.5%;
+    max-width: 32.3% !important;
+}
+
+/*===========================================================
+
+    Restaurant Details Card Styles
+
+===========================================================*/
+
+.restaurantDetails {margin: 2% 0;}

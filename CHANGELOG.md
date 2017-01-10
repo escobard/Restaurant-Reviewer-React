@@ -1,8 +1,8 @@
 ** Changelog for Capstone project
 
 v0.3
-- prototype to add material card design to elements
-- prototype to add style animations to hide / show content
+- added material design to restaurant cards
+- added animations to restaurant description and list intro
 
 v0.2
 - base restaurant data created
