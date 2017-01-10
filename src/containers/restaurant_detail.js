@@ -31,6 +31,8 @@ class RestaurantDetail extends Component {
 
 		return (
 		<div>
+
+
 			<h3>
 			Extended Description for: 
 			</h3>

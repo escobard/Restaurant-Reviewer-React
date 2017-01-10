@@ -34,19 +34,28 @@ class RestaurantList extends Component {
 			// on this.props.selectBook, it passes the value of the book that was clicked (or in other words the individual book object)
 			// to the selectBook action reducer
 			return (
-				<li 
+			<div className="card"
 				onClick={() => this.props.selectRestaurant(restaurant)}
 				key={restaurant.title} 
-				className="list-group-item">
-					
-			<img src={restaurant.image} />
-			<h4> {restaurant.category} </h4>
-			<h3> {restaurant.title} </h3>
-			<span> {restaurant.rating} </span>
-			<span> {restaurant.description} </span>
-			<span> {restaurant.price} </span>
+				className="list-group-item"
+			>
 
-				</li>
+		    <div className="view overlay hm-white-slight">
+		        <img src="http://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%287%29.jpg" className="img-fluid" alt="" />
+		        <a href="#">
+		            <div className="mask"></div>
+		        </a>
+		    </div>
+
+		    <div className="card-block">
+				<h4 className="card-title">{restaurant.category} </h4>
+		        <h3 className="card-title">{restaurant.title} </h3>
+				<span> {restaurant.rating} </span>
+		        <p className="card-text">{restaurant.description}.</p>
+		        <span>{restaurant.price}</span>
+		        <a href="#" className="btn btn-primary">Learn More</a>
+		    </div>
+			</div>
 			);
 		});
 	}
@@ -57,9 +66,9 @@ class RestaurantList extends Component {
 
 		//DONT FORGET TO RETURN HERE, JUST SPENT AN HOUR DEBUGGING THIS AREA
 		return (
-			<ul className="list-group col-sm-4">
+			<section className="restaurantList">
 				{this.renderList()}
-			</ul>
+			</section>
 		);
 	}
 
