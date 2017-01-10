@@ -2,9 +2,9 @@
 
 v0.4
 - prototype to add intro / exit animations on restaurant details and cards
-- prototype to clean up layout of restaurant details
+- cleaned up the layout of restaurant details
 - prototype to add price / review data 
-- prototype to further clean semantics
+- cleaned up restaurant detail and card semantics
 
 v0.3
 - added material design to restaurant cards

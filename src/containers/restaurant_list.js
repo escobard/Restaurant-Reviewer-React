@@ -52,7 +52,7 @@ class RestaurantList extends Component {
 		        <p className="card-text">{restaurant.description}.</p>
 		        <span>{restaurant.price}</span>
 		        <a href="#" className="btn btn-primary"
-				onClick={() => this.props.selectRestaurant(restaurant)}
+				onClick={() => {this.props.selectRestaurant(restaurant)}}
 		        >Learn More</a>
 		    </div>
 			</article>
