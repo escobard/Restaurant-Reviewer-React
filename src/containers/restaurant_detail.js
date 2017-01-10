@@ -14,6 +14,23 @@ import { connect } from 'react-redux';
 
 class RestaurantDetail extends Component {
 
+	// creates the function to apply the outro animation to the restaurant list when the restaurant details are expanded
+	restaurantHide(){
+		var restaurantDetails = document.querySelector('.restaurantDetails');
+		var restaurantList = document.querySelector('.restaurantList');
+		restaurantDetails.classList.add('fadeOutUp');
+		restaurantDetails.classList.remove('fadeInDown');
+		setTimeout(function(){
+			restaurantDetails.classList.add('hidden');
+		}, 700);
+		
+		// handles classes for the restaurant list
+		restaurantList.classList.remove('fadeOutDown');
+		restaurantList.classList.remove('hidden');
+		restaurantList.classList.add('fadeInUp');
+
+	}
+
     // in short this returns the details of the activeBook
 	render(){
 
@@ -24,7 +41,7 @@ class RestaurantDetail extends Component {
 		if (!this.props.restaurant){
 			return (
 			
-				<div className="col-md-12 mainTitle ">
+				<div className="col-md-12 mainTitle">
                     <h1 className="h1-responsive">Select a restaurant
                         <small className="text-muted"> to get started</small>
                     </h1>
@@ -36,7 +53,7 @@ class RestaurantDetail extends Component {
 		return (
 		<div>
 			
-			<article className="card restaurantDetails animated slideInDown">
+			<article className="card restaurantDetails animated fadeInDown">
 
 			    <img className="img-fluid" src="http://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%282%29.jpg" alt="Card image cap" />
 
@@ -53,7 +70,9 @@ class RestaurantDetail extends Component {
 						<span> {this.props.restaurant.ldescription} </span>
 						<div className="detailBottom">
 							<span> {this.props.restaurant.price} </span>
-						    <a href="#" className="btn btn-primary">Return to selection</a>
+						    <a href="#" className="btn btn-primary"
+								onClick={() => this.restaurantHide()}
+						    >Return to selection</a>
 						    <a href="#" className="btn btn-primary">Leave a comment</a>
 						</div>
 					</div>
