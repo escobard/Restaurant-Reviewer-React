@@ -39,6 +39,12 @@ nav {
 .mainTitle {
     margin: 2% 0;
 }
+main.container {
+    max-height: 100%;
+}
+.hidden {
+  display: none !important;
+}
 /*===========================================================
 
     Restaurant Card Styles
