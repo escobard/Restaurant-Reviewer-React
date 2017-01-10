@@ -16,6 +16,7 @@ class RestaurantDetail extends Component {
 
 	// creates the function to apply the outro animation to the restaurant list when the restaurant details are expanded
 	restaurantHide(){
+
 		var restaurantDetails = document.querySelector('.restaurantDetails');
 		var restaurantList = document.querySelector('.restaurantList');
 		restaurantDetails.classList.remove('fadeInDown');
@@ -43,7 +44,7 @@ class RestaurantDetail extends Component {
 		if (!this.props.restaurant){
 			return (
 			
-				<div className="col-md-12 mainTitle">
+				<div className="col-md-12 mainTitle restaurantDetails">
                     <h1 className="h1-responsive">Select a restaurant
                         <small className="text-muted"> to get started</small>
                     </h1>
@@ -53,9 +54,9 @@ class RestaurantDetail extends Component {
 		}
 
 		return (
-		<div>
+		<div className="col-md-12 restaurantDetails animated fadeInDown">
 			
-			<article className="card restaurantDetails animated fadeInDown">
+			<article className="card">
 
 			    <img className="img-fluid" src="http://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%282%29.jpg" alt="Card image cap" />
 

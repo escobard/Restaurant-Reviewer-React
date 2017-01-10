@@ -2,8 +2,9 @@
 
 v0.4
 - added intro / exit animation and logic for restaurant list
+- added intro / exit animation and logic for restaurant details
+- handled animation DOM height problems
 - cleaned up the layout of restaurant details
-- prototype to add price / review data 
 - cleaned up restaurant detail and card semantics
 
 v0.3
