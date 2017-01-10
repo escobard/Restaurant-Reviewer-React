@@ -43,16 +43,19 @@ class RestaurantDetail extends Component {
 			    <div className="card-block">
 
 			        <div className="col-md-12 mainTitle">
-                <h1 className="h1-responsive">{this.props.restaurant.title} 
-                    <small className="text-muted"> {this.props.restaurant.category}</small>
-                </h1>
-            </div>
-			<img src={this.props.restaurant.image} />
-			<span> {this.props.restaurant.rating} </span>
-			<span> {this.props.restaurant.price} </span>
-			<span> {this.props.restaurant.ldescription} </span>
-			<span>Pages: {this.props.restaurant.pages}</span>
-			        <a href="#" className="btn btn-primary">Button</a>
+                		<h1 className="h1-responsive">{this.props.restaurant.title} 
+                    		<small className="text-muted"> {this.props.restaurant.category}</small>
+                		</h1>
+            		</div>
+            		<div className="detailContainer">
+						<img src={this.props.restaurant.image} />
+						<span> {this.props.restaurant.rating} </span>
+						<span> {this.props.restaurant.ldescription} </span>
+						<div className="detailBottom">
+							<span> {this.props.restaurant.price} </span>
+						    <a href="#" className="btn btn-primary">Button</a>
+						</div>
+					</div>
 			    </div>
 
 
