@@ -26,8 +26,18 @@ class RestaurantList extends Component {
 	// creates the function to apply the outro animation to the restaurant list when the restaurant details are expanded
 	listHide(){
 		var restaurantList = document.querySelector('.restaurantList');
+		var restaurantDetails = document.querySelector('.restaurantDetails');
+
+		// handles animations when list is hiding
 		restaurantList.classList.add('fadeOutDown');
 		restaurantList.classList.remove('fadeInUp');
+
+		// handles restaurantHide classes
+		restaurantDetails.classList.remove('hidden');
+		restaurantDetails.classList.remove('heightHidden');
+		restaurantDetails.classList.remove('fadeOut');
+		restaurantDetails.classList.add('fadeInDown');
+		
 
 		// hides from the dom after animation is over
 		setTimeout(function(){

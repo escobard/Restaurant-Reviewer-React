@@ -18,8 +18,8 @@ class RestaurantDetail extends Component {
 	restaurantHide(){
 		var restaurantDetails = document.querySelector('.restaurantDetails');
 		var restaurantList = document.querySelector('.restaurantList');
-		restaurantDetails.classList.add('fadeOut');
 		restaurantDetails.classList.remove('fadeInDown');
+		restaurantDetails.classList.add('fadeOut');
 		restaurantDetails.classList.add('heightHidden');
 		setTimeout(function(){
 			restaurantDetails.classList.add('hidden');
