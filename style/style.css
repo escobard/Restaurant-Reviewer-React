@@ -50,5 +50,13 @@ nav {
     float: left;
     display: block;
     margin: 0.5%;
-    max-width: 32% !important;
+    max-width: 32.3% !important;
 }
+
+/*===========================================================
+
+    Restaurant Details Card Styles
+
+===========================================================*/
+
+.restaurantDetails {margin: 2% 0;}
