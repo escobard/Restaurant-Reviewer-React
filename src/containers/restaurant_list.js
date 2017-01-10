@@ -35,7 +35,6 @@ class RestaurantList extends Component {
 			// to the selectBook action reducer
 			return (
 			<article className="restaurantCard card col-xs-12 col-lg-4 col-xl-4 animated fadeInUp"
-				onClick={() => this.props.selectRestaurant(restaurant)}
 				key={restaurant.title} 
 			>
 
@@ -52,7 +51,9 @@ class RestaurantList extends Component {
 				<span> {restaurant.rating} </span>
 		        <p className="card-text">{restaurant.description}.</p>
 		        <span>{restaurant.price}</span>
-		        <a href="#" className="btn btn-primary">Learn More</a>
+		        <a href="#" className="btn btn-primary"
+				onClick={() => this.props.selectRestaurant(restaurant)}
+		        >Learn More</a>
 		    </div>
 			</article>
 			);
