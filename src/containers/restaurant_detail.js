@@ -24,7 +24,11 @@ class RestaurantDetail extends Component {
 		if (!this.props.restaurant){
 			return (
 			
-				<div>Select a restaurant to get started.</div>
+				<div className="col-md-12 mainTitle">
+                    <h1 className="h1-responsive">Select a restaurant
+                        <small className="text-muted"> to get started</small>
+                    </h1>
+                </div>
 
 			);
 		}

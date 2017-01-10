@@ -36,7 +36,9 @@ section {
 nav {
 	background-color: #c3362b;
 }
-
+.mainTitle {
+    margin: 2% 0;
+}
 /*===========================================================
 
     Restaurant Card Styles
