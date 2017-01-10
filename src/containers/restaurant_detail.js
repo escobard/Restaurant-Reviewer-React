@@ -24,7 +24,7 @@ class RestaurantDetail extends Component {
 		if (!this.props.restaurant){
 			return (
 			
-				<div>Select a book to get started.</div>
+				<div>Select a restaurant to get started.</div>
 
 			);
 		}
