@@ -1,7 +1,7 @@
 ** Changelog for Capstone project
 
 v0.4
-- prototype to add intro / exit animations on restaurant details and cards
+- added intro / exit animation and logic for restaurant list
 - cleaned up the layout of restaurant details
 - prototype to add price / review data 
 - cleaned up restaurant detail and card semantics
