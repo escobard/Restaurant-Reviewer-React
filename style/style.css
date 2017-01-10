@@ -33,6 +33,9 @@ footer {
 section {
     display: inline-block !important;
 }
+nav {
+	background-color: #c3362b;
+}
 
 /*===========================================================
 
