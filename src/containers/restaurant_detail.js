@@ -53,7 +53,8 @@ class RestaurantDetail extends Component {
 						<span> {this.props.restaurant.ldescription} </span>
 						<div className="detailBottom">
 							<span> {this.props.restaurant.price} </span>
-						    <a href="#" className="btn btn-primary">Button</a>
+						    <a href="#" className="btn btn-primary">Return to selection</a>
+						    <a href="#" className="btn btn-primary">Leave a comment</a>
 						</div>
 					</div>
 			    </div>
