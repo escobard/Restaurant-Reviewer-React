@@ -23,6 +23,12 @@ import selectRestaurant from '../actions/index'
 // THESE CLASSES MUST HAVE A CAPITAL AT THE BEGINNING OR THE CLASS WILL NOT WORK
 class RestaurantList extends Component {
 
+	// creates the function to apply the outro animation to the restaurant list when the restaurant details are expanded
+	listHide(){
+
+		document.querySelector('.restaurantList').classList.add('fadeOutDown');
+	}
+
 	// this will set up the function to render our list
 	// we will be adding the list of books to our props object later
 	renderList() {
@@ -34,7 +40,7 @@ class RestaurantList extends Component {
 			// on this.props.selectBook, it passes the value of the book that was clicked (or in other words the individual book object)
 			// to the selectBook action reducer
 			return (
-			<article className="restaurantCard card col-xs-12 col-lg-4 col-xl-4 animated fadeInUp"
+			<article className="restaurantCard card col-xs-12 col-lg-4 col-xl-4 "
 				key={restaurant.title} 
 			>
 
@@ -51,8 +57,8 @@ class RestaurantList extends Component {
 				<span> {restaurant.rating} </span>
 		        <p className="card-text">{restaurant.description}.</p>
 		        <span>{restaurant.price}</span>
-		        <a href="#" className="btn btn-primary"
-				onClick={() => {this.props.selectRestaurant(restaurant)}}
+		        <a href="#" className="btn btn-primary restaurantOpen"
+				onClick={() => {this.props.selectRestaurant(restaurant); this.listHide();}}
 		        >Learn More</a>
 		    </div>
 			</article>
@@ -66,7 +72,7 @@ class RestaurantList extends Component {
 
 		//DONT FORGET TO RETURN HERE, JUST SPENT AN HOUR DEBUGGING THIS AREA
 		return (
-			<section className="restaurantList">
+			<section className="restaurantList animated fadeInUp">
 				{this.renderList()}
 			</section>
 		);
