@@ -18,6 +18,7 @@ body {
   position: relative;
   padding-bottom: 6rem;
   min-height: 100%;
+  max-height: auto;
 }
 footer {
     padding-top: 0 !important;
@@ -38,6 +39,15 @@ nav {
 }
 .mainTitle {
     margin: 2% 0;
+}
+main.container {
+    max-height: 100%;
+}
+.hidden {
+  display: none !important;
+}
+.heightHidden {
+  height: 0;
 }
 /*===========================================================
 
@@ -60,3 +70,13 @@ nav {
 ===========================================================*/
 
 .restaurantDetails {margin: 2% 0;}
+
+.detailBottom {
+    border-top: solid 1px #ccc;
+    margin-top: 2%;
+    padding-top: 2%;
+}
+
+.restaurantTitle {
+    padding: 0 !important;
+}

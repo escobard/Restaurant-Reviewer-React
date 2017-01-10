@@ -23,6 +23,29 @@ import selectRestaurant from '../actions/index'
 // THESE CLASSES MUST HAVE A CAPITAL AT THE BEGINNING OR THE CLASS WILL NOT WORK
 class RestaurantList extends Component {
 
+	// creates the function to apply the outro animation to the restaurant list when the restaurant details are expanded
+	listHide(){
+		var restaurantList = document.querySelector('.restaurantList');
+		var restaurantDetails = document.querySelector('.restaurantDetails');
+
+		// handles animations when list is hiding
+		restaurantList.classList.add('fadeOutDown');
+		restaurantList.classList.remove('fadeInUp');
+
+		// handles restaurantHide classes
+		restaurantDetails.classList.remove('hidden');
+		restaurantDetails.classList.remove('heightHidden');
+		restaurantDetails.classList.remove('fadeOut');
+		restaurantDetails.classList.add('fadeInDown');
+		
+
+		// hides from the dom after animation is over
+		setTimeout(function(){
+			restaurantList.classList.add('hidden');
+		}, 1000);
+		
+	}
+
 	// this will set up the function to render our list
 	// we will be adding the list of books to our props object later
 	renderList() {
@@ -34,8 +57,7 @@ class RestaurantList extends Component {
 			// on this.props.selectBook, it passes the value of the book that was clicked (or in other words the individual book object)
 			// to the selectBook action reducer
 			return (
-			<div className="restaurantCard card col-xs-12 col-lg-4 col-xl-4 animated fadeInUp"
-				onClick={() => this.props.selectRestaurant(restaurant)}
+			<article className="restaurantCard card col-xs-12 col-lg-4 col-xl-4 "
 				key={restaurant.title} 
 			>
 
@@ -52,9 +74,11 @@ class RestaurantList extends Component {
 				<span> {restaurant.rating} </span>
 		        <p className="card-text">{restaurant.description}.</p>
 		        <span>{restaurant.price}</span>
-		        <a href="#" className="btn btn-primary">Learn More</a>
+		        <a href="#" className="btn btn-primary restaurantOpen"
+				onClick={() => {this.props.selectRestaurant(restaurant); this.listHide();}}
+		        >Learn More</a>
 		    </div>
-			</div>
+			</article>
 			);
 		});
 	}
@@ -65,7 +89,7 @@ class RestaurantList extends Component {
 
 		//DONT FORGET TO RETURN HERE, JUST SPENT AN HOUR DEBUGGING THIS AREA
 		return (
-			<section className="restaurantList">
+			<section className="restaurantList animated fadeInUp">
 				{this.renderList()}
 			</section>
 		);

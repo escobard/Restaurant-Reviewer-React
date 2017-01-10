@@ -14,6 +14,26 @@ import { connect } from 'react-redux';
 
 class RestaurantDetail extends Component {
 
+	// creates the function to apply the outro animation to the restaurant list when the restaurant details are expanded
+	restaurantHide(){
+
+		var restaurantDetails = document.querySelector('.restaurantDetails');
+		var restaurantList = document.querySelector('.restaurantList');
+		restaurantDetails.classList.remove('fadeInDown');
+		restaurantDetails.classList.add('fadeOut');
+		restaurantDetails.classList.add('heightHidden');
+		setTimeout(function(){
+			restaurantDetails.classList.add('hidden');
+		}, 1000);
+		
+		
+		// handles classes for the restaurant list
+		restaurantList.classList.remove('fadeOutDown');
+		restaurantList.classList.remove('hidden');
+		restaurantList.classList.add('fadeInUp');
+
+	}
+
     // in short this returns the details of the activeBook
 	render(){
 
@@ -24,7 +44,7 @@ class RestaurantDetail extends Component {
 		if (!this.props.restaurant){
 			return (
 			
-				<div className="col-md-12 mainTitle ">
+				<div className="col-md-12 mainTitle restaurantDetails">
                     <h1 className="h1-responsive">Select a restaurant
                         <small className="text-muted"> to get started</small>
                     </h1>
@@ -34,32 +54,36 @@ class RestaurantDetail extends Component {
 		}
 
 		return (
-		<div>
+		<div className="col-md-12 restaurantDetails animated fadeInDown">
 			
-			<div className="card restaurantDetails animated slideInDown">
+			<article className="card">
 
 			    <img className="img-fluid" src="http://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%282%29.jpg" alt="Card image cap" />
 
 			    <div className="card-block">
 
-			        <div className="col-md-12 mainTitle">
-                <h1 className="h1-responsive">{this.props.restaurant.title} 
-                    <small className="text-muted"> {this.props.restaurant.category}</small>
-                </h1>
-            </div>
-			<img src={this.props.restaurant.image} />
-			<span> {this.props.restaurant.rating} </span>
-			<span> {this.props.restaurant.price} </span>
-			<span> {this.props.restaurant.ldescription} </span>
-			<span>Pages: {this.props.restaurant.pages}</span>
-			        <a href="#" className="btn btn-primary">Button</a>
+			        <div className="col-md-12 restaurantTitle">
+                		<h1 className="h1-responsive">{this.props.restaurant.title} 
+                    		<small className="text-muted"> {this.props.restaurant.category}</small>
+                		</h1>
+            		</div>
+            		<div className="detailContainer">
+						<img src={this.props.restaurant.image} />
+						<span> {this.props.restaurant.rating} </span>
+						<span> {this.props.restaurant.ldescription} </span>
+						<div className="detailBottom">
+							<span> {this.props.restaurant.price} </span>
+						    <a href="#" className="btn btn-primary"
+								onClick={() => this.restaurantHide()}
+						    >Return to selection</a>
+						    <a href="#" className="btn btn-primary">Leave a comment</a>
+						</div>
+					</div>
 			    </div>
 
 
-			</div>
+			</article>
 
-
-			
 		</div>
 		);
 	}

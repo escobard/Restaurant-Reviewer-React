@@ -1,5 +1,12 @@
 ** Changelog for Capstone project
 
+v0.4
+- added intro / exit animation and logic for restaurant list
+- added intro / exit animation and logic for restaurant details
+- handled animation DOM height problems
+- cleaned up the layout of restaurant details
+- cleaned up restaurant detail and card semantics
+
 v0.3
 - added material design to restaurant cards
 - added animations to restaurant description and list intro
