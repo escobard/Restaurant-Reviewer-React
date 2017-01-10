@@ -44,4 +44,6 @@ section {
     padding: 0.5%;
     float: left;
     display: block;
+    margin: 0.5%;
+    max-width: 32% !important;
 }
