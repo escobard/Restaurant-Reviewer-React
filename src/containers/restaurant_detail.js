@@ -36,7 +36,7 @@ class RestaurantDetail extends Component {
 		return (
 		<div>
 			
-			<div className="card restaurantDetails animated slideInDown">
+			<article className="card restaurantDetails animated slideInDown">
 
 			    <img className="img-fluid" src="http://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%282%29.jpg" alt="Card image cap" />
 
@@ -59,10 +59,8 @@ class RestaurantDetail extends Component {
 			    </div>
 
 
-			</div>
+			</article>
 
-
-			
 		</div>
 		);
 	}
