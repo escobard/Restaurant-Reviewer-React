@@ -60,3 +60,9 @@ nav {
 ===========================================================*/
 
 .restaurantDetails {margin: 2% 0;}
+
+.detailBottom {
+    border-top: solid 1px #ccc;
+    margin-top: 2%;
+    padding-top: 2%;
+}
