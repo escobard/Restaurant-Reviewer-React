@@ -137,7 +137,7 @@ class RestaurantList extends Component {
 				<br/>
 				<small> {restaurant.category}</small></h4>
 				<span> {restaurant.rating} </span>
-		        <p className="card-text">{restaurant.description}.</p>
+		        <p className="card-text">{restaurant.description}</p>
 		        <div className="bottom">
 		        	<span className="restaurantPrice">${restaurant.price} <small>avarage</small></span>
 			        <a href="#" className="btn btn-primary restaurantOpen"

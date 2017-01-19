@@ -91,6 +91,15 @@ main.container {
 .restaurantPrice small {
     font-style: italic !important;
 }
+p.card-text {
+     overflow: hidden;
+     text-overflow: ellipsis;
+     max-height: 48px;
+}
+
+p.card-text::after { 
+    content: "...";
+}
 
 /*===========================================================
 
