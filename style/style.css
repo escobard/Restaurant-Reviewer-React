@@ -12,13 +12,14 @@
 
 html {
   height: 100%;
-  box-sizing: border-box;
 }
 body {
   position: relative;
   padding-bottom: 6rem;
   min-height: 100%;
   max-height: auto;
+  margin: 0.5px !important;
+  overflow-x: hidden;
 }
 footer {
     padding-top: 0 !important;
@@ -64,10 +65,43 @@ main.container {
     display: block;
     margin: 0.5%;
     max-width: 32.3% !important;
+    text-align: center;
 }
 .restaurantCard .card-title span {
     text-transform: capitalize;
 }
+.bottom {
+    padding-top: 1rem;
+    border-top: solid 1px #000;
+}
+.restaurantCard img{
+  margin-top: 1rem;
+}
+.restaurantOpen {
+    float: right;
+    margin: 0 !important;
+    background-color: #c3362b !important;
+    border-color: #9c2920 !important;
+}
+.restaurantPrice {
+    margin-top: 6px !important;
+    display: block;
+    float: left;
+    font-weight: bold;
+}
+.restaurantPrice small {
+    font-style: italic !important;
+}
+p.card-text {
+     overflow: hidden;
+     text-overflow: ellipsis;
+     max-height: 48px;
+}
+
+p.card-text::after { 
+    content: "...";
+}
+
 /*===========================================================
 
     Restaurant Details Card Styles
@@ -106,10 +140,10 @@ main.container {
     text-transform: none !important;
 }
 .intro h3{
-    margin: 1%;
+    margin: 1rem;
 }
-#searchBar {padding: 0;}
-::-webkit-input-placeholder {
+#searchBar {padding: 0;
+::-webkit-input-placeholder;
     text-align: center;
 }
 #searchBar::-webkit-input-placeholder {
@@ -125,4 +159,34 @@ main.container {
 
 #searchBar:-ms-input-placeholder {  
     text-align: center;  
+}
+.search-bar {
+    padding: 0 2rem !important;
+    margin-bottom: 0.5rem !important;
+}
+select:hover {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+.selectFilter {
+    float: left;
+}
+
+/*===========================================================
+
+    Responsive Styles
+
+===========================================================*/
+@media screen and (max-width: 1000px){
+  .restaurantCard{
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  .restaurantCard img{
+    float:none;
+    display: block;
+    margin: 1rem auto;
+  }
+  .navbar-brand {
+    font-size: 20px !important;
+  }
 }
