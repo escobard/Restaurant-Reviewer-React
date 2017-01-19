@@ -122,12 +122,16 @@ class RestaurantList extends Component {
 			<section className="restaurantList animated fadeInUp col-md-12">
 			<div className="col-md-12 intro card">
             <h3 className="h3-responsive">Select a restaurant to get started</h3>
-            <div className="search-bar">
+            <div className="search-bar md-form col-md-12">
 			<input 
+				id="searchBar"
+				className="form-control"
+				type="text"
 				value={this.state.searchTerm}
 				onChange={event => this.searchInputChange(event)}
-				placeholder="Filter restaurants by name"
+				placeholder="Filter restaurants by title"
 			 />
+
 			</div>
         	</div>
 				{this.renderList()}
