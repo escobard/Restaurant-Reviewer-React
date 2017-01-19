@@ -22,6 +22,17 @@ import selectRestaurant from '../actions/index'
 
 // THESE CLASSES MUST HAVE A CAPITAL AT THE BEGINNING OR THE CLASS WILL NOT WORK
 class RestaurantList extends Component {
+	// sets up the state handler for which books to display
+	constructor(props){
+		super(props);
+
+		this.state = {
+			// sets the search term
+			searchTerm:'',
+
+		}
+
+	}
 
 	// creates the function to apply the outro animation to the restaurant list when the restaurant details are expanded
 	listHide(){
