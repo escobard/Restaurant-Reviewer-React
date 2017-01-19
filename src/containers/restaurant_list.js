@@ -37,10 +37,10 @@ class RestaurantList extends Component {
 		// binds the search input
 		this.searchInputChange = this.searchInputChange.bind(this);
 	}
-	// handles the search bar setting of state
+	// handles the category select setting of state
 	categoryFilterChange(event){
 
-		// creates 
+		// creates filter
 		let categoryFilter = _.filter(this.props.restaurants, restaurant => restaurant.category.includes(event.target.value));
 
 		// sets the state based on filter
@@ -49,7 +49,31 @@ class RestaurantList extends Component {
 		});
 		console.log(this.state.currentlySelected);
 	}
-		// handles the search bar setting of state
+	// handles the category select setting of state
+	priceFilterChange(event){
+
+		// creates filter
+		let priceFilter = _.filter(this.props.restaurants, restaurant => restaurant.price.includes(event.target.value));
+
+		// sets the state based on filter
+		this.setState({
+			currentlySelected: priceFilter
+		});
+		console.log(this.state.currentlySelected);
+	}
+	// handles the category select setting of state
+	ratingFilterChange(event){
+
+		// creates filter 
+		let ratingFilter = _.filter(this.props.restaurants, restaurant => restaurant.rating.includes(event.target.value));
+
+		// sets the state based on filter
+		this.setState({
+			currentlySelected: ratingFilter
+		});
+		console.log(this.state.currentlySelected);
+	}
+	// handles the search bar setting of state
 	searchInputChange(event){
 
 		// creates 
@@ -147,6 +171,7 @@ class RestaurantList extends Component {
 				id="categoryFilter"
 				onChange={event => this.categoryFilterChange(event)}
 			>
+				<option value="">Select a Category</option>
 				<option value="oriental">Oriental</option>
 				<option value="fast food">Fast Food</option>
 				<option value="mexican">Mexican</option>
@@ -154,6 +179,7 @@ class RestaurantList extends Component {
 				<option value="greek">Greek</option>
 			</select>
 			<select id="priceFilter">
+				<option value="">Select a Price</option>
 				<option value="10">$10 Avarage</option>
 				<option value="15">$15 Avarage</option>
 				<option value="20">$20 Avarage</option>
@@ -161,6 +187,7 @@ class RestaurantList extends Component {
 				<option value="30">$30 Avarage</option>
 			</select>
 			<select id="ratingFilter">
+				<option value="">Select a Rating</option>
 				<option value="2">2 stars or less</option>
 				<option value="3">3 stars or less</option>
 				<option value="4">4 stars or less</option>
