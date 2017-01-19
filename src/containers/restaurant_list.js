@@ -31,9 +31,10 @@ class RestaurantList extends Component {
 		this.state = {
 			// sets the search term
 			searchTerm:'',
-			currentlySelected: this.props.people
+			currentlySelected: this.props.restaurants
 		};
-
+		
+		// binds the search input
 	}
 
 	// creates the function to apply the outro animation to the restaurant list when the restaurant details are expanded
