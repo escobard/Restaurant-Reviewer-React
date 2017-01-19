@@ -46,10 +46,10 @@ class RestaurantList extends Component {
 		// sets the state based on filter
 		this.setState({
 			searchTerm: event.target.value,
-			currentlyDisplayed: searchFilter
+			currentlySelected: searchFilter
 		});
 		console.log(this.state.searchTerm);
-		console.log(this.state.currentlyDisplayed);
+		console.log(this.state.currentlySelected);
 	}
 	// creates the function to apply the outro animation to the restaurant list when the restaurant details are expanded
 	listHide(){
@@ -125,7 +125,7 @@ class RestaurantList extends Component {
             <div className="search-bar">
 			<input 
 				value={this.state.searchTerm}
-				onChange={event => this.searchInputChange(event.target.value)} />
+				onChange={event => this.searchInputChange(event)} />
 				<p>Searching for : <span>{this.state.searchTerm}</span></p>
 			</div>
         	</div>
