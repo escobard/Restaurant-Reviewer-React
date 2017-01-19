@@ -138,7 +138,7 @@ class RestaurantList extends Component {
 				<span> {restaurant.rating} </span>
 		        <p className="card-text">{restaurant.description}.</p>
 		        <div className="bottom">
-		        	<span className="restaurantPrice">{restaurant.price}</span>
+		        	<span className="restaurantPrice">${restaurant.price} <small>avarage</small></span>
 			        <a href="#" className="btn btn-primary restaurantOpen"
 					onClick={() => {this.props.selectRestaurant(restaurant); this.listHide();}}
 			        >

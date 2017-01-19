@@ -70,14 +70,23 @@ main.container {
 }
 .bottom {
     padding-top: 1rem;
-    border-top: solid 1px #c3362b;
+    border-top: solid 1px #000;
 }
 
 .restaurantOpen {
     float: right;
-    margin: 0;
-    background-color: #c3362b;
-    border-color: #9c2920;
+    margin: 0 !important;
+    background-color: #c3362b !important;
+    border-color: #9c2920 !important;
+}
+.restaurantPrice {
+    margin-top: 7px !important;
+    display: block;
+    float: left;
+    font-weight: bold;
+}
+.restaurantPrice small {
+    font-style: italic;
 }
 /*===========================================================
 
