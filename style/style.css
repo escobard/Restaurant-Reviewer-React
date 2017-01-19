@@ -73,7 +73,9 @@ main.container {
     padding-top: 1rem;
     border-top: solid 1px #000;
 }
-
+.restaurantCard img{
+  margin-top: 1rem;
+}
 .restaurantOpen {
     float: right;
     margin: 0 !important;
@@ -128,7 +130,7 @@ main.container {
     text-transform: none !important;
 }
 .intro h3{
-    margin: 1%;
+    margin: 1rem;
 }
 #searchBar {padding: 0;
 ::-webkit-input-placeholder;
@@ -157,4 +159,24 @@ select:hover {
 }
 .selectFilter {
     float: left;
+}
+
+/*===========================================================
+
+    Responsive Styles
+
+===========================================================*/
+@media screen and (max-width: 1000px){
+  .restaurantCard{
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  .restaurantCard img{
+    float:none;
+    display: block;
+    margin: 1rem auto;
+  }
+  .navbar-brand {
+    font-size: 20px !important;
+  }
 }
