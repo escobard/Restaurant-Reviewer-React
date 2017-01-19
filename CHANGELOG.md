@@ -1,7 +1,7 @@
 ** Changelog for Capstone project
 
 v0.6
-- prototype to clean up styles for responsive 
+- cleaned up style for responsive dimensions
 - styles for pricing / ratings fixed
 - styles for search bar and filters implemented
 - prototype to add rating stars API
