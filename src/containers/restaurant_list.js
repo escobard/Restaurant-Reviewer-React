@@ -137,12 +137,14 @@ class RestaurantList extends Component {
 		        <h3 className="card-title">{restaurant.title} </h3>
 				<span> {restaurant.rating} </span>
 		        <p className="card-text">{restaurant.description}.</p>
-		        <span>{restaurant.price}</span>
-		        <a href="#" className="btn btn-primary restaurantOpen"
-				onClick={() => {this.props.selectRestaurant(restaurant); this.listHide();}}
-		        >
-		        Learn More
-		        </a>
+		        <div className="bottom">
+		        	<span className="restaurantPrice">{restaurant.price}</span>
+			        <a href="#" className="btn btn-primary restaurantOpen"
+					onClick={() => {this.props.selectRestaurant(restaurant); this.listHide();}}
+			        >
+			        Learn More
+			        </a>
+		        </div>
 		    </div>
 			</article>
 			);

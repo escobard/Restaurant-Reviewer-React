@@ -68,6 +68,17 @@ main.container {
 .restaurantCard .card-title span {
     text-transform: capitalize;
 }
+.bottom {
+    padding-top: 1rem;
+    border-top: solid 1px #c3362b;
+}
+
+.restaurantOpen {
+    float: right;
+    margin: 0;
+    background-color: #c3362b;
+    border-color: #9c2920;
+}
 /*===========================================================
 
     Restaurant Details Card Styles
