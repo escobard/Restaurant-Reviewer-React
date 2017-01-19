@@ -89,6 +89,7 @@ main.container {
 .restaurantPrice small {
     font-style: italic !important;
 }
+
 /*===========================================================
 
     Restaurant Details Card Styles
@@ -129,8 +130,8 @@ main.container {
 .intro h3{
     margin: 1%;
 }
-#searchBar {padding: 0;}
-::-webkit-input-placeholder {
+#searchBar {padding: 0;
+::-webkit-input-placeholder;
     text-align: center;
 }
 #searchBar::-webkit-input-placeholder {
@@ -146,4 +147,14 @@ main.container {
 
 #searchBar:-ms-input-placeholder {  
     text-align: center;  
+}
+.search-bar {
+    padding: 0 2rem !important;
+    margin-bottom: 0.5rem !important;
+}
+select:hover {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+.selectFilter {
+    float: left;
 }
