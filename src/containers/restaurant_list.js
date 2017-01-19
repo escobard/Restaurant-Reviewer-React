@@ -35,8 +35,9 @@ class RestaurantList extends Component {
 		};
 		
 		// binds the search input
+		this.onInputChange = this.onInputChange.bind(this);
 	}
-
+	
 	// creates the function to apply the outro animation to the restaurant list when the restaurant details are expanded
 	listHide(){
 		
