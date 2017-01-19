@@ -131,7 +131,26 @@ class RestaurantList extends Component {
 				onChange={event => this.searchInputChange(event)}
 				placeholder="Filter restaurants by title"
 			 />
-
+			<select id="categoryFilter">
+				<option value="oriental">Oriental</option>
+				<option value="fast food">Fast Food</option>
+				<option value="mexican">Mexican</option>
+				<option value="indian">Indian</option>
+				<option value="greek">Greek</option>
+			</select>
+			<select id="priceFilter">
+				<option value="10">$10 Avarage</option>
+				<option value="15">$15 Avarage</option>
+				<option value="20">$20 Avarage</option>
+				<option value="25">$25 Avarage</option>
+				<option value="30">$30 Avarage</option>
+			</select>
+			<select id="ratingFilter">
+				<option value="2">2 stars or less</option>
+				<option value="3">3 stars or less</option>
+				<option value="4">4 stars or less</option>
+				<option value="5">5 stars or less</option>
+			</select>
 			</div>
         	</div>
 				{this.renderList()}
