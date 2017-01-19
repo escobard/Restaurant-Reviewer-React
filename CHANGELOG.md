@@ -1,10 +1,14 @@
 ** Changelog for Capstone project
 
+v0.6
+- prototype to clean up styles for responsive 
+- prototype to fix styles of pricing / rating data
+- prototype to add rating stars API
+
 v0.5
-- prototype to add price / review data
-- prototype to fix responsive styles
-- prototype to continue updating semantics
-- prototype to begin adding filters
+- added price / rating data into the restaurants reducer
+- updated base semantics and responsive styles
+- added category, price, and rating filters
 - added search filter logic
 
 v0.4
