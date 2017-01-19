@@ -64,6 +64,7 @@ main.container {
     display: block;
     margin: 0.5%;
     max-width: 32.3% !important;
+    text-align: center;
 }
 .restaurantCard .card-title span {
     text-transform: capitalize;
@@ -80,13 +81,13 @@ main.container {
     border-color: #9c2920 !important;
 }
 .restaurantPrice {
-    margin-top: 7px !important;
+    margin-top: 6px !important;
     display: block;
     float: left;
     font-weight: bold;
 }
 .restaurantPrice small {
-    font-style: italic;
+    font-style: italic !important;
 }
 /*===========================================================
 

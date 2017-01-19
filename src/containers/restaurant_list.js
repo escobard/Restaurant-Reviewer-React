@@ -133,8 +133,9 @@ class RestaurantList extends Component {
 		    </div>
 
 		    <div className="card-block">
-				<h4 className="card-title">{restaurant.category} </h4>
-		        <h3 className="card-title">{restaurant.title} </h3>
+				<h4 className="card-title">{restaurant.title}
+				<br/>
+				<small> {restaurant.category}</small></h4>
 				<span> {restaurant.rating} </span>
 		        <p className="card-text">{restaurant.description}.</p>
 		        <div className="bottom">
