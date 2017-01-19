@@ -5,6 +5,7 @@ v0.5
 - prototype to fix responsive styles
 - prototype to continue updating semantics
 - prototype to begin adding filters
+- added search filter logic
 
 v0.4
 - added intro / exit animation and logic for restaurant list
