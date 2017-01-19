@@ -67,7 +67,9 @@ main.container {
     margin: 0.5%;
     max-width: 32.3% !important;
 }
-
+.restaurantCard .card-title span {
+    text-transform: capitalize;
+}
 /*===========================================================
 
     Restaurant Details Card Styles
