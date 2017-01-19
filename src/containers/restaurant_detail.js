@@ -44,11 +44,7 @@ class RestaurantDetail extends Component {
 		if (!this.props.restaurant){
 			return (
 			
-				<div className="col-md-12 mainTitle restaurantDetails">
-                    <h1 className="h1-responsive">Select a restaurant
-                        <small className="text-muted"> to get started</small>
-                    </h1>
-                </div>
+				<div></div>
 
 			);
 		}

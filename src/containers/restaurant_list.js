@@ -19,12 +19,27 @@ import { bindActionCreators } from 'redux';
 // imports action creators
 import selectRestaurant from '../actions/index'
 
+// imports lodash plugin
+import _ from 'lodash';
 
 // THESE CLASSES MUST HAVE A CAPITAL AT THE BEGINNING OR THE CLASS WILL NOT WORK
 class RestaurantList extends Component {
+	// sets up the state handler for which books to display
+	constructor(props){
+		super(props);
+
+		this.state = {
+			// sets the search term
+			searchTerm:'',
+			currentlySelected: this.props.restaurants
+		};
+		
+		// binds the search input
+	}
 
 	// creates the function to apply the outro animation to the restaurant list when the restaurant details are expanded
 	listHide(){
+		
 		var restaurantList = document.querySelector('.restaurantList');
 		var restaurantDetails = document.querySelector('.restaurantDetails');
 
@@ -37,7 +52,6 @@ class RestaurantList extends Component {
 		restaurantDetails.classList.remove('heightHidden');
 		restaurantDetails.classList.remove('fadeOut');
 		restaurantDetails.classList.add('fadeInDown');
-		
 
 		// hides from the dom after animation is over
 		setTimeout(function(){
@@ -76,7 +90,9 @@ class RestaurantList extends Component {
 		        <span>{restaurant.price}</span>
 		        <a href="#" className="btn btn-primary restaurantOpen"
 				onClick={() => {this.props.selectRestaurant(restaurant); this.listHide();}}
-		        >Learn More</a>
+		        >
+		        Learn More
+		        </a>
 		    </div>
 			</article>
 			);
@@ -90,6 +106,11 @@ class RestaurantList extends Component {
 		//DONT FORGET TO RETURN HERE, JUST SPENT AN HOUR DEBUGGING THIS AREA
 		return (
 			<section className="restaurantList animated fadeInUp">
+			<div className="col-md-12 mainTitle restaurantDetails">
+            <h1 className="h1-responsive">Select a restaurant
+                <small className="text-muted"> to get started</small>
+            </h1>
+        	</div>
 				{this.renderList()}
 			</section>
 		);
