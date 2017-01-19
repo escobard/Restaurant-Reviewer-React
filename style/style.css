@@ -87,3 +87,6 @@ main.container {
 .restaurantTitle {
     padding: 0 !important;
 }
+.restaurantDetails h1 span {
+    text-transform: capitalize;
+}
