@@ -38,7 +38,16 @@ class RestaurantList extends Component {
 		this.onInputChange = this.onInputChange.bind(this);
 	}
 	// handles the search bar setting of state
-	onInputChange(event){
+	searchInputChange(event){
+
+		// creates 
+		let searchFilter = _.filter(this.props.restaurants, restaurant => restaurant.title.includes(event.target.value.toLowerCase()));
+
+		// sets the state based on filter
+		this.setState({
+			searchTerm: event.target.value,
+			currentlyDisplayed: searchFilter
+		});
 
 	}
 	// creates the function to apply the outro animation to the restaurant list when the restaurant details are expanded
