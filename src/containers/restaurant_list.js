@@ -38,6 +38,18 @@ class RestaurantList extends Component {
 		this.searchInputChange = this.searchInputChange.bind(this);
 	}
 	// handles the search bar setting of state
+	categoryFilterChange(event){
+
+		// creates 
+		let categoryFilter = _.filter(this.props.restaurants, restaurant => restaurant.category.includes(event.target.value));
+
+		// sets the state based on filter
+		this.setState({
+			currentlySelected: categoryFilter
+		});
+		console.log(this.state.currentlySelected);
+	}
+		// handles the search bar setting of state
 	searchInputChange(event){
 
 		// creates 
@@ -131,7 +143,10 @@ class RestaurantList extends Component {
 				onChange={event => this.searchInputChange(event)}
 				placeholder="Filter restaurants by title"
 			 />
-			<select id="categoryFilter">
+			<select 
+				id="categoryFilter"
+				onChange={event => this.categoryFilterChange(event)}
+			>
 				<option value="oriental">Oriental</option>
 				<option value="fast food">Fast Food</option>
 				<option value="mexican">Mexican</option>
