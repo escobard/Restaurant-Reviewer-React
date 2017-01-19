@@ -19,6 +19,8 @@ import { bindActionCreators } from 'redux';
 // imports action creators
 import selectRestaurant from '../actions/index'
 
+// imports lodash plugin
+import _ from 'lodash';
 
 // THESE CLASSES MUST HAVE A CAPITAL AT THE BEGINNING OR THE CLASS WILL NOT WORK
 class RestaurantList extends Component {
@@ -29,8 +31,8 @@ class RestaurantList extends Component {
 		this.state = {
 			// sets the search term
 			searchTerm:'',
-
-		}
+			currentlySelected: this.props.people
+		};
 
 	}
 
@@ -87,7 +89,9 @@ class RestaurantList extends Component {
 		        <span>{restaurant.price}</span>
 		        <a href="#" className="btn btn-primary restaurantOpen"
 				onClick={() => {this.props.selectRestaurant(restaurant); this.listHide();}}
-		        >Learn More</a>
+		        >
+		        Learn More
+		        </a>
 		    </div>
 			</article>
 			);
