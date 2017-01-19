@@ -92,7 +92,7 @@ class RestaurantList extends Component {
 		    <div className="view overlay hm-white-slight">
 		        <img src="http://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%287%29.jpg" className="img-fluid" alt="" />
 		        <a href="#">
-		            <div className="mask"></div>
+		            <div className="mask restaurantDetails"></div>
 		        </a>
 		    </div>
 
@@ -120,13 +120,14 @@ class RestaurantList extends Component {
 		//DONT FORGET TO RETURN HERE, JUST SPENT AN HOUR DEBUGGING THIS AREA
 		return (
 			<section className="restaurantList animated fadeInUp col-md-12">
-			<div className="col-md-12 mainTitle restaurantDetails">
-            <h1 className="h1-responsive">Select a restaurant<small className="text-muted"> to get started</small></h1>
+			<div className="col-md-12 intro card">
+            <h3 className="h3-responsive">Select a restaurant to get started</h3>
             <div className="search-bar">
 			<input 
 				value={this.state.searchTerm}
-				onChange={event => this.searchInputChange(event)} />
-				<p>Searching for : <span>{this.state.searchTerm}</span></p>
+				onChange={event => this.searchInputChange(event)}
+				placeholder="Filter restaurants by name"
+			 />
 			</div>
         	</div>
 				{this.renderList()}

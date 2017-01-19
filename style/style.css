@@ -81,16 +81,28 @@ main.container {
     margin-top: 2%;
     padding-top: 2%;
 }
-.mainTitle {
-    margin: 2% 0;
-    text-transform: none !important;
-}
+
 .restaurantTitle {
     padding: 0 !important;
 }
 .restaurantDetails h1 span {
     text-transform: capitalize;
 }
-.mainTitle h1 span{
+
+/*===========================================================
+
+    Restaurant Intro Styles
+
+===========================================================*/
+
+.intro {
+    margin: 2% 0;
     text-transform: none !important;
+    text-align: center;
+}
+.intro h1 span{
+    text-transform: none !important;
+}
+.intro h3{
+    margin: 1%;
 }
