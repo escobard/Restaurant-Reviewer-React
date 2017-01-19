@@ -1,5 +1,10 @@
 ** Changelog for Capstone project
 
+v0.5
+- prototype to add price / review data
+- prototype to fix responsive styles
+- prototype to continue updating semantics
+
 v0.4
 - added intro / exit animation and logic for restaurant list
 - added intro / exit animation and logic for restaurant details

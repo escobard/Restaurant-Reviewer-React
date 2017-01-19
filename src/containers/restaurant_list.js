@@ -25,6 +25,7 @@ class RestaurantList extends Component {
 
 	// creates the function to apply the outro animation to the restaurant list when the restaurant details are expanded
 	listHide(){
+		
 		var restaurantList = document.querySelector('.restaurantList');
 		var restaurantDetails = document.querySelector('.restaurantDetails');
 
@@ -37,7 +38,6 @@ class RestaurantList extends Component {
 		restaurantDetails.classList.remove('heightHidden');
 		restaurantDetails.classList.remove('fadeOut');
 		restaurantDetails.classList.add('fadeInDown');
-		
 
 		// hides from the dom after animation is over
 		setTimeout(function(){
@@ -90,6 +90,11 @@ class RestaurantList extends Component {
 		//DONT FORGET TO RETURN HERE, JUST SPENT AN HOUR DEBUGGING THIS AREA
 		return (
 			<section className="restaurantList animated fadeInUp">
+			<div className="col-md-12 mainTitle restaurantDetails">
+            <h1 className="h1-responsive">Select a restaurant
+                <small className="text-muted"> to get started</small>
+            </h1>
+        	</div>
 				{this.renderList()}
 			</section>
 		);
