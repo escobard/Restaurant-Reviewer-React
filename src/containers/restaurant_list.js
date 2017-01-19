@@ -35,8 +35,58 @@ class RestaurantList extends Component {
 		};
 		
 		// binds the search input
+		this.searchInputChange = this.searchInputChange.bind(this);
 	}
+	// handles the category select setting of state
+	categoryFilterChange(event){
 
+		// creates filter
+		let categoryFilter = _.filter(this.props.restaurants, restaurant => restaurant.category.includes(event.target.value));
+
+		// sets the state based on filter
+		this.setState({
+			currentlySelected: categoryFilter
+		});
+		console.log(this.state.currentlySelected);
+	}
+	// handles the category select setting of state
+	priceFilterChange(event){
+
+		// creates filter
+		let priceFilter = _.filter(this.props.restaurants, restaurant => restaurant.price.includes(event.target.value));
+
+		// sets the state based on filter
+		this.setState({
+			currentlySelected: priceFilter
+		});
+		console.log(this.state.currentlySelected);
+	}
+	// handles the category select setting of state
+	ratingFilterChange(event){
+
+		// creates filter 
+		let ratingFilter = _.filter(this.props.restaurants, restaurant => restaurant.rating.includes(event.target.value));
+
+		// sets the state based on filter
+		this.setState({
+			currentlySelected: ratingFilter
+		});
+		console.log(this.state.currentlySelected);
+	}
+	// handles the search bar setting of state
+	searchInputChange(event){
+
+		// creates 
+		let searchFilter = _.filter(this.props.restaurants, restaurant => restaurant.title.includes(event.target.value.toLowerCase()));
+
+		// sets the state based on filter
+		this.setState({
+			searchTerm: event.target.value,
+			currentlySelected: searchFilter
+		});
+		console.log(this.state.searchTerm);
+		console.log(this.state.currentlySelected);
+	}
 	// creates the function to apply the outro animation to the restaurant list when the restaurant details are expanded
 	listHide(){
 		
@@ -59,14 +109,14 @@ class RestaurantList extends Component {
 		}, 1000);
 		
 	}
-
+	
 	// this will set up the function to render our list
 	// we will be adding the list of books to our props object later
 	renderList() {
 
 		// creates the map of the books array, setting up an object for each index and calling it 'book'
-		return this.props.restaurants.map((restaurant) => {
-
+		// return this.props.restaurants.map((restaurant) => {
+		return this.state.currentlySelected.map((restaurant) => {
 			// returns our book properties within an li
 			// on this.props.selectBook, it passes the value of the book that was clicked (or in other words the individual book object)
 			// to the selectBook action reducer
@@ -78,7 +128,7 @@ class RestaurantList extends Component {
 		    <div className="view overlay hm-white-slight">
 		        <img src="http://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%287%29.jpg" className="img-fluid" alt="" />
 		        <a href="#">
-		            <div className="mask"></div>
+		            <div className="mask restaurantDetails"></div>
 		        </a>
 		    </div>
 
@@ -105,11 +155,51 @@ class RestaurantList extends Component {
 
 		//DONT FORGET TO RETURN HERE, JUST SPENT AN HOUR DEBUGGING THIS AREA
 		return (
-			<section className="restaurantList animated fadeInUp">
-			<div className="col-md-12 mainTitle restaurantDetails">
-            <h1 className="h1-responsive">Select a restaurant
-                <small className="text-muted"> to get started</small>
-            </h1>
+			<section className="restaurantList animated fadeInUp col-md-12">
+			<div className="col-md-12 intro card">
+            <h3 className="h3-responsive">Select a restaurant to get started</h3>
+            <div className="search-bar md-form col-md-12">
+			<input 
+				id="searchBar"
+				className="form-control"
+				type="text"
+				value={this.state.searchTerm}
+				onChange={event => this.searchInputChange(event)}
+				placeholder="Filter restaurants by title"
+			 />
+			<select 
+				id="categoryFilter"
+				onChange={event => this.categoryFilterChange(event)}
+			>
+				<option value="">Select a Category</option>
+				<option value="oriental">Oriental</option>
+				<option value="fast food">Fast Food</option>
+				<option value="mexican">Mexican</option>
+				<option value="indian">Indian</option>
+				<option value="greek">Greek</option>
+			</select>
+			<select 
+				id="priceFilter"
+				onChange={event => this.priceFilterChange(event)}
+			>
+				<option value="">Select a Price</option>
+				<option value="10">$10 Avarage</option>
+				<option value="15">$15 Avarage</option>
+				<option value="20">$20 Avarage</option>
+				<option value="25">$25 Avarage</option>
+				<option value="30">$30 Avarage</option>
+			</select>
+			<select 
+				id="ratingFilter"
+				onChange={event => this.ratingFilterChange(event)}
+			>
+				<option value="">Select a Rating</option>
+				<option value="2">2 stars or less</option>
+				<option value="3">3 stars or less</option>
+				<option value="4">4 stars or less</option>
+				<option value="5">5 stars or less</option>
+			</select>
+			</div>
         	</div>
 				{this.renderList()}
 			</section>

@@ -36,10 +36,12 @@ section {
 }
 nav {
 	background-color: #c3362b;
+  text-align: center;
 }
-.mainTitle {
-    margin: 2% 0;
+.navbar-brand{
+  font-size: 26px !important;
 }
+
 main.container {
     max-height: 100%;
 }
@@ -49,9 +51,10 @@ main.container {
 .heightHidden {
   height: 0;
 }
+
 /*===========================================================
 
-    Restaurant Card Styles
+    Restaurant List Styles
 
 ===========================================================*/
 
@@ -62,7 +65,9 @@ main.container {
     margin: 0.5%;
     max-width: 32.3% !important;
 }
-
+.restaurantCard .card-title span {
+    text-transform: capitalize;
+}
 /*===========================================================
 
     Restaurant Details Card Styles
@@ -79,4 +84,45 @@ main.container {
 
 .restaurantTitle {
     padding: 0 !important;
+}
+.restaurantDetails h1 span {
+    text-transform: capitalize;
+}
+
+/*===========================================================
+
+    Restaurant Intro Styles
+
+===========================================================*/
+
+.intro {
+    margin: 2% 0.5%;
+    text-transform: none !important;
+    text-align: center;
+    padding: 0 !important;
+    width: 99% !important;
+}
+.intro h1 span{
+    text-transform: none !important;
+}
+.intro h3{
+    margin: 1%;
+}
+#searchBar {padding: 0;}
+::-webkit-input-placeholder {
+    text-align: center;
+}
+#searchBar::-webkit-input-placeholder {
+    text-align: center;
+}
+#searchBar:-moz-placeholder { /* Firefox 18- */
+    text-align: center; 
+}
+
+#searchBar::-moz-placeholder {  /* Firefox 19+ */
+    text-align: center;
+}
+
+#searchBar:-ms-input-placeholder {  
+    text-align: center;  
 }
