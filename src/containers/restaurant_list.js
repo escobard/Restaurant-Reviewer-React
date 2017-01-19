@@ -178,7 +178,10 @@ class RestaurantList extends Component {
 				<option value="indian">Indian</option>
 				<option value="greek">Greek</option>
 			</select>
-			<select id="priceFilter">
+			<select 
+				id="priceFilter"
+				onChange={event => this.priceFilterChange(event)}
+			>
 				<option value="">Select a Price</option>
 				<option value="10">$10 Avarage</option>
 				<option value="15">$15 Avarage</option>
@@ -186,7 +189,10 @@ class RestaurantList extends Component {
 				<option value="25">$25 Avarage</option>
 				<option value="30">$30 Avarage</option>
 			</select>
-			<select id="ratingFilter">
+			<select 
+				id="ratingFilter"
+				onChange={event => this.ratingFilterChange(event)}
+			>
 				<option value="">Select a Rating</option>
 				<option value="2">2 stars or less</option>
 				<option value="3">3 stars or less</option>
