@@ -119,7 +119,7 @@ class RestaurantList extends Component {
 
 		//DONT FORGET TO RETURN HERE, JUST SPENT AN HOUR DEBUGGING THIS AREA
 		return (
-			<section className="restaurantList animated fadeInUp">
+			<section className="restaurantList animated fadeInUp col-md-12">
 			<div className="col-md-12 mainTitle restaurantDetails">
             <h1 className="h1-responsive">Select a restaurant<small className="text-muted"> to get started</small></h1>
             <div className="search-bar">
