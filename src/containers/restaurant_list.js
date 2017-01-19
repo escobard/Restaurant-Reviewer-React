@@ -35,7 +35,7 @@ class RestaurantList extends Component {
 		};
 		
 		// binds the search input
-		this.onInputChange = this.onInputChange.bind(this);
+		this.searchInputChange = this.searchInputChange.bind(this);
 	}
 	// handles the search bar setting of state
 	searchInputChange(event){
@@ -48,7 +48,8 @@ class RestaurantList extends Component {
 			searchTerm: event.target.value,
 			currentlyDisplayed: searchFilter
 		});
-
+		console.log(this.state.searchTerm);
+		console.log(this.state.currentlyDisplayed);
 	}
 	// creates the function to apply the outro animation to the restaurant list when the restaurant details are expanded
 	listHide(){
@@ -120,9 +121,13 @@ class RestaurantList extends Component {
 		return (
 			<section className="restaurantList animated fadeInUp">
 			<div className="col-md-12 mainTitle restaurantDetails">
-            <h1 className="h1-responsive">Select a restaurant
-                <small className="text-muted"> to get started</small>
-            </h1>
+            <h1 className="h1-responsive">Select a restaurant<small className="text-muted"> to get started</small></h1>
+            <div className="search-bar">
+			<input 
+				value={this.state.searchTerm}
+				onChange={event => this.searchInputChange(event.target.value)} />
+				<p>Searching for : <span>{this.state.searchTerm}</span></p>
+			</div>
         	</div>
 				{this.renderList()}
 			</section>
