@@ -37,7 +37,10 @@ class RestaurantList extends Component {
 		// binds the search input
 		this.onInputChange = this.onInputChange.bind(this);
 	}
-	
+	// handles the search bar setting of state
+	onInputChange(event){
+
+	}
 	// creates the function to apply the outro animation to the restaurant list when the restaurant details are expanded
 	listHide(){
 		
@@ -60,14 +63,14 @@ class RestaurantList extends Component {
 		}, 1000);
 		
 	}
-
+	
 	// this will set up the function to render our list
 	// we will be adding the list of books to our props object later
 	renderList() {
 
 		// creates the map of the books array, setting up an object for each index and calling it 'book'
-		return this.props.restaurants.map((restaurant) => {
-
+		// return this.props.restaurants.map((restaurant) => {
+		return this.state.currentlySelected.map((restaurant) => {
 			// returns our book properties within an li
 			// on this.props.selectBook, it passes the value of the book that was clicked (or in other words the individual book object)
 			// to the selectBook action reducer
