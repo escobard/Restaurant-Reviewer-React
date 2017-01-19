@@ -162,19 +162,20 @@ class RestaurantList extends Component {
 				<div className="col-md-12 intro card">
 		            <h3 className="h3-responsive">Select a restaurant to get started</h3>
 		            <div className="search-bar md-form col-md-12">
-						<label className="hidden" for="categoryFilter">Select a Category</label>
+						<label className="hidden" htmlFor="categoryFilter">Select a Category</label>
 						<input 
 							id="searchBar"
 							className="form-control"
 							type="text"
 							value={this.state.searchTerm}
 							onChange={event => this.searchInputChange(event)}
+							autofocus
 							placeholder="Filter restaurants by title"
 						 />
 					 </div>
 					<div className="form-group col-md-12">
 						<div className="col-md-4 selectFilter">
-							<label className="hidden" for="categoryFilter">Select a Category</label>
+							<label className="hidden" htmlFor="categoryFilter">Select a Category</label>
 							<select 
 								id="categoryFilter"
 								className="form-control"
@@ -189,7 +190,7 @@ class RestaurantList extends Component {
 							</select>
 						</div>
 						<div className="col-md-4 selectFilter">
-							<label className="hidden" for="priceFilter">Select a Price Range</label>
+							<label className="hidden" htmlFor="priceFilter">Select a Price Range</label>
 							<select 
 								id="priceFilter"
 								className="form-control"
@@ -204,7 +205,7 @@ class RestaurantList extends Component {
 							</select>
 						</div>
 						<div className="col-md-4 selectFilter">
-							<label className="hidden" for="ratingFilter">Select Rating Range</label>
+							<label className="hidden" htmlFor="ratingFilter">Select Rating Range</label>
 							<select 
 								id="ratingFilter"
 								className="form-control"
