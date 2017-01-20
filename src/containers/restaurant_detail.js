@@ -71,7 +71,7 @@ class RestaurantDetail extends Component {
 						</div>
 						<div className="restaurantDescription"> {this.props.restaurant.ldescription} </div>
 						<div className="detailBottom">
-							<span className="restaurantPrice">${this.props.restaurant.price} <small>avarage.</small></span>
+							<span className="restaurantPrice">${this.props.restaurant.price} <small>avarage</small></span>
 						    <a href="#" className="btn btn-primary"
 								onClick={() => this.restaurantHide()}
 						    >Return to selection</a>

@@ -36,7 +36,7 @@ section {
     display: inline-block !important;
 }
 nav {
-	background-color: #c3362b;
+  background-color: #c3362b;
   text-align: center;
 }
 .navbar-brand{
@@ -96,6 +96,7 @@ p.card-text {
      overflow: hidden;
      text-overflow: ellipsis;
      max-height: 48px;
+     margin: 0.5rem 0 1.5rem!important;
 }
 
 p.card-text::after { 
@@ -136,7 +137,14 @@ p.card-text::after {
 .restaurantDetails .restaurantDescription {
     margin: 1rem 0 2rem;
 }
-
+.restaurantDetails .restaurantPrice {
+    font-size: 22px;
+}
+.detailBottom .btn {
+    float: right;
+    border-color: #731e17;
+    background-color: #c3362b;
+}
 /*===========================================================
 
     Restaurant Intro Styles
