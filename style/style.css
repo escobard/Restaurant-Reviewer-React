@@ -116,6 +116,8 @@ p.card-text::after {
     border-top: solid 1px #ccc;
     margin-top: 2%;
     padding-top: 2%;
+    display: inline-block;
+    width: 100%;
 }
 
 .restaurantTitle {
@@ -145,6 +147,18 @@ p.card-text::after {
     float: right;
     border-color: #731e17;
     background-color: #c3362b;
+}
+.restaurantHours {
+    display: block;
+    float: left;
+    font-weight: bold;
+    font-size: 22px;
+}
+.restaurantAddress {
+    display: block;
+    float: right;
+    font-weight: bold;
+    font-size: 22px;
 }
 /*===========================================================
 
