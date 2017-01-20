@@ -22,6 +22,9 @@ import selectRestaurant from '../actions/index'
 // imports lodash plugin
 import _ from 'lodash';
 
+// imports star rating component
+import StarRating from '../components/star_rating_component'
+
 // THESE CLASSES MUST HAVE A CAPITAL AT THE BEGINNING OR THE CLASS WILL NOT WORK
 class RestaurantList extends Component {
 	// sets up the state handler for which books to display
@@ -136,7 +139,7 @@ class RestaurantList extends Component {
 				<h4 className="card-title">{restaurant.title}
 				<br/>
 				<small> {restaurant.category}</small></h4>
-				<span> {restaurant.rating} </span>
+				<StarRating value={restaurant.rating}/>
 		        <p className="card-text">{restaurant.description}</p>
 		        <div className="bottom">
 		        	<span className="restaurantPrice">${restaurant.price} <small>avarage</small></span>

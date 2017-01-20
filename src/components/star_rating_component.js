@@ -11,7 +11,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import StarRatingComponent from 'react-star-rating-component';
 
-export default class starRating extends Component {
+export default class StarRating extends Component {
     render() {
         const { rating } = this.state;
         return (                
