@@ -75,6 +75,7 @@ class RestaurantDetail extends Component {
 						</div>
 
 						<div className="restaurantDescription"> {this.props.restaurant.ldescription} </div>
+						<div className="restaurantDescription"> {this.props.restaurant.comments.description} </div>
 
 						<div className="detailBottom first">
 
