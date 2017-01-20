@@ -124,7 +124,7 @@ class RestaurantList extends Component {
 			// returns our book properties within an li
 			// on this.props.selectBook, it passes the value of the book that was clicked (or in other words the individual book object)
 			// to the selectBook action reducer
-			const rating = restaurant.rating;
+			const rating = parseInt(restaurant.rating);
 			return (
 			<article className="restaurantCard card col-md-4"
 				key={restaurant.title} 
