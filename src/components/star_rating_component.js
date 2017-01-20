@@ -11,19 +11,16 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import StarRatingComponent from 'react-star-rating-component';
 
-export default class StarRating extends Component {
-    render() {
-        const { rating } = this.state;
-        return (                
+export default (props) => {
+        return ( 
+
             <div>
-                <h2>Rating from state: {rating}</h2>
                 <StarRatingComponent 
-                    name="starRating" 
-                    editing={false}
-                    starCount={5}
+                    name={props.name}
+                    editing={props.editing}
+                    starCount={props.starcount}
                     value={props.value}
                 />
             </div>
         );
-    }
 }

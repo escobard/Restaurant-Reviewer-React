@@ -23,7 +23,8 @@ import selectRestaurant from '../actions/index'
 import _ from 'lodash';
 
 // imports star rating component
-import StarRating from '../components/star_rating_component'
+import StarRating from '../components/star_rating_component';
+
 
 // THESE CLASSES MUST HAVE A CAPITAL AT THE BEGINNING OR THE CLASS WILL NOT WORK
 class RestaurantList extends Component {
@@ -123,6 +124,7 @@ class RestaurantList extends Component {
 			// returns our book properties within an li
 			// on this.props.selectBook, it passes the value of the book that was clicked (or in other words the individual book object)
 			// to the selectBook action reducer
+			
 			return (
 			<article className="restaurantCard card col-md-4"
 				key={restaurant.title} 
@@ -139,7 +141,8 @@ class RestaurantList extends Component {
 				<h4 className="card-title">{restaurant.title}
 				<br/>
 				<small> {restaurant.category}</small></h4>
-				<StarRating value={restaurant.rating}/>
+				<StarRating name={"test"} editing={false} starcount={5} value={4}/>
+				<span> {restaurant.rating} </span>
 		        <p className="card-text">{restaurant.description}</p>
 		        <div className="bottom">
 		        	<span className="restaurantPrice">${restaurant.price} <small>avarage</small></span>
