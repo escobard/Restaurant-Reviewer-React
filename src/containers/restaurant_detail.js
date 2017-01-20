@@ -65,7 +65,9 @@ class RestaurantDetail extends Component {
             		</div>
             		<div className="detailContainer">
 						<img src={this.props.restaurant.image} />
-						<StarRatingWidget rating={rating}/>
+						<div className="starRating">
+							<StarRatingWidget rating={rating}/>
+						</div>
 						<span> {this.props.restaurant.ldescription} </span>
 						<div className="detailBottom">
 							<span> {this.props.restaurant.price} </span>
