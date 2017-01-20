@@ -122,7 +122,17 @@ p.card-text::after {
 .restaurantDetails h1 span {
     text-transform: capitalize;
 }
+.restaurantDetails h1 {
+    text-align: center;
+    margin: 1rem 0;
+}
 
+.restaurantDetails .card-block {
+    padding-top: 0;
+}
+.starRating {
+    text-align: center;
+}
 /*===========================================================
 
     Restaurant Intro Styles

@@ -4,7 +4,7 @@ v0.6
 - cleaned up style for responsive dimensions
 - styles for pricing / ratings fixed
 - styles for search bar and filters implemented
-- prototype to add rating stars API
+- added star rating API
 
 v0.5
 - added price / rating data into the restaurants reducer
