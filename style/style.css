@@ -133,6 +133,10 @@ p.card-text::after {
 .starRating {
     text-align: center;
 }
+.restaurantDetails .restaurantDescription {
+    margin: 1rem 0 2rem;
+}
+
 /*===========================================================
 
     Restaurant Intro Styles

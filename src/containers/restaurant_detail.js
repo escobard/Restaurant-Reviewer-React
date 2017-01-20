@@ -22,6 +22,7 @@ class RestaurantDetail extends Component {
 
 		var restaurantDetails = document.querySelector('.restaurantDetails');
 		var restaurantList = document.querySelector('.restaurantList');
+
 		restaurantDetails.classList.remove('fadeInDown');
 		restaurantDetails.classList.add('fadeOut');
 		restaurantDetails.classList.add('heightHidden');
@@ -68,9 +69,9 @@ class RestaurantDetail extends Component {
 						<div className="starRating">
 							<StarRatingWidget rating={rating}/>
 						</div>
-						<span> {this.props.restaurant.ldescription} </span>
+						<div className="restaurantDescription"> {this.props.restaurant.ldescription} </div>
 						<div className="detailBottom">
-							<span> {this.props.restaurant.price} </span>
+							<span className="restaurantPrice">${this.props.restaurant.price} <small>avarage.</small></span>
 						    <a href="#" className="btn btn-primary"
 								onClick={() => this.restaurantHide()}
 						    >Return to selection</a>
