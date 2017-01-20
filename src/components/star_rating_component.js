@@ -12,10 +12,7 @@ import StarRating from 'react-star-rating';
 export default class StarRatingWidget extends Component {
   render() {
     return (
-      <form action="/api" method="POST">
-        <StarRating name="airbnb-rating" caption="Rate your stay!" totalStars={5} rating={3} />
-        <button type="submit" className="btn btn-submit">Submit Rating</button>
-      </form>
+        <StarRating name="rating" totalStars={5} rating={3} size={35}/>
     );
   }
 }
