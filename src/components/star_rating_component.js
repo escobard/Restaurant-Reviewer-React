@@ -12,7 +12,7 @@ import StarRating from 'react-star-rating';
 export default class StarRatingWidget extends Component {
   render() {
     return (
-        <StarRating name="rating" totalStars={5} rating={3} size={35}/>
+        <StarRating name="rating" totalStars={5} rating={this.props.rating} size={35}/>
     );
   }
 }
