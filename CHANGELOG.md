@@ -1,5 +1,10 @@
 ** Changelog for Capstone project
 
+v0.7
+- prototype to style restaurant details
+- prototype to add comment form, and reducers
+- prototype to keep revising semantics
+
 v0.6
 - cleaned up style for responsive dimensions
 - styles for pricing / ratings fixed
