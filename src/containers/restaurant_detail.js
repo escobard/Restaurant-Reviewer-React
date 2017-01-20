@@ -12,6 +12,9 @@ import React, { Component } from 'react';
 // since this component is a container, the connect function must be included
 import { connect } from 'react-redux';
 
+// imports star rating component
+import StarRatingWidget from '../components/star_rating_component';
+
 class RestaurantDetail extends Component {
 
 	// creates the function to apply the outro animation to the restaurant list when the restaurant details are expanded
@@ -34,13 +37,8 @@ class RestaurantDetail extends Component {
 
 	}
 
-    // in short this returns the details of the activeBook
 	render(){
 
-		// since the state of our book is currently NULL, react throws an error which breaks the app because it expects
-		// the inital state to not be null. this happens because we have not yet selected a book to generate that state
-		// to fix this, we need to create a statement which catches the error, and does something instead if state=null
-		// this is one workaround
 		if (!this.props.restaurant){
 			return (
 			
@@ -48,6 +46,8 @@ class RestaurantDetail extends Component {
 
 			);
 		}
+		
+		const rating = parseInt(this.props.restaurant.rating);
 
 		return (
 		<div className="col-md-12 restaurantDetails animated fadeInDown">
@@ -65,7 +65,7 @@ class RestaurantDetail extends Component {
             		</div>
             		<div className="detailContainer">
 						<img src={this.props.restaurant.image} />
-						<span> {this.props.restaurant.rating} </span>
+						<StarRatingWidget rating={rating}/>
 						<span> {this.props.restaurant.ldescription} </span>
 						<div className="detailBottom">
 							<span> {this.props.restaurant.price} </span>
