@@ -23,7 +23,7 @@ import selectRestaurant from '../actions/index'
 import _ from 'lodash';
 
 // imports star rating component
-import StarRating from '../components/star_rating_component';
+import StarRatingWidget from '../components/star_rating_component';
 
 
 // THESE CLASSES MUST HAVE A CAPITAL AT THE BEGINNING OR THE CLASS WILL NOT WORK
@@ -141,7 +141,7 @@ class RestaurantList extends Component {
 				<h4 className="card-title">{restaurant.title}
 				<br/>
 				<small> {restaurant.category}</small></h4>
-				<StarRating name={"test"} editing={false} starcount={5} value={4}/>
+				<StarRatingWidget />
 				<span> {restaurant.rating} </span>
 		        <p className="card-text">{restaurant.description}</p>
 		        <div className="bottom">

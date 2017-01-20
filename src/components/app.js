@@ -5,8 +5,7 @@
 // =============================================================
 
 // imported two different functions from the same library, here's how:
-import React from 'react';
-import { Component } from 'react';
+import React, { Component } from 'react';
 
 // imports our booklist
 import RestaurantList from '../containers/restaurant_list';
