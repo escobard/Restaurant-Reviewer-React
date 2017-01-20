@@ -141,7 +141,7 @@ p.card-text::after {
     margin: 1rem 0 2rem;
 }
 .restaurantDetails .restaurantPrice {
-    font-size: 22px;
+    font-size: 20px;
 }
 .detailBottom .btn {
     float: right;
@@ -152,13 +152,13 @@ p.card-text::after {
     display: block;
     float: left;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 20px;
 }
 .restaurantAddress {
     display: block;
     float: right;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 20px;
 }
 /*===========================================================
 
