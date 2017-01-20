@@ -1,8 +1,9 @@
 ** Changelog for Capstone project
 
 v0.7
-- prototype to style restaurant details
-- prototype to add comment form, and reducers
+- styled restaurant details
+- prototype to add address / hour information
+- prototype to add comments and reducer data
 - prototype to keep revising semantics
 
 v0.6
