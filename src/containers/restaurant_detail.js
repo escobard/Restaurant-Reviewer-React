@@ -36,7 +36,15 @@ class RestaurantDetail extends Component {
 		restaurantList.classList.add('fadeInUp');
 
 	}
+	renderComments(){
+		return this.props.restaurant.reviews.map((reviews) => {
+			return (
+				
+				<span key={reviews.name}>{reviews.comments}</span>
 
+			);
+		})
+	}
 	render(){
 
 		if (!this.props.restaurant){
@@ -48,7 +56,7 @@ class RestaurantDetail extends Component {
 		}
 		
 		const rating = parseInt(this.props.restaurant.rating);
-
+		console.log("reviews" + this.props.restaurant.reviews);
 		return (
 		<div className="col-md-12 restaurantDetails animated fadeInDown">
 			
@@ -75,8 +83,7 @@ class RestaurantDetail extends Component {
 						</div>
 
 						<div className="restaurantDescription"> {this.props.restaurant.ldescription} </div>
-						<div className="restaurantDescription"> {this.props.restaurant.comments.description} </div>
-
+						<div className="restaurantDescription"> {this.renderComments()} </div>
 						<div className="detailBottom first">
 
 							<span className="restaurantHours">Hours of operation: <small>{this.props.restaurant.hours}</small></span>
