@@ -218,10 +218,8 @@ select:hover {
     border-top: solid 1px;
     padding: 1rem 0 0;
     display: inline-block;
-    width: 100%;
 }
-.restaurantReview span {
-    width: 50%;
+.reviewItem {
     float: left;
     display: block;
 }

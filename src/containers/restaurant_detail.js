@@ -40,11 +40,10 @@ class RestaurantDetail extends Component {
 		return this.props.restaurant.reviews.map((reviews) => {
 		const rating = parseInt(reviews.rating);			
 			return (
-				<div className="restaurantReview" key={reviews.name}>
-					<span className="name">Name: <small>{reviews.name}</small></span>
-					<span className="date">Date: <small>{reviews.date}</small></span>
-					<StarRatingWidget className="rating" rating={rating} />	
-					<span className="comment">{reviews.comments}</span>
+				<div className="restaurantReview col-md-12" key={reviews.name}>
+					<span className="reviewItem date col-md-6">Date: <small>{reviews.date}</small></span>
+					<StarRatingWidget className="reviewItem rating col-md-6" rating={rating} />	
+					<span className="reviewItem comment col-md-12">"{reviews.comments}" - {reviews.name}</span>
 				</div>
 			);
 		})
