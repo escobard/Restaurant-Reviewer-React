@@ -3,8 +3,8 @@
 v0.7
 - styled restaurant details
 - added and displayed hour / address information
-- prototype to add comments and reducer data
-- prototype to keep revising semantics
+- added restaurant review data, ready to create render components
+- revised restaurant detail semantics
 
 v0.6
 - cleaned up style for responsive dimensions
