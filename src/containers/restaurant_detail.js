@@ -41,10 +41,10 @@ class RestaurantDetail extends Component {
 		const rating = parseInt(reviews.rating);			
 			return (
 				<div className="restaurantReview" key={reviews.name}>
-					<span>{reviews.name}</span>
-					<span>{reviews.date}</span>
-					<StarRatingWidget rating={rating} />	
-					<span>{reviews.comments}</span>
+					<span className="name">Name: <small>{reviews.name}</small></span>
+					<span className="date">Date: <small>{reviews.date}</small></span>
+					<StarRatingWidget className="rating" rating={rating} />	
+					<span className="comment">{reviews.comments}</span>
 				</div>
 			);
 		})
@@ -87,7 +87,7 @@ class RestaurantDetail extends Component {
 						</div>
 
 						<div className="restaurantDescription"> {this.props.restaurant.ldescription} </div>
-						<div className="restaurantDescription"> {this.renderComments()} </div>
+						<div> {this.renderComments()} </div>
 						<div className="detailBottom first">
 
 							<span className="restaurantHours">Hours of operation: <small>{this.props.restaurant.hours}</small></span>

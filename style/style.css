@@ -217,8 +217,14 @@ select:hover {
     margin: 1rem 0;
     border-top: solid 1px;
     padding: 1rem 0 0;
+    display: inline-block;
+    width: 100%;
 }
-
+.restaurantReview span {
+    width: 50%;
+    float: left;
+    display: block;
+}
 /*===========================================================
 
     Responsive Styles
