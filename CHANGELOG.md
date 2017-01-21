@@ -3,7 +3,7 @@
 v0.8
 - prototype to add components to render reviews
 - prototype to add form container / action / reducer
-- prototype to continue updating semantics / styling
+- prototype to continue updating semantics / styling - refactor prices / addresses / other relevant info into titles for better accessibility
 
 v0.7
 - styled restaurant details.
