@@ -2,7 +2,7 @@
 
 v0.7
 - styled restaurant details
-- prototype to add address / hour information
+- added and displayed hour / address information
 - prototype to add comments and reducer data
 - prototype to keep revising semantics
 
