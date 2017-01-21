@@ -1,10 +1,15 @@
-** Changelog for Capstone project
+** Changelog for Restaurant Reviewer
+
+v0.8
+- prototype to add components to render reviews
+- prototype to add form container / action / reducer
+- prototype to continue updating semantics / styling
 
 v0.7
-- styled restaurant details
-- added and displayed hour / address information
-- added restaurant review data, ready to create render components
-- revised restaurant detail semantics
+- styled restaurant details.
+- added and displayed hour / address information.
+- added restaurant review data, ready to create render components.
+- revised restaurant detail semantics.
 
 v0.6
 - cleaned up style for responsive dimensions
