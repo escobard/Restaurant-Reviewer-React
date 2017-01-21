@@ -30,14 +30,21 @@ class RestaurantDetail extends Component {
 			restaurantDetails.classList.add('hidden');
 		}, 1000);
 		
-		
 		// handles classes for the restaurant list
 		restaurantList.classList.remove('fadeOutDown');
 		restaurantList.classList.remove('hidden');
 		restaurantList.classList.add('fadeInUp');
 
 	}
+	renderComments(){
+		return this.props.restaurant.reviews.map((reviews) => {
+			return (
+				
+				<span key={reviews.name}>{reviews.comments}</span>
 
+			);
+		})
+	}
 	render(){
 
 		if (!this.props.restaurant){
@@ -49,7 +56,7 @@ class RestaurantDetail extends Component {
 		}
 		
 		const rating = parseInt(this.props.restaurant.rating);
-
+		console.log("reviews" + this.props.restaurant.reviews);
 		return (
 		<div className="col-md-12 restaurantDetails animated fadeInDown">
 			
@@ -60,26 +67,44 @@ class RestaurantDetail extends Component {
 			    <div className="card-block">
 
 			        <div className="col-md-12 restaurantTitle">
+
                 		<h1 className="h1-responsive">{this.props.restaurant.title} 
                     		<small className="text-muted"> {this.props.restaurant.category}</small>
                 		</h1>
+
             		</div>
+
             		<div className="detailContainer">
+
 						<img src={this.props.restaurant.image} />
+
 						<div className="starRating">
 							<StarRatingWidget rating={rating}/>
 						</div>
-						<div className="restaurantDescription"> {this.props.restaurant.ldescription} </div>
-						<div className="detailBottom">
-							<span className="restaurantPrice">${this.props.restaurant.price} <small>avarage</small></span>
-						    <a href="#" className="btn btn-primary"
-								onClick={() => this.restaurantHide()}
-						    >Return to selection</a>
-						    <a href="#" className="btn btn-primary">Leave a comment</a>
-						</div>
-					</div>
-			    </div>
 
+						<div className="restaurantDescription"> {this.props.restaurant.ldescription} </div>
+						<div className="restaurantDescription"> {this.renderComments()} </div>
+						<div className="detailBottom first">
+
+							<span className="restaurantHours">Hours of operation: <small>{this.props.restaurant.hours}</small></span>
+
+							<span className="restaurantAddress">Address: <small>{this.props.restaurant.address}</small></span>
+
+						</div>
+
+						<div className="detailBottom">
+
+							<span className="restaurantPrice">${this.props.restaurant.price} <small>avarage</small></span>
+
+						    <a href="#" className="btn btn-primary" onClick={() => this.restaurantHide()}>Return to selection</a>
+
+						    <a href="#" className="btn btn-primary">Leave a comment</a>
+
+						</div>
+
+					</div>
+
+			    </div>
 
 			</article>
 

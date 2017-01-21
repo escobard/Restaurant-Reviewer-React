@@ -1,9 +1,10 @@
 ** Changelog for Capstone project
 
 v0.7
-- prototype to style restaurant details
-- prototype to add comment form, and reducers
-- prototype to keep revising semantics
+- styled restaurant details
+- added and displayed hour / address information
+- added restaurant review data, ready to create render components
+- revised restaurant detail semantics
 
 v0.6
 - cleaned up style for responsive dimensions
