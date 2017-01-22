@@ -15,10 +15,10 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 // imports action creators
-import postReview from '../actions/select_restaurant'
+import postReview from '../actions/post_review'
 
 // THESE CLASSES MUST HAVE A CAPITAL AT THE BEGINNING OR THE CLASS WILL NOT WORK
-class RestaurantList extends Component {
+class PostReview extends Component {
 	// sets up the state handler for which books to display
 	constructor(props){
 		super(props);
@@ -26,14 +26,17 @@ class RestaurantList extends Component {
 		this.state = {
 
 			// sets the post data
-			postData: {}
+			postData: {
+				name: ''
+			}
 		};
 		
 		// binds the search input
 		this.searchInputChange = this.searchInputChange.bind(this);
 	}
 	// handles the search bar setting of state
-	searchInputChange(event){
+	postComment(event){
+		console.log(event);
 
 	}
 	// creates the function to apply the outro animation to the restaurant list when the restaurant details are expanded
@@ -41,37 +44,16 @@ class RestaurantList extends Component {
 		
 	}
 
-
-	// this sets up the component for our booklist's HTML
 	render() {
-
-		//DONT FORGET TO RETURN HERE, JUST SPENT AN HOUR DEBUGGING THIS AREA
 		return (
+			<section>
+				<form action={event => this.postComment(event)}>
+					<input type="text" value={this.state.postData.name} placeholder="type anything"></input>
+					<input type="submit"></input>
+				</form>
+			</section>
 		);
 	}
-
-};
-
-// exactly how it sounds, it maps the state into the props method
-// whatever returns, will show up as this.props inside of BookList
-// this is a built in function of React
-function mapStateToProps(state) {
-	
-	// for example, this will add asdf to props, making it callable by using this.props.asdf
-	/* return {
-	asdf: '123'
-	};
-	*/
-
-	// this defines the state of this component
-	return {
-		// this is the KEY or what we want to call what is attached to this component's .props
-		restaurants: 
-		// this is the actual DATA of the KEY books within reducers.js, which contains the JSON info
-		// within reducer_books.js
-		state.restaurants
-
-	};
 
 };
 
@@ -85,10 +67,10 @@ function mapDispatchToProps(dispatch) {
 
 		// this is the KEY the function selectBook is bound to
 		// thanks to this key, the property from the action creator gets passed on to this.book
-		selectRestaurant: 
+		postReview: 
 
 		// this is the actual selectBook function
-		selectRestaurant },
+		postReview },
 
 		// this is the argument
 		// 
@@ -106,4 +88,4 @@ function mapDispatchToProps(dispatch) {
 // 
 // essentially this promotes BookList from a component to a container - react needs to know 
 // about this new component selection method, selectBook.
-export default connect(mapStateToProps, mapDispatchToProps) (RestaurantList);
+export default connect(null, mapDispatchToProps) (PostReview);
