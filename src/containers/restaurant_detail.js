@@ -36,14 +36,32 @@ class RestaurantDetail extends Component {
 		restaurantList.classList.add('fadeInUp');
 
 	}
+	// ADD THE IMAGE FUNCTION HERE, DEPENDING ON REVIEWER SEX
+	renderReviewImage(reviewImage){
+		switch(expression) {
+		    case n:
+		        code block
+		        break;
+		    case n:
+		        code block
+		        break;
+		    default:
+		        default code block
+		}
+	}	
 	renderComments(){
 		return this.props.restaurant.reviews.map((reviews) => {
+
 		const rating = parseInt(reviews.rating);			
 			return (
 				<div className="restaurantReview col-md-12" key={reviews.name}>
+					<div className="profileContainer">
+						<img src="" alt=""/>
+						<span>{reviews.name}</span>
+					</div>
 					<span className="reviewItem date col-md-6">Date: <small>{reviews.date}</small></span>
 					<StarRatingWidget className="reviewItem rating col-md-6" rating={rating} />	
-					<span className="reviewItem comment col-md-12">"{reviews.comments}" - {reviews.name}</span>
+					<span className="reviewItem comment col-md-12">"{reviews.comments}"</span>
 				</div>
 			);
 		})
