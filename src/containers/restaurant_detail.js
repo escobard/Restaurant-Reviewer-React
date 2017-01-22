@@ -15,6 +15,10 @@ import { connect } from 'react-redux';
 // imports star rating component
 import StarRatingWidget from '../components/star_rating_component';
 
+// imports review component
+import Reviews from '../components/reviews';
+
+
 class RestaurantDetail extends Component {
 
 	// creates the function to apply the outro animation to the restaurant list when the restaurant details are expanded
@@ -36,12 +40,14 @@ class RestaurantDetail extends Component {
 		restaurantList.classList.add('fadeInUp');
 
 	}
+
 	renderComments(){
 		return this.props.restaurant.reviews.map((reviews) => {
+		const rating = parseInt(reviews.rating);			
 			return (
-				
-				<span key={reviews.name}>{reviews.comments}</span>
-
+			<section className="col-md-12" key={reviews.name}>
+				<Reviews image={reviews.image} name={reviews.name} date={reviews.date} rating={rating} comment={reviews.comments} />
+			</section>
 			);
 		})
 	}
@@ -56,7 +62,6 @@ class RestaurantDetail extends Component {
 		}
 		
 		const rating = parseInt(this.props.restaurant.rating);
-		console.log("reviews" + this.props.restaurant.reviews);
 		return (
 		<div className="col-md-12 restaurantDetails animated fadeInDown">
 			
@@ -83,7 +88,10 @@ class RestaurantDetail extends Component {
 						</div>
 
 						<div className="restaurantDescription"> {this.props.restaurant.ldescription} </div>
-						<div className="restaurantDescription"> {this.renderComments()} </div>
+						<div className="reviewContainer"> 
+							<h2>Reviews</h2>
+							{this.renderComments()} 
+						</div>
 						<div className="detailBottom first">
 
 							<span className="restaurantHours">Hours of operation: <small>{this.props.restaurant.hours}</small></span>

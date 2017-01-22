@@ -207,7 +207,45 @@ select:hover {
 .selectFilter {
     float: left;
 }
+/*===========================================================
 
+    Reviews Styles
+
+===========================================================*/
+
+.restaurantReview {
+    margin: 1rem 0 0;
+    padding: 2rem 0 0;
+    display: inline-block;
+    border-top: solid 1px #ccc;
+}
+.userDetails {
+    display: block;
+    float: left;
+    text-align: center;
+}
+.userDetails img{
+    width: 100px;
+    float: none;
+    margin: auto;
+}
+.userDetails span {
+    width: 100%;
+    display: block;
+}
+.reviewDetails {
+    float: left;
+    display: block;
+}
+.reviewContainer h2 {
+    text-align: center;
+}
+
+.reviewContainer {
+    margin-top: 1rem;
+    border-top: solid 1px #ccc;
+    padding-top: 1rem;
+}
 /*===========================================================
 
     Responsive Styles
