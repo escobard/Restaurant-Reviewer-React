@@ -26,18 +26,19 @@ class PostReview extends Component {
 		this.state = {
 
 			// sets the post data
-			postData: {
-				name: ''
-			}
+			postData: ''
 		};
 		
 		// binds the search input
-		this.searchInputChange = this.searchInputChange.bind(this);
+		this.postComment = this.postComment.bind(this);
 	}
 	// handles the search bar setting of state
 	postComment(event){
-		console.log(event);
 
+		this.setState({
+			postData: event.target.value,
+		});
+		console.log(this.state.postData);
 	}
 	// creates the function to apply the outro animation to the restaurant list when the restaurant details are expanded
 	listHide(){
@@ -47,8 +48,9 @@ class PostReview extends Component {
 	render() {
 		return (
 			<section>
-				<form action={event => this.postComment(event)}>
-					<input type="text" value={this.state.postData.name} placeholder="type anything"></input>
+				<form>
+					<input type="text" 							value={this.state.postData}
+							onChange={event => this.postComment(event)} placeholder="type anything"></input>
 					<input type="submit"></input>
 				</form>
 			</section>

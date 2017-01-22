@@ -18,6 +18,9 @@ import StarRatingWidget from '../components/star_rating_component';
 // imports review component
 import Reviews from '../components/reviews';
 
+// imports post container
+import PostReview from './restaurant_post_review';
+
 
 class RestaurantDetail extends Component {
 
@@ -91,6 +94,7 @@ class RestaurantDetail extends Component {
 						<div className="reviewContainer"> 
 							<h2>Reviews</h2>
 							{this.renderComments()} 
+							<PostReview />
 						</div>
 						<div className="detailBottom first">
 
