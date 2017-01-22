@@ -59,13 +59,15 @@ class RestaurantDetail extends Component {
 		const rating = parseInt(reviews.rating);			
 			return (
 				<div className="restaurantReview col-md-12" key={reviews.name}>
-					<div className="profileContainer">
+					<div className="profileContainer col-md-4">
 						{this.renderReviewImage(reviews.image)}
 						<span>{reviews.name}</span>
+						<span className="reviewItem date">{reviews.date}</span>
+
 					</div>
-					<span className="reviewItem date col-md-6">Date: <small>{reviews.date}</small></span>
-					<StarRatingWidget className="reviewItem rating col-md-6" rating={rating} />	
-					<span className="reviewItem comment col-md-12">"{reviews.comments}"</span>
+					
+					<StarRatingWidget className="reviewItem rating col-md-8" rating={rating} />	
+					<span className="reviewItem comment col-md-8">"{reviews.comments}"</span>
 				</div>
 			);
 		})
