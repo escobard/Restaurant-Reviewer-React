@@ -29,4 +29,4 @@ function postReview(review){
 };
 
 // this needs to be attached over to book_list.js and the rest of the app, so we export
-export default selectRestaurant;
+export default postReview;
