@@ -38,15 +38,19 @@ class RestaurantDetail extends Component {
 	}
 	// ADD THE IMAGE FUNCTION HERE, DEPENDING ON REVIEWER SEX
 	renderReviewImage(reviewImage){
-		switch(expression) {
-		    case n:
-		        code block
-		        break;
-		    case n:
-		        code block
-		        break;
+		switch(reviewImage) {
+		    case (reviewImage == "male"):
+		        return (
+		        	<img src="../../img/user-male.png" alt="male profile picture"/>
+		        );
+		    case (reviewImage == "female"):
+		    	return (
+		        <img src="../../img/user-female.png" alt="female profile picture"/>
+		        );
 		    default:
-		        default code block
+		        return (
+		        	<img src="../../img/user-male.png" alt="male profile picture"/>
+		        );
 		}
 	}	
 	renderComments(){
@@ -56,7 +60,7 @@ class RestaurantDetail extends Component {
 			return (
 				<div className="restaurantReview col-md-12" key={reviews.name}>
 					<div className="profileContainer">
-						<img src="" alt=""/>
+						{this.renderReviewImage(reviews.image)}
 						<span>{reviews.name}</span>
 					</div>
 					<span className="reviewItem date col-md-6">Date: <small>{reviews.date}</small></span>
