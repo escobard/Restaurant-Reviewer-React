@@ -38,36 +38,38 @@ class RestaurantDetail extends Component {
 	}
 	// ADD THE IMAGE FUNCTION HERE, DEPENDING ON REVIEWER SEX
 	renderReviewImage(reviewImage){
-		switch(reviewImage) {
-		    case (reviewImage == "male"):
+		    if (reviewImage === "male"){
 		        return (
 		        	<img src="../../img/user-male.png" alt="male profile picture"/>
 		        );
-		    case (reviewImage == "female"):
+		    }
+		    else if (reviewImage === "female"){
 		    	return (
 		        <img src="../../img/user-female.png" alt="female profile picture"/>
 		        );
-		    default:
+		    }
+			else {
 		        return (
 		        	<img src="../../img/user-male.png" alt="male profile picture"/>
 		        );
-		}
+		    }
 	}	
 	renderComments(){
 		return this.props.restaurant.reviews.map((reviews) => {
-
 		const rating = parseInt(reviews.rating);			
 			return (
 				<div className="restaurantReview col-md-12" key={reviews.name}>
-					<div className="profileContainer col-md-4">
+					<div className="userDetails col-md-4">
 						{this.renderReviewImage(reviews.image)}
 						<span>{reviews.name}</span>
-						<span className="reviewItem date">{reviews.date}</span>
+						<span>{reviews.date}</span>
 
 					</div>
+					<div className="reviewDetails col-md-8">
+						<div className="starContainer col-md-12"><StarRatingWidget rating={rating} /></div>	
+						<span className="col-md-12">"{reviews.comments}"</span>
+					</div>
 					
-					<StarRatingWidget className="reviewItem rating col-md-8" rating={rating} />	
-					<span className="reviewItem comment col-md-8">"{reviews.comments}"</span>
 				</div>
 			);
 		})
@@ -110,7 +112,10 @@ class RestaurantDetail extends Component {
 						</div>
 
 						<div className="restaurantDescription"> {this.props.restaurant.ldescription} </div>
-						<div> {this.renderComments()} </div>
+						<div className="reviewContainer"> 
+							<h2>Reviews</h2>
+							{this.renderComments()} 
+						</div>
 						<div className="detailBottom first">
 
 							<span className="restaurantHours">Hours of operation: <small>{this.props.restaurant.hours}</small></span>
