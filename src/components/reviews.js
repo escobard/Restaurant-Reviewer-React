@@ -6,7 +6,13 @@
 
 import React, { Component } from 'react';
 
+// imports star rating component
+import StarRatingWidget from './star_rating_component';
+
 export default class Reviews extends Component {
+	constructor(props){
+		super(props);
+	}
   	// adds review image based on user gender
 	renderReviewImage(reviewImage){
 		    if (reviewImage === "male"){
@@ -28,16 +34,15 @@ export default class Reviews extends Component {
 
   render() {
     return (
-    	<div className="restaurantReview col-md-12" key={reviews.name}>
+    	<div className="restaurantReview col-md-12">
 					<div className="userDetails col-md-4">
-						{this.renderReviewImage(reviews.image)}
-						<span>{reviews.name}</span>
-						<span>{reviews.date}</span>
-
+						{this.renderReviewImage(this.props.image)}
+						<span>{this.props.name}</span>
+						<span>{this.props.date}</span>
 					</div>
 					<div className="reviewDetails col-md-8">
-						<div className="starContainer col-md-12"><StarRatingWidget rating={rating} /></div>	
-						<span className="col-md-12">"{reviews.comments}"</span>
+						<div className="starContainer col-md-12"><StarRatingWidget rating={this.props.rating} /></div>	
+						<span className="col-md-12">"{this.props.comment}"</span>
 					</div>
 					
 		</div>

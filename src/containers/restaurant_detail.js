@@ -15,6 +15,10 @@ import { connect } from 'react-redux';
 // imports star rating component
 import StarRatingWidget from '../components/star_rating_component';
 
+// imports review component
+import Reviews from '../components/reviews';
+
+
 class RestaurantDetail extends Component {
 
 	// creates the function to apply the outro animation to the restaurant list when the restaurant details are expanded
@@ -36,41 +40,14 @@ class RestaurantDetail extends Component {
 		restaurantList.classList.add('fadeInUp');
 
 	}
-	// ADD THE IMAGE FUNCTION HERE, DEPENDING ON REVIEWER SEX
-	renderReviewImage(reviewImage){
-		    if (reviewImage === "male"){
-		        return (
-		        	<img src="../../img/user-male.png" alt="male profile picture"/>
-		        );
-		    }
-		    else if (reviewImage === "female"){
-		    	return (
-		        <img src="../../img/user-female.png" alt="female profile picture"/>
-		        );
-		    }
-			else {
-		        return (
-		        	<img src="../../img/user-male.png" alt="male profile picture"/>
-		        );
-		    }
-	}	
+
 	renderComments(){
 		return this.props.restaurant.reviews.map((reviews) => {
 		const rating = parseInt(reviews.rating);			
 			return (
-				<div className="restaurantReview col-md-12" key={reviews.name}>
-					<div className="userDetails col-md-4">
-						{this.renderReviewImage(reviews.image)}
-						<span>{reviews.name}</span>
-						<span>{reviews.date}</span>
-
-					</div>
-					<div className="reviewDetails col-md-8">
-						<div className="starContainer col-md-12"><StarRatingWidget rating={rating} /></div>	
-						<span className="col-md-12">"{reviews.comments}"</span>
-					</div>
-					
-				</div>
+			<article key={reviews.name}>
+				<Reviews image={reviews.image} name={reviews.name} date={reviews.date} rating={rating} comment={reviews.comments} />
+			</article>
 			);
 		})
 	}
@@ -85,7 +62,6 @@ class RestaurantDetail extends Component {
 		}
 		
 		const rating = parseInt(this.props.restaurant.rating);
-		console.log("reviews" + this.props.restaurant.reviews);
 		return (
 		<div className="col-md-12 restaurantDetails animated fadeInDown">
 			
