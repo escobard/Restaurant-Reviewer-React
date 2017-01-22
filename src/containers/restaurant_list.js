@@ -17,7 +17,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 // imports action creators
-import selectRestaurant from '../actions/index'
+import selectRestaurant from '../actions/select_restaurant'
 
 // imports lodash plugin
 import _ from 'lodash';

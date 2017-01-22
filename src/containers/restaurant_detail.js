@@ -45,9 +45,9 @@ class RestaurantDetail extends Component {
 		return this.props.restaurant.reviews.map((reviews) => {
 		const rating = parseInt(reviews.rating);			
 			return (
-			<article key={reviews.name}>
+			<section className="col-md-12" key={reviews.name}>
 				<Reviews image={reviews.image} name={reviews.name} date={reviews.date} rating={rating} comment={reviews.comments} />
-			</article>
+			</section>
 			);
 		})
 	}

@@ -1,7 +1,7 @@
 ** Changelog for Restaurant Reviewer
 
 v0.8
-- prototype to add components to render reviews
+- added and styled reviews, refactored into their own component
 - prototype to add form container / action / reducer
 - prototype to continue updating semantics / styling - refactor prices / addresses / other relevant info into titles for better accessibility
 
