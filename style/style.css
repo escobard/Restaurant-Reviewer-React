@@ -214,9 +214,10 @@ select:hover {
 ===========================================================*/
 
 .restaurantReview {
-    margin: 1rem 0;
-    padding: 1rem 0 0;
+    margin: 1rem 0 0;
+    padding: 2rem 0 0;
     display: inline-block;
+    border-top: solid 1px #ccc;
 }
 .userDetails {
     display: block;
@@ -235,6 +236,15 @@ select:hover {
 .reviewDetails {
     float: left;
     display: block;
+}
+.reviewContainer h2 {
+    text-align: center;
+}
+
+.reviewContainer {
+    margin-top: 1rem;
+    border-top: solid 1px #ccc;
+    padding-top: 1rem;
 }
 /*===========================================================
 
