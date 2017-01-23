@@ -18,6 +18,12 @@ import { bindActionCreators } from 'redux';
 import postReview from '../actions/post_review'
 
 // THESE CLASSES MUST HAVE A CAPITAL AT THE BEGINNING OR THE CLASS WILL NOT WORK
+function setState(stateBinding){
+	this.setState({
+			name: state.target.value,
+		});
+	console.log(this.state.name);
+};
 class PostReview extends Component {
 	// sets up the state handler for which books to display
 	constructor(props){
@@ -28,7 +34,9 @@ class PostReview extends Component {
 			// sets the post data
 			name: '',
 			rating: '',
+			gender: '',
 			comment: ''
+
 		};
 		
 		// binds the search input
@@ -60,7 +68,13 @@ class PostReview extends Component {
 		});
 		console.log(this.state.comment);
 	}
+	postGender(gender){
 
+		this.setState({
+			gender: gender.target.value
+		});
+		console.log(this.state.gender);
+	}
 	// creates the function to apply the outro animation to the restaurant list when the restaurant details are expanded
 	listHide(){
 		
@@ -70,42 +84,48 @@ class PostReview extends Component {
 		event.preventDefault();
 		console.log("Current state name:" + this.state.name);
 		console.log("Current state rating:" + this.state.rating);
+		console.log("Current state rating:" + this.state.gender);
 		console.log("Current state comment:" + this.state.comment);
 		return;
 	}
 	render() {
 		return (
 			<section>
-				<form id="">
+				
+				<div className="form-group ">
+					<form id="">
 					<input type="text" onChange={name => this.postName(name)} placeholder="type anything"></input>
-					<select name="rating" onChange={rating => this.postRating(rating)}>
-						<option value="">Select a rating</option>
-						<option value="1">1 star</option>
-						<option value="2">2 star</option>
-						<option value="3">3 star</option>
-						<option value="4">4 star</option>
-						<option value="5">5 star</option>
-					</select>
-					<div className="form-group ">
 						<div className="col-md-4 ratingPicker">
-							<label className="" htmlFor="ratingPicker">Select a Category</label>
+							<label className="" htmlFor="ratingPicker">Select a Rating</label>
 							<select 
 								id="ratingPicker"
 								className="form-control"
 								onChange={rating => this.postRating(rating)}
 							>
-								<option value="">Select a Category</option>
-								<option value="oriental">Oriental</option>
-								<option value="fast food">Fast Food</option>
-								<option value="mexican">Mexican</option>
-								<option value="indian">Indian</option>
-								<option value="greek">Greek</option>
+								<option value="">Select a rating</option>
+								<option value="1">1 star</option>
+								<option value="2">2 star</option>
+								<option value="3">3 star</option>
+								<option value="4">4 star</option>
+								<option value="5">5 star</option>
+							</select>
+							<label className="" htmlFor="genderPicker">Select a Gender</label>
+							<select 
+								id="genderPicker"
+								className="form-control"
+								onChange={gender => this.postGender(gender)}
+							>
+								<option value="">Select a gender</option>
+								<option value="male">Male</option>
+								<option value="female">Female</option>
+								<option value="pntd">Prefer not to disclose</option>
 							</select>
 						</div>
-					</div>
-					<input type="textarea" onChange={comment => this.postComment(comment)} />
-					<button onClick={event => this.postReview(event)}></button>
-				</form>
+						<input type="textarea" onChange={comment => this.postComment(comment)} />
+						<button onClick={event => this.postReview(event)}></button>
+
+					</form>
+				</div>
 			</section>
 		);
 	}
