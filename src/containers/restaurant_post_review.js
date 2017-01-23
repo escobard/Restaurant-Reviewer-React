@@ -35,7 +35,7 @@ class PostReview extends Component {
 
 			// sets the post data
 			name: '',
-			rating: '',
+			rating: '2',
 			gender: '',
 			comment: '',
 			date: ''

@@ -268,7 +268,7 @@ select {
 }
 .postReview {
     border-top: solid 1px #ccc;
-    padding: 2rem 0px;
+    padding: 2rem 0px 0;
     margin: 2rem 0 0;
 }
 
