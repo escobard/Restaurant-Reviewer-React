@@ -32,6 +32,8 @@ class PostReview extends Component {
 		};
 		
 		// binds the search input
+		this.postName = this.postName.bind(this);
+		this.postReview = this.postReview.bind(this);
 		this.postComment = this.postComment.bind(this);
 	}
 	// handles the search bar setting of state
@@ -45,7 +47,7 @@ class PostReview extends Component {
 	postRating(rating){
 
 		this.setState({
-			rating: rating.target.value,
+			rating: this.state.rating,
 
 		});
 		console.log(this.state.rating);
@@ -57,17 +59,26 @@ class PostReview extends Component {
 		});
 		console.log(this.state.comment);
 	}
+
 	// creates the function to apply the outro animation to the restaurant list when the restaurant details are expanded
 	listHide(){
 		
 	}
-
+	
+	postReview(event){
+		event.preventDefault();
+		console.log("Current state name:" + this.state.name);
+		console.log("Current state rating:" + this.state.rating);
+		console.log("Current state comment:" + this.state.comment);
+		return;
+	}
 	render() {
 		return (
 			<section>
-				<form>
+				<form id="">
 					<input type="text" onChange={name => this.postName(name)} placeholder="type anything"></input>
 					<select name="rating" onChange={rating => this.postRating(rating)}>
+						<option value="">Select a rating</option>
 						<option value="1">1 star</option>
 						<option value="2">2 star</option>
 						<option value="3">3 star</option>
@@ -75,7 +86,7 @@ class PostReview extends Component {
 						<option value="5">5 star</option>
 					</select>
 					<input type="textarea" onChange={comment => this.postComment(comment)} />
-					<input type="submit"></input>
+					<button onClick={event => this.postReview(event)}></button>
 				</form>
 			</section>
 		);
