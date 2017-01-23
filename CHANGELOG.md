@@ -1,9 +1,14 @@
 ** Changelog for Restaurant Reviewer
 
+v0.9
+- prototype to add styling handlers for post review and post render.
+- prototype to finish cleaning up responsive.
+- prototype to revise semantics before submission.
+
 v0.8
 - added and styled reviews, refactored into their own component
-- prototype to add form container / action / reducer
-- prototype to continue updating semantics / styling - refactor prices / addresses / other relevant info into titles for better accessibility
+- added post review components, created render review logic
+- updated semantics on reviews
 
 v0.7
 - styled restaurant details.
