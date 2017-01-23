@@ -84,9 +84,10 @@ class PostReview extends Component {
 	}
 	renderReview(){
 		var rating = parseInt(this.state.rating);	
+		var date = new Date();
 		return (
 			<div>
-				<Reviews image={this.state.gender} name={this.state.name} date={"asdfas"} rating={rating} comment={this.state.comment} />
+				<Reviews image={this.state.gender} name={this.state.name} date={date} rating={rating} comment={this.state.comment} />
 			</div>
 		);
 	}
