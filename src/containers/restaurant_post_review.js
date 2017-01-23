@@ -15,7 +15,9 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 // imports action creators
-import postReview from '../actions/post_review'
+import postReview from '../actions/post_review';
+
+import Reviews from '../components/reviews';
 
 // THESE CLASSES MUST HAVE A CAPITAL AT THE BEGINNING OR THE CLASS WILL NOT WORK
 function setState(stateBinding){
@@ -28,6 +30,8 @@ class PostReview extends Component {
 	// sets up the state handler for which books to display
 	constructor(props){
 		super(props);
+		
+		const date = new Date();
 
 		this.state = {
 
@@ -35,7 +39,8 @@ class PostReview extends Component {
 			name: '',
 			rating: '',
 			gender: '',
-			comment: ''
+			comment: '',
+			date: date
 
 		};
 		
@@ -44,6 +49,7 @@ class PostReview extends Component {
 		this.postRating = this.postRating.bind(this);
 		this.postReview = this.postReview.bind(this);
 		this.postComment = this.postComment.bind(this);
+		this.renderReview = this.renderReview.bind(this);
 	}
 	// handles the search bar setting of state
 	postName(name){
@@ -79,58 +85,71 @@ class PostReview extends Component {
 	listHide(){
 		
 	}
-	
-	postReview(event){
+	renderReview(){
+		const rating = parseInt(this.state.rating);	
+		return (
+			
+			<Reviews image={this.state.gender} name={this.state.name} date={this.state.date} rating={rating} comment={this.state.comments} />
+
+		);
+	}
+	postReview(){
 		event.preventDefault();
 		console.log("Current state name:" + this.state.name);
 		console.log("Current state rating:" + this.state.rating);
 		console.log("Current state rating:" + this.state.gender);
 		console.log("Current state comment:" + this.state.comment);
-		return;
+		
+		this.renderReview();
 	}
 	render() {
 		return (
-			<section className="col-md-12 postReview">
-				
-				<div className="form-group">
-					<form id="">
-					
-						<div className="selectPicker">
+				<div>
+					<div className="col-md-12 reviewContainer">
+						{this.renderReview}
+					</div>
+					<section className="col-md-12 postReview">
 						
-							<label className="hidden" htmlFor="ratingPicker">Select a Rating</label>
-							<select 
-								id="ratingPicker"
-								className="form-control col-md-6 col-sm-12"
-								onChange={rating => this.postRating(rating)}
-							>
-								<option value="">Select a rating</option>
-								<option value="1">1 star</option>
-								<option value="2">2 star</option>
-								<option value="3">3 star</option>
-								<option value="4">4 star</option>
-								<option value="5">5 star</option>
-							</select>
-							<label className="hidden" htmlFor="genderPicker">Select a Gender</label>
-							<select 
-								id="genderPicker"
-								className="form-control col-md-6 col-sm-12"
-								onChange={gender => this.postGender(gender)}
-							>
-								<option value="">Select a gender</option>
-								<option value="male">Male</option>
-								<option value="female">Female</option>
-								<option value="pntd">Prefer not to disclose</option>
-							</select>
-						</div>
-						<div className="textArea">
-							<input type="text" onChange={name => this.postName(name)} placeholder="Please enter your name"></input>
-							<input type="text" onChange={comment => this.postComment(comment)} placeholder="Leave us a review!"/>
-						</div>
-						<button className="btn" onClick={event => this.postReview(event)}>Post your review</button>
+						<div className="form-group">
+							<form id="">
+							
+								<div className="selectPicker">
+								
+									<label className="hidden" htmlFor="ratingPicker">Select a Rating</label>
+									<select 
+										id="ratingPicker"
+										className="form-control col-md-6 col-sm-12"
+										onChange={rating => this.postRating(rating)}
+									>
+										<option value="">Select a rating</option>
+										<option value="1">1 star</option>
+										<option value="2">2 star</option>
+										<option value="3">3 star</option>
+										<option value="4">4 star</option>
+										<option value="5">5 star</option>
+									</select>
+									<label className="hidden" htmlFor="genderPicker">Select a Gender</label>
+									<select 
+										id="genderPicker"
+										className="form-control col-md-6 col-sm-12"
+										onChange={gender => this.postGender(gender)}
+									>
+										<option value="">Select a gender</option>
+										<option value="male">Male</option>
+										<option value="female">Female</option>
+										<option value="pntd">Prefer not to disclose</option>
+									</select>
+								</div>
+								<div className="textArea">
+									<input type="text" onChange={name => this.postName(name)} placeholder="Please enter your name"></input>
+									<input type="text" onChange={comment => this.postComment(comment)} placeholder="Leave us a review!"/>
+								</div>
+								<button className="btn" onClick={() => this.postReview()}>Post your review</button>
 
-					</form>
+							</form>
+						</div>
+					</section>
 				</div>
-			</section>
 		);
 	}
 
