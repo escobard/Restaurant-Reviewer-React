@@ -54,6 +54,10 @@ class RestaurantDetail extends Component {
 			);
 		})
 	}
+	postReview(){
+		var postReview = document.querySelector('#postReview');
+		postReview.classList.remove('hidden');
+	}
 	render(){
 
 		if (!this.props.restaurant){
@@ -94,7 +98,9 @@ class RestaurantDetail extends Component {
 						<div className="reviewContainer"> 
 							<h2>Reviews</h2>
 							{this.renderComments()} 
-							<PostReview />
+							<div id="postReview" className="hidden">
+								<PostReview />
+							</div>
 						</div>
 						<div className="detailBottom first">
 
@@ -110,7 +116,7 @@ class RestaurantDetail extends Component {
 
 						    <a href="#" className="btn btn-primary" onClick={() => this.restaurantHide()}>Return to selection</a>
 
-						    <a href="#" className="btn btn-primary">Leave a comment</a>
+						    <a href="#" className="btn btn-primary" onClick={() => this.postReview()}>Post a Review</a>
 
 						</div>
 

@@ -109,9 +109,9 @@ class PostReview extends Component {
 	render() {
 		return (
 				<div>
-					<div className="col-md-12">
+					<section className="col-md-12 hidden">
 						{this.renderReview()}
-					</div>
+					</section>
 					<section className="col-md-12 postReview">
 						
 						<div className="form-group">
