@@ -101,12 +101,13 @@ class PostReview extends Component {
 		console.log("Current state date:" + this.state.date);
 		var reviewContainer = document.querySelector('reviewPost');
 		reviewPost.classList.remove('hidden');
+		reviewPost.classList.add('fadeInUp')
 
 	}
 	render() {
 		return (
 				<div>
-					<section id="reviewPost" className="col-md-12 hidden">
+					<section id="reviewPost" className="col-md-12 hidden animated">
 						{this.renderReview()}
 					</section>
 					<section className="col-md-12 postReview">
