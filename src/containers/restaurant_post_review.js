@@ -31,8 +31,6 @@ class PostReview extends Component {
 	constructor(props){
 		super(props);
 		
-		const date = new Date();
-
 		this.state = {
 
 			// sets the post data
@@ -40,8 +38,7 @@ class PostReview extends Component {
 			rating: '',
 			gender: '',
 			comment: '',
-			date: date
-
+			date: ''
 		};
 		
 		// binds the search input
@@ -86,27 +83,32 @@ class PostReview extends Component {
 		
 	}
 	renderReview(){
-		const rating = parseInt(this.state.rating);	
+		var rating = parseInt(this.state.rating);	
 		return (
-			
-			<Reviews image={this.state.gender} name={this.state.name} date={this.state.date} rating={rating} comment={this.state.comments} />
-
+			<div>
+				<Reviews image={this.state.gender} name={this.state.name} date={"asdfas"} rating={rating} comment={this.state.comment} />
+			</div>
 		);
 	}
 	postReview(){
-		event.preventDefault();
 		console.log("Current state name:" + this.state.name);
 		console.log("Current state rating:" + this.state.rating);
 		console.log("Current state rating:" + this.state.gender);
 		console.log("Current state comment:" + this.state.comment);
-		
-		this.renderReview();
+		console.log("Current state date:" + this.state.date);
+				var rating = parseInt(this.state.rating);	
+		return (
+			<div>
+				
+			</div>
+		);
+
 	}
 	render() {
 		return (
 				<div>
-					<div className="col-md-12 reviewContainer">
-						{this.renderReview}
+					<div className="col-md-12">
+						{this.renderReview()}
 					</div>
 					<section className="col-md-12 postReview">
 						
