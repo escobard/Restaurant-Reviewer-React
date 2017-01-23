@@ -42,7 +42,7 @@ export default class Reviews extends Component {
 					</div>
 					<div className="reviewDetails col-md-8">
 						<div className="starContainer col-md-12"><StarRatingWidget rating={this.props.rating} /></div>	
-						<span className="col-md-12">"{this.props.comment}"</span>
+						<span className="col-md-12 reviewComment">"{this.props.comment}"</span>
 					</div>
 					
 		</div>

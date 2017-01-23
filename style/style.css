@@ -297,4 +297,18 @@ select {
     display: block;
     text-align: center;
   }
+  span.reviewComment {
+    text-align: center !important;
+  }
+  .detailBottom span {
+      width: 100%;
+      text-align: center;
+  }
+  .postReview button {
+    margin: 1rem auto;
+    float: none;
+    display: block;
+    width: 50%;
+    padding: 1rem;
+}
 }
