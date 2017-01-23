@@ -15,236 +15,145 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 // imports action creators
-import selectRestaurant from '../actions/select_restaurant'
+import postReview from '../actions/post_review';
 
-
+import Reviews from '../components/reviews';
 
 // THESE CLASSES MUST HAVE A CAPITAL AT THE BEGINNING OR THE CLASS WILL NOT WORK
-class RestaurantList extends Component {
+function setState(stateBinding){
+	this.setState({
+			name: state.target.value,
+		});
+	console.log(this.state.name);
+};
+class PostReview extends Component {
 	// sets up the state handler for which books to display
 	constructor(props){
 		super(props);
-
+		
 		this.state = {
-			// sets the search term
-			searchTerm:'',
-			currentlySelected: this.props.restaurants
+
+			// sets the post data
+			name: '',
+			rating: '',
+			gender: '',
+			comment: '',
+			date: ''
 		};
 		
 		// binds the search input
-		this.searchInputChange = this.searchInputChange.bind(this);
-	}
-	// handles the category select setting of state
-	categoryFilterChange(event){
-
-		// creates filter
-		let categoryFilter = _.filter(this.props.restaurants, restaurant => restaurant.category.includes(event.target.value));
-
-		// sets the state based on filter
-		this.setState({
-			currentlySelected: categoryFilter
-		});
-		console.log(this.state.currentlySelected);
-	}
-	// handles the category select setting of state
-	priceFilterChange(event){
-
-		// creates filter
-		let priceFilter = _.filter(this.props.restaurants, restaurant => restaurant.price.includes(event.target.value));
-
-		// sets the state based on filter
-		this.setState({
-			currentlySelected: priceFilter
-		});
-		console.log(this.state.currentlySelected);
-	}
-	// handles the category select setting of state
-	ratingFilterChange(event){
-
-		// creates filter 
-		let ratingFilter = _.filter(this.props.restaurants, restaurant => restaurant.rating.includes(event.target.value));
-
-		// sets the state based on filter
-		this.setState({
-			currentlySelected: ratingFilter
-		});
-		console.log(this.state.currentlySelected);
+		this.postName = this.postName.bind(this);
+		this.postRating = this.postRating.bind(this);
+		this.postReview = this.postReview.bind(this);
+		this.postComment = this.postComment.bind(this);
+		this.renderReview = this.renderReview.bind(this);
 	}
 	// handles the search bar setting of state
-	searchInputChange(event){
+	postName(name){
 
-		// creates 
-		let searchFilter = _.filter(this.props.restaurants, restaurant => restaurant.title.includes(event.target.value.toLowerCase()));
-
-		// sets the state based on filter
 		this.setState({
-			searchTerm: event.target.value,
-			currentlySelected: searchFilter
+			name: name.target.value,
 		});
-		console.log(this.state.searchTerm);
-		console.log(this.state.currentlySelected);
+		console.log(this.state.name);
+	}
+	postRating(rating){
+
+		this.setState({
+			rating: rating.target.value,
+
+		});
+		console.log(this.state.rating);
+	}
+	postComment(comment){
+
+		this.setState({
+			comment: comment.target.value
+		});
+		console.log(this.state.comment);
+	}
+	postGender(gender){
+
+		this.setState({
+			gender: gender.target.value
+		});
+		console.log(this.state.gender);
 	}
 	// creates the function to apply the outro animation to the restaurant list when the restaurant details are expanded
 	listHide(){
 		
-		var restaurantList = document.querySelector('.restaurantList');
-		var restaurantDetails = document.querySelector('.restaurantDetails');
-
-		// handles animations when list is hiding
-		restaurantList.classList.add('fadeOutDown');
-		restaurantList.classList.remove('fadeInUp');
-
-		// handles restaurantHide classes
-		restaurantDetails.classList.remove('hidden');
-		restaurantDetails.classList.remove('heightHidden');
-		restaurantDetails.classList.remove('fadeOut');
-		restaurantDetails.classList.add('fadeInDown');
-
-		// hides from the dom after animation is over
-		setTimeout(function(){
-			restaurantList.classList.add('hidden');
-		}, 1000);
-		
 	}
-	
-	// this will set up the function to render our list
-	// we will be adding the list of books to our props object later
-	renderList() {
-
-		// creates the map of the books array, setting up an object for each index and calling it 'book'
-		// return this.props.restaurants.map((restaurant) => {
-		return this.state.currentlySelected.map((restaurant) => {
-			// returns our book properties within an li
-			// on this.props.selectBook, it passes the value of the book that was clicked (or in other words the individual book object)
-			// to the selectBook action reducer
-			const rating = parseInt(restaurant.rating);
-			return (
-			<article className="restaurantCard card col-md-4"
-				key={restaurant.title} 
-			>
-
-		    <div className="view overlay hm-white-slight">
-		        <img src="http://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%287%29.jpg" className="img-fluid" alt="" />
-		        <a href="#">
-		            <div className="mask restaurantDetails"></div>
-		        </a>
-		    </div>
-
-		    <div className="card-block">
-				<h4 className="card-title">{restaurant.title}
-				<br/>
-				<small> {restaurant.category}</small></h4>
-				<StarRatingWidget rating={rating} />
-		        <p className="card-text">{restaurant.description}</p>
-		        <div className="bottom">
-		        	<span className="restaurantPrice">${restaurant.price} <small>avarage</small></span>
-			        <a href="#" className="btn btn-primary restaurantOpen"
-					onClick={() => {this.props.selectRestaurant(restaurant); this.listHide();}}
-			        >
-			        Learn More
-			        </a>
-		        </div>
-		    </div>
-			</article>
-			);
-		});
-	}
-
-
-	// this sets up the component for our booklist's HTML
-	render() {
-
-		//DONT FORGET TO RETURN HERE, JUST SPENT AN HOUR DEBUGGING THIS AREA
+	renderReview(){
+		var rating = parseInt(this.state.rating);	
 		return (
-			<section className="restaurantList animated fadeInUp col-md-12">
-				<div className="col-md-12 intro card">
-		            <h3 className="h3-responsive">Select a restaurant to get started</h3>
-		            <div className="search-bar md-form col-md-12">
-						<label className="hidden" htmlFor="categoryFilter">Select a Category</label>
-						<input 
-							id="searchBar"
-							className="form-control"
-							type="text"
-							value={this.state.searchTerm}
-							onChange={event => this.searchInputChange(event)}
-							autofocus
-							placeholder="Filter restaurants by title"
-						 />
-					 </div>
-					<div className="form-group col-md-12">
-						<div className="col-md-4 selectFilter">
-							<label className="hidden" htmlFor="categoryFilter">Select a Category</label>
-							<select 
-								id="categoryFilter"
-								className="form-control"
-								onChange={event => this.categoryFilterChange(event)}
-							>
-								<option value="">Select a Category</option>
-								<option value="oriental">Oriental</option>
-								<option value="fast food">Fast Food</option>
-								<option value="mexican">Mexican</option>
-								<option value="indian">Indian</option>
-								<option value="greek">Greek</option>
-							</select>
-						</div>
-						<div className="col-md-4 selectFilter">
-							<label className="hidden" htmlFor="priceFilter">Select a Price Range</label>
-							<select 
-								id="priceFilter"
-								className="form-control"
-								onChange={event => this.priceFilterChange(event)}
-							>
-								<option value="">Select a Price</option>
-								<option value="10">$10 Avarage</option>
-								<option value="15">$15 Avarage</option>
-								<option value="20">$20 Avarage</option>
-								<option value="25">$25 Avarage</option>
-								<option value="30">$30 Avarage</option>
-							</select>
-						</div>
-						<div className="col-md-4 selectFilter">
-							<label className="hidden" htmlFor="ratingFilter">Select Rating Range</label>
-							<select 
-								id="ratingFilter"
-								className="form-control"
-								onChange={event => this.ratingFilterChange(event)}
-							>
-								<option value="">Select a Rating</option>
-								<option value="2">2 stars or less</option>
-								<option value="3">3 stars or less</option>
-								<option value="4">4 stars or less</option>
-								<option value="5">5 stars or less</option>
-							</select>
-						</div>
-					</div>
-				</div>
-				{this.renderList()}
-			</section>
+			<div>
+				<Reviews image={this.state.gender} name={this.state.name} date={"asdfas"} rating={rating} comment={this.state.comment} />
+			</div>
 		);
 	}
+	postReview(){
+		console.log("Current state name:" + this.state.name);
+		console.log("Current state rating:" + this.state.rating);
+		console.log("Current state rating:" + this.state.gender);
+		console.log("Current state comment:" + this.state.comment);
+		console.log("Current state date:" + this.state.date);
+				var rating = parseInt(this.state.rating);	
+		return (
+			<div>
+				
+			</div>
+		);
 
-};
+	}
+	render() {
+		return (
+				<div>
+					<div className="col-md-12">
+						{this.renderReview()}
+					</div>
+					<section className="col-md-12 postReview">
+						
+						<div className="form-group">
+							<form id="">
+							
+								<div className="selectPicker">
+								
+									<label className="hidden" htmlFor="ratingPicker">Select a Rating</label>
+									<select 
+										id="ratingPicker"
+										className="form-control col-md-6 col-sm-12"
+										onChange={rating => this.postRating(rating)}
+									>
+										<option value="">Select a rating</option>
+										<option value="1">1 star</option>
+										<option value="2">2 star</option>
+										<option value="3">3 star</option>
+										<option value="4">4 star</option>
+										<option value="5">5 star</option>
+									</select>
+									<label className="hidden" htmlFor="genderPicker">Select a Gender</label>
+									<select 
+										id="genderPicker"
+										className="form-control col-md-6 col-sm-12"
+										onChange={gender => this.postGender(gender)}
+									>
+										<option value="">Select a gender</option>
+										<option value="male">Male</option>
+										<option value="female">Female</option>
+										<option value="pntd">Prefer not to disclose</option>
+									</select>
+								</div>
+								<div className="textArea">
+									<input type="text" onChange={name => this.postName(name)} placeholder="Please enter your name"></input>
+									<input type="text" onChange={comment => this.postComment(comment)} placeholder="Leave us a review!"/>
+								</div>
+								<button className="btn" onClick={() => this.postReview()}>Post your review</button>
 
-// exactly how it sounds, it maps the state into the props method
-// whatever returns, will show up as this.props inside of BookList
-// this is a built in function of React
-function mapStateToProps(state) {
-	
-	// for example, this will add asdf to props, making it callable by using this.props.asdf
-	/* return {
-	asdf: '123'
-	};
-	*/
-
-	// this defines the state of this component
-	return {
-		// this is the KEY or what we want to call what is attached to this component's .props
-		restaurants: 
-		// this is the actual DATA of the KEY books within reducers.js, which contains the JSON info
-		// within reducer_books.js
-		state.restaurants
-
-	};
+							</form>
+						</div>
+					</section>
+				</div>
+		);
+	}
 
 };
 
@@ -258,10 +167,10 @@ function mapDispatchToProps(dispatch) {
 
 		// this is the KEY the function selectBook is bound to
 		// thanks to this key, the property from the action creator gets passed on to this.book
-		selectRestaurant: 
+		postReview: 
 
 		// this is the actual selectBook function
-		selectRestaurant },
+		postReview },
 
 		// this is the argument
 		// 
@@ -279,4 +188,4 @@ function mapDispatchToProps(dispatch) {
 // 
 // essentially this promotes BookList from a component to a container - react needs to know 
 // about this new component selection method, selectBook.
-export default connect(mapStateToProps, mapDispatchToProps) (RestaurantList);
+export default connect(null, mapDispatchToProps) (PostReview);

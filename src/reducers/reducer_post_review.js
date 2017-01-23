@@ -1,6 +1,6 @@
 // =============================================================
 // 
-// reducer_active_restaurant.js
+// reducer_post_comment.js
 // 
 // =============================================================
 
@@ -12,13 +12,13 @@
 // 
 // IMPORTANT: state argument is not application state, only the state this reducer is responsible for
 // IF the reducer is responsible for the state of a component, then it changes the state of that component, in this case BookList's state
-function ActiveRestaurant(state = null, action){
+function PostReview(state = null, action){
 
 	// this takes the TYPE of action as case 0, 
 	switch(action.type){
 		
 		// if the action.type passed is 'BOOK_SELECTED'
-		case 'RESTAURANT_SELECTED':
+		case 'POST_REVIEW':
 
 			// this case will return the action's payload, in this case this is our book
 			// try to return a fresh object, leave state manipulation out of the action.type switch statements
@@ -32,4 +32,4 @@ function ActiveRestaurant(state = null, action){
 
 };
 
-export default ActiveRestaurant;
+export default PostReview;

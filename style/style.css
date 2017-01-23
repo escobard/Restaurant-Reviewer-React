@@ -53,6 +53,11 @@ main.container {
   height: 0;
 }
 
+
+.btn {
+    background-color: #c3362b !important;
+    border-color: #c3362b !important;
+}
 /*===========================================================
 
     Restaurant List Styles
@@ -245,6 +250,30 @@ select:hover {
     margin-top: 1rem;
     border-top: solid 1px #ccc;
     padding-top: 1rem;
+}
+
+/*===========================================================
+
+    Post review  Styles
+
+===========================================================*/
+
+select {
+    float: left;
+    padding: 3%;
+}
+
+.textArea input {
+    margin: 1% 0;
+}
+.postReview {
+    border-top: solid 1px #ccc;
+    padding: 2rem 0px;
+    margin: 2rem 0 0;
+}
+
+.postReview button {
+    margin: 0;
 }
 /*===========================================================
 
