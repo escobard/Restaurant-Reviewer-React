@@ -98,18 +98,14 @@ class PostReview extends Component {
 		console.log("Current state rating:" + this.state.gender);
 		console.log("Current state comment:" + this.state.comment);
 		console.log("Current state date:" + this.state.date);
-				var rating = parseInt(this.state.rating);	
-		return (
-			<div>
-				
-			</div>
-		);
-
+		var reviewContainer = document.querySelector('reviewPost');
+		reviewPost.classList.remove('hidden');
+		
 	}
 	render() {
 		return (
 				<div>
-					<section className="col-md-12 hidden">
+					<section id="reviewPost" className="col-md-12 hidden">
 						{this.renderReview()}
 					</section>
 					<section className="col-md-12 postReview">
