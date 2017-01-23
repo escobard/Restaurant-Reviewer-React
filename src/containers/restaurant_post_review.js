@@ -33,6 +33,7 @@ class PostReview extends Component {
 		
 		// binds the search input
 		this.postName = this.postName.bind(this);
+		this.postRating = this.postRating.bind(this);
 		this.postReview = this.postReview.bind(this);
 		this.postComment = this.postComment.bind(this);
 	}
@@ -47,7 +48,7 @@ class PostReview extends Component {
 	postRating(rating){
 
 		this.setState({
-			rating: this.state.rating,
+			rating: rating.target.value,
 
 		});
 		console.log(this.state.rating);
@@ -85,6 +86,23 @@ class PostReview extends Component {
 						<option value="4">4 star</option>
 						<option value="5">5 star</option>
 					</select>
+					<div className="form-group ">
+						<div className="col-md-4 ratingPicker">
+							<label className="" htmlFor="ratingPicker">Select a Category</label>
+							<select 
+								id="ratingPicker"
+								className="form-control"
+								onChange={rating => this.postRating(rating)}
+							>
+								<option value="">Select a Category</option>
+								<option value="oriental">Oriental</option>
+								<option value="fast food">Fast Food</option>
+								<option value="mexican">Mexican</option>
+								<option value="indian">Indian</option>
+								<option value="greek">Greek</option>
+							</select>
+						</div>
+					</div>
 					<input type="textarea" onChange={comment => this.postComment(comment)} />
 					<button onClick={event => this.postReview(event)}></button>
 				</form>
