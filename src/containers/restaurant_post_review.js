@@ -87,7 +87,7 @@ class PostReview extends Component {
 		// to convert date from : http://stackoverflow.com/questions/13459866/javascript-change-date-into-format-of-dd-mm-yyyy
 		var date = Date();
 		return (
-			<div>
+			<div >
 				<Reviews image={this.state.gender} name={this.state.name} date={date} rating={rating} comment={this.state.comment} />
 			</div>
 		);
