@@ -54,7 +54,8 @@ class RestaurantDetail extends Component {
 			);
 		})
 	}
-	postReview(){
+	postReview(event){
+		event.preventDefault();
 		var postReview = document.querySelector('#postReview');
 		postReview.classList.remove('hidden');
 	}
@@ -116,7 +117,7 @@ class RestaurantDetail extends Component {
 
 						    <a href="#" className="btn btn-primary" onClick={() => this.restaurantHide()}>Return to selection</a>
 
-						    <a href="#" className="btn btn-primary" onClick={() => this.postReview()}>Post a Review</a>
+						    <a href="#" className="btn btn-primary" onClick={event => this.postReview(event)}>Post a Review</a>
 
 						</div>
 

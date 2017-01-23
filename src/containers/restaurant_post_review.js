@@ -92,7 +92,8 @@ class PostReview extends Component {
 			</div>
 		);
 	}
-	postReview(){
+	postReview(event){
+		event.preventDefault();
 		console.log("Current state name:" + this.state.name);
 		console.log("Current state rating:" + this.state.rating);
 		console.log("Current state rating:" + this.state.gender);
@@ -100,7 +101,7 @@ class PostReview extends Component {
 		console.log("Current state date:" + this.state.date);
 		var reviewContainer = document.querySelector('reviewPost');
 		reviewPost.classList.remove('hidden');
-		
+
 	}
 	render() {
 		return (
@@ -144,7 +145,7 @@ class PostReview extends Component {
 									<input type="text" onChange={name => this.postName(name)} placeholder="Please enter your name"></input>
 									<input type="text" onChange={comment => this.postComment(comment)} placeholder="Leave us a review!"/>
 								</div>
-								<button className="btn" onClick={() => this.postReview()}>Post your review</button>
+								<button className="btn" onClick={event => this.postReview(event)}>Post your review</button>
 
 							</form>
 						</div>
