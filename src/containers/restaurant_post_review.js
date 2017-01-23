@@ -84,7 +84,8 @@ class PostReview extends Component {
 	}
 	renderReview(){
 		var rating = parseInt(this.state.rating);	
-		var date = new Date();
+		// to convert date from : http://stackoverflow.com/questions/13459866/javascript-change-date-into-format-of-dd-mm-yyyy
+		var date = Date();
 		return (
 			<div>
 				<Reviews image={this.state.gender} name={this.state.name} date={date} rating={rating} comment={this.state.comment} />
