@@ -124,9 +124,9 @@ class RestaurantDetail extends Component {
 
 							<span className="restaurantPrice">${this.props.restaurant.price} <small>avarage</small></span>
 
-						    <a href="#" className="btn btn-primary" onClick={() => this.restaurantHide()}>Return to selection</a>
+						    <button className="btn btn-primary" onClick={() => this.restaurantHide()}>Return to selection</button>
 
-						    <a href="#" className="btn btn-primary" onClick={event => this.postReview(event)}>Post a Review</a>
+						    <button className="btn btn-primary" onClick={event => this.postReview(event)}>Post a Review</button>
 
 						</div>
 

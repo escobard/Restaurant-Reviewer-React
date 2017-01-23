@@ -221,7 +221,7 @@ select:hover {
 .restaurantReview {
     margin: 1rem 0 0;
     padding: 2rem 0 0;
-    display: inline-block;
+    display: block;
     border-top: solid 1px #ccc;
 }
 .userDetails {
@@ -268,12 +268,12 @@ select {
 }
 .postReview {
     border-top: solid 1px #ccc;
-    padding: 2rem 0px 0;
+    padding: 2rem 0px 0 !important;
     margin: 2rem 0 0;
 }
 
 .postReview button {
-    margin: 0;
+    margin: 0.5rem 0;
 }
 /*===========================================================
 
@@ -285,6 +285,9 @@ select {
     max-width: 100% !important;
     width: 100% !important;
   }
+  small {
+    display: block;
+}
   .restaurantCard img{
     float:none;
     display: block;
@@ -304,11 +307,31 @@ select {
       width: 100%;
       text-align: center;
   }
-  .postReview button {
+  .detailBottom button {
     margin: 1rem auto;
     float: none;
     display: block;
-    width: 50%;
+    width: 100%;
     padding: 1rem;
+  }
+    .postReview button {
+      margin: 1rem auto;
+      float: none;
+      display: block;
+      width: 100%;
+      padding: 1rem;
+  }
+  span.restaurantPrice {
+      margin: 2rem 0 1rem;
+  }
+  .restaurantDetails section.col-md-12 {
+      padding: 0;
+  }
+  .restaurantDetails {
+    padding: 0;
+  }
+  nav.navbar.navbar-fixed-top.navbar-dark {
+    margin: 0 !important;
+    padding: 0;
 }
 }

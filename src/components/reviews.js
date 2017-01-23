@@ -34,7 +34,7 @@ export default class Reviews extends Component {
 
   render() {
     return (
-    	<div className="restaurantReview col-md-12">
+    	<div className="restaurantReview">
 					<div className="userDetails col-md-4">
 						{this.renderReviewImage(this.props.image)}
 						<span>{this.props.name}</span>
