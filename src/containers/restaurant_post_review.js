@@ -90,7 +90,7 @@ class PostReview extends Component {
 	}
 	render() {
 		return (
-			<section className="col-md-12">
+			<section className="col-md-12 postReview">
 				
 				<div className="form-group">
 					<form id="">
@@ -100,7 +100,7 @@ class PostReview extends Component {
 							<label className="hidden" htmlFor="ratingPicker">Select a Rating</label>
 							<select 
 								id="ratingPicker"
-								className="form-control"
+								className="form-control col-md-6 col-sm-12"
 								onChange={rating => this.postRating(rating)}
 							>
 								<option value="">Select a rating</option>
@@ -113,7 +113,7 @@ class PostReview extends Component {
 							<label className="hidden" htmlFor="genderPicker">Select a Gender</label>
 							<select 
 								id="genderPicker"
-								className="form-control"
+								className="form-control col-md-6 col-sm-12"
 								onChange={gender => this.postGender(gender)}
 							>
 								<option value="">Select a gender</option>
@@ -126,7 +126,7 @@ class PostReview extends Component {
 							<input type="text" onChange={name => this.postName(name)} placeholder="Please enter your name"></input>
 							<input type="text" onChange={comment => this.postComment(comment)} placeholder="Leave us a review!"/>
 						</div>
-						<button className="btn btn-primary" onClick={event => this.postReview(event)}>Post your review</button>
+						<button className="btn" onClick={event => this.postReview(event)}>Post your review</button>
 
 					</form>
 				</div>
