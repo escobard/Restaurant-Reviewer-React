@@ -29,7 +29,8 @@ class RestaurantDetail extends Component {
 
 		var restaurantDetails = document.querySelector('.restaurantDetails');
 		var restaurantList = document.querySelector('.restaurantList');
-
+		var postReview = document.querySelector('#postReview');
+		var reviewPost = document.querySelector('#reviewPost');
 		restaurantDetails.classList.remove('fadeInDown');
 		restaurantDetails.classList.add('fadeOut');
 		restaurantDetails.classList.add('heightHidden');
@@ -37,11 +38,18 @@ class RestaurantDetail extends Component {
 			restaurantDetails.classList.add('hidden');
 		}, 1000);
 		
-		// handles classes for the restaurant list
+		// handles views for the restaurant list
 		restaurantList.classList.remove('fadeOutDown');
 		restaurantList.classList.remove('hidden');
 		restaurantList.classList.add('fadeInUp');
+		
+		// handles views for the postReview
+		postReview.classList.add('hidden');
+		postReview.classList.remove('fadeInUp');
 
+		// handles views for the reviewPost
+		reviewPost.classList.add('hidden');
+		reviewPost.classList.remove('fadeInUp');
 	}
 
 	renderComments(){
@@ -53,6 +61,12 @@ class RestaurantDetail extends Component {
 			</section>
 			);
 		})
+	}
+	postReview(event){
+		event.preventDefault();
+		var postReview = document.querySelector('#postReview');
+		postReview.classList.remove('hidden');
+		postReview.classList.add('fadeInUp');
 	}
 	render(){
 
@@ -94,7 +108,9 @@ class RestaurantDetail extends Component {
 						<div className="reviewContainer"> 
 							<h2>Reviews</h2>
 							{this.renderComments()} 
-							<PostReview />
+							<div id="postReview" className="hidden animated">
+								<PostReview />
+							</div>
 						</div>
 						<div className="detailBottom first">
 
@@ -108,9 +124,9 @@ class RestaurantDetail extends Component {
 
 							<span className="restaurantPrice">${this.props.restaurant.price} <small>avarage</small></span>
 
-						    <a href="#" className="btn btn-primary" onClick={() => this.restaurantHide()}>Return to selection</a>
+						    <button className="btn btn-primary" onClick={() => this.restaurantHide()}>Return to selection</button>
 
-						    <a href="#" className="btn btn-primary">Leave a comment</a>
+						    <button className="btn btn-primary" onClick={event => this.postReview(event)}>Post a Review</button>
 
 						</div>
 

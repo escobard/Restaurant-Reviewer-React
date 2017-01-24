@@ -35,7 +35,7 @@ class PostReview extends Component {
 
 			// sets the post data
 			name: '',
-			rating: '',
+			rating: '2',
 			gender: '',
 			comment: '',
 			date: ''
@@ -84,32 +84,33 @@ class PostReview extends Component {
 	}
 	renderReview(){
 		var rating = parseInt(this.state.rating);	
+		// to convert date from : http://stackoverflow.com/questions/13459866/javascript-change-date-into-format-of-dd-mm-yyyy
+		var date = Date();
 		return (
-			<div>
-				<Reviews image={this.state.gender} name={this.state.name} date={"asdfas"} rating={rating} comment={this.state.comment} />
+			<div >
+				<Reviews image={this.state.gender} name={this.state.name} date={date} rating={rating} comment={this.state.comment} />
 			</div>
 		);
 	}
-	postReview(){
+	postReview(event){
+		event.preventDefault();
 		console.log("Current state name:" + this.state.name);
 		console.log("Current state rating:" + this.state.rating);
 		console.log("Current state rating:" + this.state.gender);
 		console.log("Current state comment:" + this.state.comment);
 		console.log("Current state date:" + this.state.date);
-				var rating = parseInt(this.state.rating);	
-		return (
-			<div>
-				
-			</div>
-		);
+		var reviewContainer = document.querySelector('#reviewPost');
+		var ratingPicker = document.querySelector('#ratingPicker');
+		reviewPost.classList.remove('hidden');
+		reviewPost.classList.add('fadeInUp')
 
 	}
 	render() {
 		return (
 				<div>
-					<div className="col-md-12">
+					<section id="reviewPost" className="col-md-12 hidden animated">
 						{this.renderReview()}
-					</div>
+					</section>
 					<section className="col-md-12 postReview">
 						
 						<div className="form-group">
@@ -122,6 +123,7 @@ class PostReview extends Component {
 										id="ratingPicker"
 										className="form-control col-md-6 col-sm-12"
 										onChange={rating => this.postRating(rating)}
+										autofocus
 									>
 										<option value="">Select a rating</option>
 										<option value="1">1 star</option>
@@ -146,7 +148,7 @@ class PostReview extends Component {
 									<input type="text" onChange={name => this.postName(name)} placeholder="Please enter your name"></input>
 									<input type="text" onChange={comment => this.postComment(comment)} placeholder="Leave us a review!"/>
 								</div>
-								<button className="btn" onClick={() => this.postReview()}>Post your review</button>
+								<button className="btn" onClick={event => this.postReview(event)}>Post your review</button>
 
 							</form>
 						</div>
