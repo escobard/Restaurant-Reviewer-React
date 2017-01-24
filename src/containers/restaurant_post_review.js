@@ -99,7 +99,8 @@ class PostReview extends Component {
 		console.log("Current state rating:" + this.state.gender);
 		console.log("Current state comment:" + this.state.comment);
 		console.log("Current state date:" + this.state.date);
-		var reviewContainer = document.querySelector('reviewPost');
+		var reviewContainer = document.querySelector('#reviewPost');
+		var ratingPicker = document.querySelector('#ratingPicker');
 		reviewPost.classList.remove('hidden');
 		reviewPost.classList.add('fadeInUp')
 
@@ -122,6 +123,7 @@ class PostReview extends Component {
 										id="ratingPicker"
 										className="form-control col-md-6 col-sm-12"
 										onChange={rating => this.postRating(rating)}
+										autofocus
 									>
 										<option value="">Select a rating</option>
 										<option value="1">1 star</option>

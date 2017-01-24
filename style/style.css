@@ -108,7 +108,10 @@ p.card-text {
 p.card-text::after { 
     content: "...";
 }
-
+button.btn:hover, button.btn:active {
+    cursor: pointer;
+    background-color: #0275d8 !important;
+}
 /*===========================================================
 
     Restaurant Details Card Styles
