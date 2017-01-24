@@ -2,8 +2,8 @@
 
 v0.9
 - finished cleaning up style handlers to make post appear / dissapear.
-- prototype to finish cleaning up responsive.
-- prototype to revise semantics before submission.
+- cleaned up responsive styling.
+- updated semantics for all elements, application completely accessible and organized with the keyboard.
 
 v0.8
 - added and styled reviews, refactored into their own component
