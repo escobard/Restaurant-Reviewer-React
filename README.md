@@ -39,10 +39,13 @@ $ npm build
 
 ## To Do's
 - Give app offline functionality.
+- Make app homescreen installable.
 - Update app images with freestock images of restaurants.
 - Update app layout on mobile and tablet views.
 - Push app reviews into a firebase database.
-- compress bundle.js and create this file in the local app directory for easier compression
+- compress bundle.js and create this file in the local app directory for easier compression.
+- refactor filter elements
+- remove console.logs and unecessary commentary
 
 ## Libraries, Frameworks
 
@@ -52,9 +55,14 @@ $ npm build
 
 [ReduxSimpleStarter] (https://github.com/StephenGrider/ReduxSimpleStarter)
 
+[Material Design for Bootstrap] (https://mdbootstrap.com/material-design-for-bootstrap/)
+
+[FLATICON - for the favicon] (http://www.flaticon.com/)
+
 ##  Tutorials
 
 [Udemy - Modern React with Redux] (https://www.udemy.com/react-redux/)
+
 
 ## Contribution
 
