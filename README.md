@@ -12,21 +12,16 @@ This application was created as a restaurant reviewer, with a special focus on s
 ###Desktop
 ![desktop image - main](https://onlinedevelopers.ca/udacity/restaurant-reviewer/img/read-me/Udacity-project-3-demo-1.jpg)
 
-![desktop image - secondary](
-![desktop image - main](https://onlinedevelopers.ca/udacity/restaurant-reviewer/img/read-me/Udacity-project-3-demo-1-1.jpg)
+![desktop image - secondary](https://onlinedevelopers.ca/udacity/restaurant-reviewer/img/read-me/Udacity-project-3-demo-1-1.jpg)
 
 ###Tablet
-![tablet image - main](
-![desktop image - main](https://onlinedevelopers.ca/udacity/restaurant-reviewer/img/read-me/Udacity-project-3-demo-2.jpg)
+![tablet image - main](https://onlinedevelopers.ca/udacity/restaurant-reviewer/img/read-me/Udacity-project-3-demo-2.jpg)
 
-![tablet image - secondary](
-![desktop image - main](https://onlinedevelopers.ca/udacity/restaurant-reviewer/img/read-me/Udacity-project-3-demo-2-2.jpg)
+![tablet image - secondary](https://onlinedevelopers.ca/udacity/restaurant-reviewer/img/read-me/Udacity-project-3-demo-2-2.jpg)
 ###Mobile
-![mobile image - main](
-![desktop image - main](https://onlinedevelopers.ca/udacity/restaurant-reviewer/img/read-me/Udacity-project-3-demo-3.jpg)
+![mobile image - main](https://onlinedevelopers.ca/udacity/restaurant-reviewer/img/read-me/Udacity-project-3-demo-3.jpg)
 
-![mobile image - secondary](
-![desktop image - main](https://onlinedevelopers.ca/udacity/restaurant-reviewer/img/read-me/Udacity-project-3-demo-3-3.jpg)
+![mobile image - secondary](https://onlinedevelopers.ca/udacity/restaurant-reviewer/img/read-me/Udacity-project-3-demo-3-3.jpg)
 
 To download and on your own local or web installation, please follow the instructions below.
 
