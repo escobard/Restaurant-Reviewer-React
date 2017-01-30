@@ -10,18 +10,18 @@ This application was created as a restaurant reviewer, with a special focus on s
 [To view the application live click here] (https://onlinedevelopers.ca/udacity/restaurant-reviewer/)
 
 ###Desktop
-![desktop image - main](https://github.com/escobard/udacity-srwebdev-project3-restaurant/img/read-me/Udacity-project-3-demo-1)
+![desktop image - main](https://github.com/escobard/udacity-srwebdev-project3-restaurant/img/read-me/Udacity-project-3-demo-1.jpg)
 
-![desktop image - secondary](https://github.com/escobard/udacity-srwebdev-project3-restaurant/img/read-me/Udacity-project-3-demo-1-1)
+![desktop image - secondary](https://github.com/escobard/udacity-srwebdev-project3-restaurant/img/read-me/Udacity-project-3-demo-1-1.jpg)
 
 ###Tablet
-![tablet image - main](https://github.com/escobard/udacity-srwebdev-project3-restaurant/img/read-me/Udacity-project-3-demo-2)
+![tablet image - main](https://github.com/escobard/udacity-srwebdev-project3-restaurant/img/read-me/Udacity-project-3-demo-2.jpg)
 
-![tablet image - secondary](https://github.com/escobard/udacity-srwebdev-project3-restaurant/img/read-me/Udacity-project-3-demo-2-2)
+![tablet image - secondary](https://github.com/escobard/udacity-srwebdev-project3-restaurant/img/read-me/Udacity-project-3-demo-2-2.jpg)
 ###Mobile
-![mobile image - main](https://github.com/escobard/udacity-srwebdev-project3-restaurant/img/read-me/Udacity-project-3-demo-3)
+![mobile image - main](https://github.com/escobard/udacity-srwebdev-project3-restaurant/img/read-me/Udacity-project-3-demo-3.jpg)
 
-![mobile image - secondary](https://github.com/escobard/udacity-srwebdev-project3-restaurant/img/read-me/Udacity-project-3-demo-3-3)
+![mobile image - secondary](https://github.com/escobard/udacity-srwebdev-project3-restaurant/img/read-me/Udacity-project-3-demo-3-3.jpg)
 
 To download and on your own local or web installation, please follow the instructions below.
 
