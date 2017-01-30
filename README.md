@@ -1,10 +1,16 @@
 # Udacity - Senior Web Developer Nanodegree - By Google - Project 3
-This repository contains all my own programming project files, notes, and associated files for the [Udacity -Senior Web Developer Nanodegree - By Google - Project 3](https://www.udacity.com/course/senior-web-developer-nanodegree-by-google--nd802) course with [Udacity](https://www.udacity.com/). 
 
-None of the provided course example files, or content are provided in this repository. To get access to these files, please sign up to the course via the above link.
+This repository contains all the files for the third project of the [Udacity - Senior Web Developer Nanodegree - By Google](https://www.udacity.com/course/senior-web-developer-nanodegree-by-google--nd802) course with [Udacity](https://www.udacity.com/). 
 
-All rights for the original files used and provided with this course go to 
-[Udacity](https://www.udacity.com/).  
+## Project Criteria
+This application was created as a restaurant reviewer, with a special focus on screan reader and special needs accessibility. The application must be fully usable with the keyboard, and accessibility HTML semantics must be appropriately used to further ease accesibility.
+
+## Demo
+
+[To view the application live click here] (https://onlinedevelopers.ca/udacity/restaurant-reviewer/)
+
+To download and on your own local or web installation, please follow the instructions below
+
 ## Installation
 
 Clone the repository from: 
@@ -17,7 +23,7 @@ Install NPM dependencies:
 $ npm install
 ```
 
-## Usage
+## Web Pack Commands
 
 To run this application locally use the following commands:
 
@@ -30,6 +36,12 @@ To publish, minimize, and compile components for production use:
 ```
 $ npm build
 ```
+
+## To Do's
+- Give Application offline functionality.
+- Update Application images with freestock images of restaurants.
+- Update application layout on mobile and tablet views.
+- Allow application comments to actually be saved in a firebase database.
 
 ## Libraries, Frameworks
 
@@ -44,7 +56,10 @@ $ npm build
 [Udemy - Modern React with Redux] (https://www.udemy.com/react-redux/)
 
 ## Contribution
-Feel free to contribute to any and all of the files within this repository as you see fit. These files are mainly for personal use, but my goal is to help others better understand JavaScript Object Oriented programming with my software and helpful commentary.
+
+Feel free to contribute to this repository. All files in this repository are protected under the MIT license, but feel free to contribute, fork, star, or share this application as you see fit.
+
+For commercial or educational use, please paste a link to this repository to give proper credit.
 
 ## License
 As of October 31st, 2016, these files are open for all to use and contribute to. This repository is protected under the [MIT License](http://choosealicense.com/licenses/mit/).
