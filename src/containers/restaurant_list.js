@@ -131,7 +131,7 @@ class RestaurantList extends Component {
 			>
 
 		    <div className="view overlay hm-white-slight">
-		        <img src="http://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%287%29.jpg" className="img-fluid" alt="" />
+		        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%287%29.jpg" className="img-fluid" alt="" />
 		        <a href="#">
 		            <div className="mask restaurantDetails"></div>
 		        </a>

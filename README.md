@@ -53,6 +53,7 @@ $ npm build
 - Remove console.logs and unecessary commentary
 - Add routing to application
 - Revise and update screen reader usability
+- Revise mobile displays, fix alignments
 
 ## Libraries, Frameworks
 
