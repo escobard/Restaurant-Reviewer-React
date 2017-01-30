@@ -6,7 +6,6 @@ This repository contains all the files for the third project of the [Udacity - S
 This application was created as a restaurant reviewer, with a special focus on screan reader and special needs accessibility. The application must be fully usable with the keyboard, and accessibility HTML semantics must be appropriately used to further ease accesibility.
 
 ## Demo
-
 [To view the application live click here] (https://onlinedevelopers.ca/udacity/restaurant-reviewer/)
 
 ###Desktop
@@ -54,6 +53,7 @@ $ npm build
 - Remove console.logs and unecessary commentary
 - Add routing to application
 - Revise and update screen reader usability
+
 ## Libraries, Frameworks
 
 [React](https://facebook.github.io/react/)
