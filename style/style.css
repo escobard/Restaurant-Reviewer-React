@@ -87,6 +87,7 @@ main.container {
     margin: 0 !important;
     background-color: #c3362b !important;
     border-color: #9c2920 !important;
+    margin-top: 9px !important;
 }
 .restaurantPrice {
     margin-top: 6px !important;
@@ -118,7 +119,7 @@ button.btn:hover, button.btn:active {
 
 ===========================================================*/
 
-.restaurantDetails {margin: 2% 0;}
+.restaurantDetails {margin: 2rem 0;}
 
 .detailBottom {
     border-top: solid 1px #ccc;
@@ -332,6 +333,7 @@ select {
   }
   .restaurantDetails {
     padding: 0;
+    margin: 2rem 0;
   }
   nav.navbar.navbar-fixed-top.navbar-dark {
     margin: 0 !important;

@@ -9,6 +9,20 @@ This application was created as a restaurant reviewer, with a special focus on s
 
 [To view the application live click here] (https://onlinedevelopers.ca/udacity/restaurant-reviewer/)
 
+###Desktop
+![desktop image - main](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Desktop image main")
+
+![desktop image - secondary](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Desktop image secondary")
+
+###Tablet
+![tablet image - main](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Desktop image main")
+
+![tablet image - secondary](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Desktop image secondary")
+###Mobile
+![mobile image - main](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Desktop image main")
+
+![mobile image - secondary](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Desktop image secondary")
+
 To download and on your own local or web installation, please follow the instructions below.
 
 ## Installation
@@ -43,10 +57,11 @@ $ npm build
 - Update app images with freestock images of restaurants.
 - Update app layout on mobile and tablet views.
 - Push app reviews into a firebase database.
-- compress bundle.js and create this file in the local app directory for easier compression.
-- refactor filter elements
-- remove console.logs and unecessary commentary
-
+- Compress bundle.js and create this file in the local app directory for easier compression.
+- Refactor filter elements
+- Remove console.logs and unecessary commentary
+- Add routing to application
+- Revise and update screen reader usability
 ## Libraries, Frameworks
 
 [React](https://facebook.github.io/react/)
