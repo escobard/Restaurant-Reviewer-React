@@ -1,4 +1,4 @@
-# Udacity - Senior Web Developer Nanodegree - By Google - Project 3
+# Restaurant Reviewer - React / Redux
 
 This repository contains all the files for the third project of the [Udacity - Senior Web Developer Nanodegree - By Google](https://www.udacity.com/course/senior-web-developer-nanodegree-by-google--nd802) course with [Udacity](https://www.udacity.com/). 
 
@@ -11,10 +11,6 @@ This application was created as a restaurant reviewer, with a special focus on s
 
 ###Desktop
 ![desktop image - main](https://onlinedevelopers.ca/udacity/restaurant-reviewer/img/read-me/Udacity-project-3-demo-1.jpg)
-
-
-###Tablet
-![tablet image - main](https://onlinedevelopers.ca/udacity/restaurant-reviewer/img/read-me/Udacity-project-3-demo-2.jpg)
 
 ###Mobile
 ![mobile image - main](https://onlinedevelopers.ca/udacity/restaurant-reviewer/img/read-me/Udacity-project-3-demo-3.jpg)
