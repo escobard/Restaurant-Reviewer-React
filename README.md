@@ -9,7 +9,7 @@ This application was created as a restaurant reviewer, with a special focus on s
 
 [To view the application live click here] (https://onlinedevelopers.ca/udacity/restaurant-reviewer/)
 
-To download and on your own local or web installation, please follow the instructions below
+To download and on your own local or web installation, please follow the instructions below.
 
 ## Installation
 
@@ -38,10 +38,11 @@ $ npm build
 ```
 
 ## To Do's
-- Give Application offline functionality.
-- Update Application images with freestock images of restaurants.
-- Update application layout on mobile and tablet views.
-- Allow application comments to actually be saved in a firebase database.
+- Give app offline functionality.
+- Update app images with freestock images of restaurants.
+- Update app layout on mobile and tablet views.
+- Push app reviews into a firebase database.
+- compress bundle.js and create this file in the local app directory for easier compression
 
 ## Libraries, Frameworks
 
