@@ -10,18 +10,18 @@ This application was created as a restaurant reviewer, with a special focus on s
 [To view the application live click here] (https://onlinedevelopers.ca/udacity/restaurant-reviewer/)
 
 ###Desktop
-![desktop image - main](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Desktop image main")
+![desktop image - main](https://github.com/escobard/udacity-srwebdev-project3-restaurant/img/read-me/Udacity-project-3-demo-1)
 
-![desktop image - secondary](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Desktop image secondary")
+![desktop image - secondary](https://github.com/escobard/udacity-srwebdev-project3-restaurant/img/read-me/Udacity-project-3-demo-1-1)
 
 ###Tablet
-![tablet image - main](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Desktop image main")
+![tablet image - main](https://github.com/escobard/udacity-srwebdev-project3-restaurant/img/read-me/Udacity-project-3-demo-2)
 
-![tablet image - secondary](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Desktop image secondary")
+![tablet image - secondary](https://github.com/escobard/udacity-srwebdev-project3-restaurant/img/read-me/Udacity-project-3-demo-2-2)
 ###Mobile
-![mobile image - main](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Desktop image main")
+![mobile image - main](https://github.com/escobard/udacity-srwebdev-project3-restaurant/img/read-me/Udacity-project-3-demo-3)
 
-![mobile image - secondary](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Desktop image secondary")
+![mobile image - secondary](https://github.com/escobard/udacity-srwebdev-project3-restaurant/img/read-me/Udacity-project-3-demo-3-3)
 
 To download and on your own local or web installation, please follow the instructions below.
 
