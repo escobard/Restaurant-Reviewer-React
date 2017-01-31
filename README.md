@@ -14,13 +14,13 @@ This application was created as a restaurant reviewer, with a special focus on s
 ###Mobile
 ![mobile image - main](https://onlinedevelopers.ca/udacity/restaurant-reviewer/img/read-me/Udacity-project-3-demo-3.jpg)
 
-To download and on your own local or web installation, please follow the instructions below.
+To download, please follow the instructions below.
 
 ## Installation
 
 Clone the repository from: 
 ```
-$ git clone https://github.com/escobard/udacity-srwebdev-project3-restaurant.git
+$ git clone https://github.com/escobard/Restaurant-Reviewer-React
 ```
 
 Install NPM dependencies:
@@ -42,19 +42,6 @@ To publish, minimize, and compile components for production use:
 $ npm build
 ```
 
-## To Do's
-- Give app offline functionality.
-- Make app homescreen installable.
-- Update app images with freestock images of restaurants.
-- Update app layout on mobile and tablet views.
-- Push app reviews into a firebase database.
-- Compress bundle.js and create this file in the local app directory for easier compression.
-- Refactor filter elements
-- Remove console.logs and unecessary commentary
-- Add routing to application
-- Revise and update screen reader usability
-- Revise mobile displays, fix alignments
-
 ## Libraries, Frameworks
 
 [React](https://facebook.github.io/react/)
@@ -71,7 +58,7 @@ $ npm build
 
 [Udemy - Modern React with Redux] (https://www.udemy.com/react-redux/)
 
-
+[Udacity - Senior Web Developer Nanodegree] (https://www.udacity.com/course/senior-web-developer-nanodegree-by-google--nd802)
 ## Contribution
 
 Feel free to contribute to this repository. All files in this repository are protected under the MIT license, but feel free to contribute, fork, star, or share this application as you see fit.
