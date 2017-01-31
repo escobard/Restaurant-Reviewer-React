@@ -20,7 +20,7 @@ To download and on your own local or web installation, please follow the instruc
 
 Clone the repository from: 
 ```
-$ git clone https://github.com/escobard/udacity-srwebdev-project3-restaurant.git
+$ git clone https://github.com/escobard/Restaurant-Reviewer-React.git
 ```
 
 Install NPM dependencies:
