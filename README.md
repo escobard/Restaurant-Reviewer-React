@@ -46,6 +46,8 @@ $ npm build
 - Add gulp production methods.
 - Personalize / add new images for each restaurant.
 - Handle tile animation for filters.
+- Remove useless commentary within source files.
+- Fix animation skipping issues on list / details. 
 
 ## Known Bugs
 - Application height is bugged under certain circumstances in Chrome version 54+

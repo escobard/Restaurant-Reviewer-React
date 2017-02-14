@@ -17,17 +17,17 @@ export default class Reviews extends Component {
 	renderReviewImage(reviewImage){
 		    if (reviewImage === "male"){
 		        return (
-		        	<img src="img/user-male.png" alt="male profile picture"/>
+		        	<img src="/src/img/user-male.png" alt="male profile picture"/>
 		        );
 		    }
 		    else if (reviewImage === "female"){
 		    	return (
-		        <img src="img/user-female.png" alt="female profile picture"/>
+		        <img src="/src/img/user-female.png" alt="female profile picture"/>
 		        );
 		    }
 			else {
 		        return (
-		        	<img src="img/user-male.png" alt="male profile picture"/>
+		        	<img src="/src/img/user-male.png" alt="male profile picture"/>
 		        );
 		    }
 	}	

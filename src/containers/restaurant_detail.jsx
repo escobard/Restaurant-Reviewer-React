@@ -84,7 +84,7 @@ class RestaurantDetail extends Component {
 			
 			<article className="card">
 
-			    <img className="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%282%29.jpg" alt="Card image cap" />
+			    <img className="img-fluid" src="/src/img/restaurant-detail.jpg" alt="Card image cap" />
 
 			    <div className="card-block">
 
