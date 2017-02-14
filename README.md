@@ -5,7 +5,14 @@ This repository contains all the files for the third project of the [Udacity - S
 ## Project Criteria
 This application was created as a restaurant reviewer, with a special focus on screan reader and special needs accessibility. The application must be fully usable with the keyboard, and accessibility HTML semantics must be appropriately used to further ease accesibility.
 
+### Additional features
+- Full offline functionality
+- Home-screen installable
+
 ## Demo
+
+![desktop image](https://onlinedevelopers.ca/udacity/weather-app/src/img/read-me/proj3-collage.jpg)
+
 [To view the application live click here] (https://onlinedevelopers.ca/udacity/restaurant-reviewer/)
 
 To download, please follow the instructions below.
@@ -22,9 +29,9 @@ Install NPM dependencies:
 $ npm install
 ```
 
-## Web Pack Commands
+## Usage
 
-To run this application locally use the following commands:
+To run this application locally for development, use the following commands:
 
 ```
 $ npm start
@@ -33,17 +40,20 @@ $ npm start
 To publish, minimize, and compile components for production use:
 
 ```
-$ npm build
+$ gulp create-bundle
+$ gulp build
 ```
 
-## Most Recent Update - v1.00
-- Released first public version, tested for production ready. 
+
+## Most Recent Update - v1.10
+- added offline functionality
+- added mobile screen installation
+- added gulp production processes. 
+- added icon into the application title.
+- revised mobile and dom styling
 
 ## To Do's
 - Revise mobile dimensions.
-- Add offline functionality.
-- Add home screen installation.
-- Add gulp production methods.
 - Personalize / add new images for each restaurant.
 - Handle tile animation for filters.
 - Remove useless commentary within source files.

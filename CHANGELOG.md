@@ -1,10 +1,11 @@
 ** Changelog for Restaurant Reviewer
 
 v1.1
-- prototype to add offline functionality
-- prototype to add mobile screen installation
-- prototye to add production processes. 
-- prototype to add icon into application title.
+- added offline functionality
+- added mobile screen installation
+- added gulp production processes. 
+- added icon into the application title.
+- revised mobile and dom styling
 
 v1.0
 - Public release.
