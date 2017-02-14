@@ -11,7 +11,7 @@ This application was created as a restaurant reviewer, with a special focus on s
 
 ## Demo
 
-![desktop image](https://onlinedevelopers.ca/udacity/weather-app/src/img/read-me/proj3-collage.jpg)
+![desktop image](https://onlinedevelopers.ca/udacity/restaurant-reviewer/src/img/read-me/proj3-collage.jpg)
 
 [To view the application live click here] (https://onlinedevelopers.ca/udacity/restaurant-reviewer/)
 
@@ -21,7 +21,7 @@ To download, please follow the instructions below.
 
 Clone the repository from: 
 ```
-$ git clone https://github.com/escobard/Restaurant-Reviewer-React
+$ git clone https://github.com/escobard/Restaurant-Reviewer-React.git
 ```
 
 Install NPM dependencies:
