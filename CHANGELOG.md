@@ -1,5 +1,15 @@
 ** Changelog for Restaurant Reviewer
 
+v1.1
+- prototype to add offline functionality
+- prototype to add mobile screen installation
+- prototye to add production processes. 
+
+v1.0
+- Public release.
+- Working / development versions completed.
+- Live version uploaded / tested.
+
 v0.9
 - finished cleaning up style handlers to make post appear / dissapear.
 - cleaned up responsive styling.

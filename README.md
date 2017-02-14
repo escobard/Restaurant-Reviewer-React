@@ -8,12 +8,6 @@ This application was created as a restaurant reviewer, with a special focus on s
 ## Demo
 [To view the application live click here] (https://onlinedevelopers.ca/udacity/restaurant-reviewer/)
 
-###Desktop
-![desktop image - main](https://onlinedevelopers.ca/udacity/restaurant-reviewer/img/read-me/Udacity-project-3-demo-1.jpg)
-
-###Mobile
-![mobile image - main](https://onlinedevelopers.ca/udacity/restaurant-reviewer/img/read-me/Udacity-project-3-demo-3.jpg)
-
 To download, please follow the instructions below.
 
 ## Installation
@@ -41,6 +35,20 @@ To publish, minimize, and compile components for production use:
 ```
 $ npm build
 ```
+
+## Most Recent Update - v1.00
+- Released first public version, tested for production ready. 
+
+## To Do's
+- Revise mobile dimensions.
+- Add offline functionality.
+- Add home screen installation.
+- Add gulp production methods.
+- Personalize / add new images for each restaurant.
+- Handle tile animation for filters.
+
+## Known Bugs
+- Application height is bugged under certain circumstances in Chrome version 54+
 
 ## Libraries, Frameworks
 
