@@ -6,7 +6,7 @@
 
 
 // sets the cache name
-var staticCacheName = 'wa-static-v0.3';
+var staticCacheName = 'wa-static-v0.4';
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
