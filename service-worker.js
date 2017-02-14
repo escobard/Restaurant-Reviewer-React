@@ -14,15 +14,15 @@ self.addEventListener('install', function(event) {
       return cache.addAll([
       './',
       './src/style/bootstrap.min.css',
-      './src/style/font-awesome.min.css',
+      './src/style/react-star-rating.min.css',
       './src/style/mdb.min.css',
       './src/style/style.css',
-      './src/img/clouds-192.png',
-      './src/img/clouds.png',
-      './src/img/gears.gif',
-      './src/img/clouds-favicon.png',
-      './src/img/up-arrow.png',
-      './manifest.json',
+      './src/img/dish-512.png',
+      './src/img/dish.png',
+      './src/img/restaurant-detail.jpg',
+      './src/img/restaurant-list.jpg',
+      './src/img/user-female.png',
+      './src/img/user-male.png',
       './bundle.js'
       ]);
     }).then(function(){
