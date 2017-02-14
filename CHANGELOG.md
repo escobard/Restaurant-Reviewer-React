@@ -4,6 +4,7 @@ v1.1
 - prototype to add offline functionality
 - prototype to add mobile screen installation
 - prototye to add production processes. 
+- prototype to add icon into application title.
 
 v1.0
 - Public release.

@@ -41,8 +41,12 @@ nav {
 }
 .navbar-brand{
   font-size: 26px !important;
+  margin-bottom: 0 !important;
 }
-
+.navbar-brand img {
+    width: 60px;
+    margin-right: 1rem;
+}
 main.container {
     max-height: 100%;
 }
