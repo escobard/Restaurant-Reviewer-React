@@ -49,7 +49,7 @@ class RestaurantList extends Component {
 		this.setState({
 			currentlySelected: categoryFilter
 		});
-		console.log(this.state.currentlySelected);
+		// console.log(this.state.currentlySelected);
 	}
 	// handles the category select setting of state
 	priceFilterChange(event){
@@ -61,7 +61,7 @@ class RestaurantList extends Component {
 		this.setState({
 			currentlySelected: priceFilter
 		});
-		console.log(this.state.currentlySelected);
+		// console.log(this.state.currentlySelected);
 	}
 	// handles the category select setting of state
 	ratingFilterChange(event){
@@ -73,7 +73,7 @@ class RestaurantList extends Component {
 		this.setState({
 			currentlySelected: ratingFilter
 		});
-		console.log(this.state.currentlySelected);
+		// console.log(this.state.currentlySelected);
 	}
 	// handles the search bar setting of state
 	searchInputChange(event){
@@ -87,7 +87,7 @@ class RestaurantList extends Component {
 			currentlySelected: searchFilter
 		});
 		// console.log(this.state.searchTerm);
-		console.log(this.state.currentlySelected);
+		// console.log(this.state.currentlySelected);
 	}
 	// creates the function to apply the outro animation to the restaurant list when the restaurant details are expanded
 	listHide(){
