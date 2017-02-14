@@ -1,5 +1,17 @@
 ** Changelog for Restaurant Reviewer
 
+v1.1
+- added offline functionality
+- added mobile screen installation
+- added gulp production processes. 
+- added icon into the application title.
+- revised mobile and dom styling
+
+v1.0
+- Public release.
+- Working / development versions completed.
+- Live version uploaded / tested.
+
 v0.9
 - finished cleaning up style handlers to make post appear / dissapear.
 - cleaned up responsive styling.

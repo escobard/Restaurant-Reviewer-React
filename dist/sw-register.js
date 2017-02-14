@@ -1,0 +1,1 @@
+navigator.serviceWorker&&"serviceWorker"in navigator&&(console.log("SW registered!"),window.addEventListener("load",function(){navigator.serviceWorker.register("./service-worker.js")}));

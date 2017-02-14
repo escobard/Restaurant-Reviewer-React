@@ -5,22 +5,25 @@ This repository contains all the files for the third project of the [Udacity - S
 ## Project Criteria
 This application was created as a restaurant reviewer, with a special focus on screan reader and special needs accessibility. The application must be fully usable with the keyboard, and accessibility HTML semantics must be appropriately used to further ease accesibility.
 
+### Additional features
+- Full offline functionality
+- Home-screen installable
+
 ## Demo
+
+![desktop image](https://onlinedevelopers.ca/udacity/weather-app/src/img/read-me/proj3-collage.jpg)
+
 [To view the application live click here] (https://onlinedevelopers.ca/udacity/restaurant-reviewer/)
 
-###Desktop
-![desktop image - main](https://onlinedevelopers.ca/udacity/restaurant-reviewer/img/read-me/Udacity-project-3-demo-1.jpg)
-
-###Mobile
-![mobile image - main](https://onlinedevelopers.ca/udacity/restaurant-reviewer/img/read-me/Udacity-project-3-demo-3.jpg)
-
-To download and on your own local or web installation, please follow the instructions below.
+To download, please follow the instructions below.
 
 ## Installation
 
 Clone the repository from: 
 ```
+
 $ git clone https://github.com/escobard/Restaurant-Reviewer-React.git
+
 ```
 
 Install NPM dependencies:
@@ -28,9 +31,9 @@ Install NPM dependencies:
 $ npm install
 ```
 
-## Web Pack Commands
+## Usage
 
-To run this application locally use the following commands:
+To run this application locally for development, use the following commands:
 
 ```
 $ npm start
@@ -39,21 +42,27 @@ $ npm start
 To publish, minimize, and compile components for production use:
 
 ```
-$ npm build
+$ gulp create-bundle
+$ gulp build
 ```
 
+
+## Most Recent Update - v1.10
+- added offline functionality
+- added mobile screen installation
+- added gulp production processes. 
+- added icon into the application title.
+- revised mobile and dom styling
+
 ## To Do's
-- Give app offline functionality.
-- Make app homescreen installable.
-- Update app images with freestock images of restaurants.
-- Update app layout on mobile and tablet views.
-- Push app reviews into a firebase database.
-- Compress bundle.js and create this file in the local app directory for easier compression.
-- Refactor filter elements
-- Remove console.logs and unecessary commentary
-- Add routing to application
-- Revise and update screen reader usability
-- Revise mobile displays, fix alignments
+- Revise mobile dimensions.
+- Personalize / add new images for each restaurant.
+- Handle tile animation for filters.
+- Remove useless commentary within source files.
+- Fix animation skipping issues on list / details. 
+
+## Known Bugs
+- Application height is bugged under certain circumstances in Chrome version 54+
 
 ## Libraries, Frameworks
 
@@ -71,7 +80,7 @@ $ npm build
 
 [Udemy - Modern React with Redux] (https://www.udemy.com/react-redux/)
 
-
+[Udacity - Senior Web Developer Nanodegree] (https://www.udacity.com/course/senior-web-developer-nanodegree-by-google--nd802)
 ## Contribution
 
 Feel free to contribute to this repository. All files in this repository are protected under the MIT license, but feel free to contribute, fork, star, or share this application as you see fit.
