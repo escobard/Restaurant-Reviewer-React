@@ -295,7 +295,19 @@ span.restaurantPrice {
 
 .restaurantOpen {
     width: 100%;
-}}
+}
+.navbar-brand span {
+    display: none;
+}
+
+.navbar-brand img {
+    margin: 3px 0;
+}
+
+.card {
+    margin-top: 2rem;
+}
+}
 @media screen and (max-width: 1000px){
   .restaurantCard{
     max-width: 100% !important;
