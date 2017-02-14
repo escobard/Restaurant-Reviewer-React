@@ -288,6 +288,14 @@ select {
     Responsive Styles
 
 ===========================================================*/
+@media screen and (max-width: 768px){
+span.restaurantPrice {
+    width: 100%;
+}
+
+.restaurantOpen {
+    width: 100%;
+}}
 @media screen and (max-width: 1000px){
   .restaurantCard{
     max-width: 100% !important;
