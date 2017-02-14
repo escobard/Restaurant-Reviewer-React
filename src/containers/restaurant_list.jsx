@@ -86,7 +86,7 @@ class RestaurantList extends Component {
 			searchTerm: event.target.value,
 			currentlySelected: searchFilter
 		});
-		console.log(this.state.searchTerm);
+		// console.log(this.state.searchTerm);
 		console.log(this.state.currentlySelected);
 	}
 	// creates the function to apply the outro animation to the restaurant list when the restaurant details are expanded
@@ -129,7 +129,7 @@ class RestaurantList extends Component {
 			>
 
 		    <div className="view overlay hm-white-slight">
-		        <img src="/src/img/restaurant-list.jpg" className="img-fluid" alt="" />
+		        <img src="src/img/restaurant-list.jpg" className="img-fluid" alt="" />
 		        <a href="#">
 		            <div className="mask restaurantDetails"></div>
 		        </a>
