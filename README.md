@@ -44,7 +44,6 @@ $ gulp create-bundle
 $ gulp build
 ```
 
-
 ## Most Recent Update - v1.10
 - added offline functionality
 - added mobile screen installation
