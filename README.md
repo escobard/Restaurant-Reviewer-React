@@ -21,7 +21,9 @@ To download, please follow the instructions below.
 
 Clone the repository from: 
 ```
+
 $ git clone https://github.com/escobard/Restaurant-Reviewer-React.git
+
 ```
 
 Install NPM dependencies:
