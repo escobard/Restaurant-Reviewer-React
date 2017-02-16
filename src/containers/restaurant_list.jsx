@@ -215,10 +215,10 @@ class RestaurantList extends Component {
 								onChange={event => this.ratingFilterChange(event)}
 							>
 								<option value="">Select a Rating</option>
-								<option value="2">2 stars or less</option>
-								<option value="3">3 stars or less</option>
-								<option value="4">4 stars or less</option>
-								<option value="5">5 stars or less</option>
+								<option value="2">2 stars</option>
+								<option value="3">3 stars</option>
+								<option value="4">4 stars</option>
+								<option value="5">5 stars</option>
 							</select>
 						</div>
 					</div>
