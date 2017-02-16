@@ -44,7 +44,7 @@ $ gulp create-bundle
 $ gulp build
 ```
 
-## Most Recent Update - v1.10
+## Most Recent Update - v1.10a
 - added offline functionality
 - added mobile screen installation
 - added gulp production processes. 
@@ -57,9 +57,10 @@ $ gulp build
 - Handle tile animation for filters.
 - Remove useless commentary within source files.
 - Fix animation skipping issues on list / details. 
+- Add a scroll to top button on Mobile.
 
 ## Known Bugs
-- Application height is bugged under certain circumstances in Chrome version 54+
+- Application height is bugged on load due to boostrap animations in Chrome version 54+
 
 ## Libraries, Frameworks
 

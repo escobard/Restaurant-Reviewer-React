@@ -1,6 +1,11 @@
 ** Changelog for Restaurant Reviewer
 
-v1.1
+v1.10a
+- fixed offline functionality issues
+- prototype to fix rating filter semantics
+- prototype to remove obsolete commentary.
+
+v1.10
 - added offline functionality
 - added mobile screen installation
 - added gulp production processes. 
