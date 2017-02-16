@@ -3,7 +3,6 @@
 v1.10a
 - fixed offline functionality issues
 - prototype to fix rating filter semantics
-- prototype to remove obsolete commentary.
 
 v1.10
 - added offline functionality
