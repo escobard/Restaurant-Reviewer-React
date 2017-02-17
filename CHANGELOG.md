@@ -1,8 +1,13 @@
 ** Changelog for Restaurant Reviewer
 
+v1.20
+- prototype to add restaurant images
+- prototype to add scroll to top button
+- prototype to scroll to top when restaurant details close is clicked
+
 v1.10a
 - fixed offline functionality issues
-- prototype to fix rating filter semantics
+- fixed star rating semantics
 
 v1.10
 - added offline functionality

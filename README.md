@@ -56,6 +56,8 @@ $ gulp build
 - Personalize / add new images for each restaurant.
 - Handle tile animation for filters.
 - Remove useless commentary within source files.
+- Add text validation for reviews.
+- Save reviews in external database.
 - Fix animation skipping issues on list / details. 
 - Add a scroll to top button on Mobile.
 
