@@ -98,9 +98,13 @@ class PostReview extends Component {
 		// console.log("Current state date:" + this.state.date);
 		var reviewContainer = document.querySelector('#reviewPost');
 		var ratingPicker = document.querySelector('#ratingPicker');
+		var revealReview = document.querySelector('#revealReview');
+
 		reviewPost.classList.remove('hidden');
 		reviewPost.classList.add('fadeInUp')
-
+		
+		revealReview.classList.remove('hidden', 'fadeOut');
+		revealReview.classList.add('fadeIn');
 	}
 	render() {
 		return (

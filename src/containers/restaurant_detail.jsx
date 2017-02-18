@@ -54,8 +54,15 @@ class RestaurantDetail extends Component {
 	postReview(event){
 		event.preventDefault();
 		var postReview = document.querySelector('#postReview');
+		var revealReview = document.querySelector('#revealReview');
+
 		postReview.classList.remove('hidden');
 		postReview.classList.add('fadeInUp');
+		
+		revealReview.classList.remove('fadeIn');
+		revealReview.classList.add('fadeOut');
+		setTimeout(revealReview.classList.add('hidden'), 500);
+
 	}
 	render(){
 
@@ -115,7 +122,7 @@ class RestaurantDetail extends Component {
 									<button className="btn btn-primary" onClick={() => this.restaurantHide()}>Return to selection</button>
 								</ScrollToTop>
 							</div>
-						    <button className="btn btn-primary" onClick={event => this.postReview(event)}>Post a Review</button>
+						    <button id="revealReview" className="btn btn-primary animated" onClick={event => this.postReview(event)}>Post a Review</button>
 
 						</div>
 
