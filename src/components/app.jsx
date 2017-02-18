@@ -1,22 +1,15 @@
 // =============================================================
 // 
-//  app.js
+//  app.jsx
 //
 // =============================================================
 
-// imported two different functions from the same library, here's how:
 import React, { Component } from 'react';
-
-// imports our booklist
 import RestaurantList from '../containers/restaurant_list';
-
-// imports our bookdetail
 import RestaurantDetail from '../containers/restaurant_detail';
-
-// custom components
 import Nav from './nav';
 import Footer from './footer';
-
+import ScrollToTop from 'react-scroll-up';
 
 export default class App extends Component {
   render() {
@@ -26,7 +19,10 @@ export default class App extends Component {
 		<main className="container">
       	<RestaurantDetail />
       	<RestaurantList />
-      	</main>
+    </main>
+    <ScrollToTop showUnder={160}>
+        <img id="scrollToTop" src="src/img/up-arrow.png" alt="scroll to top"/>
+    </ScrollToTop>    
 		<Footer />
       </div>
     );
