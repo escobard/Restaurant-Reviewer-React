@@ -315,8 +315,13 @@ span.restaurantPrice {
 .card {
     margin-top: 2rem;
 }
+#scrollToTop {
+    width: 30px;
+    margin-right: -30px;
+    margin-bottom: 0.6rem;
 }
-@media screen and (max-width: 1000px){
+}
+@media screen and (max-width: 1024px){
   .restaurantCard{
     max-width: 100% !important;
     width: 100% !important;
@@ -370,5 +375,10 @@ span.restaurantPrice {
   nav.navbar.navbar-fixed-top.navbar-dark {
     margin: 0 !important;
     padding: 0;
+}
+#scrollToTop {
+    width: 47px;
+    margin-right: -28px;
+    margin-bottom: 0.6rem;
 }
 }
