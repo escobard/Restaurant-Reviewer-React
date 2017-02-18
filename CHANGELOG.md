@@ -1,9 +1,10 @@
 ** Changelog for Restaurant Reviewer
 
 v1.20
-- prototype to add restaurant images
-- prototype to add scroll to top button
-- prototype to scroll to top when restaurant details close is clicked
+- added and styled restaurant images
+- implemented scroll to top button, styled for all dimensions
+- scrolling to top when restaurant detail is expanded / closed.
+- changed date format on reviews.
 
 v1.10a
 - fixed offline functionality issues
