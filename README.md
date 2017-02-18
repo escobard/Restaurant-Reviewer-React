@@ -63,6 +63,7 @@ $ gulp build
 
 ## Known Bugs
 - Application height is bugged on load due to boostrap animations in Chrome version 54+
+- Application live version showing an error due to bundle.js compression.
 
 ## Libraries, Frameworks
 
