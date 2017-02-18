@@ -106,7 +106,7 @@ class RestaurantList extends Component {
 			>
 
 		    <div className="view overlay hm-white-slight">
-		        <img src="src/img/restaurant-list.jpg" className="img-fluid" alt="" />
+		        <img src={restaurant.imagesmall} className="img-fluid" alt={restaurant.alt} />
 		        <a href="#">
 		            <div className="mask restaurantDetails"></div>
 		        </a>
