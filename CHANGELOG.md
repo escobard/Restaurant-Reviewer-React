@@ -5,6 +5,7 @@ v1.20
 - implemented scroll to top button, styled for all dimensions
 - scrolling to top when restaurant detail is expanded / closed.
 - changed date format on reviews.
+- Update service worker to work with new images.
 
 v1.10a
 - fixed offline functionality issues
