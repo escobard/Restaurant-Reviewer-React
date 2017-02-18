@@ -3,6 +3,8 @@
   "short_name": "Restaurant Reviewer - Project 3",
   "main": "index.html",
   "display": "standalone",
+  "theme_color": "#c3362b",
+  "background_color": "#c3362b",
   "icons": [
     {
       "src": "/img/dish-512.png",
