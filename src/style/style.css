@@ -56,7 +56,7 @@ main.container {
   display: none !important;
 }
 .heightHidden {
-  height: 0;
+  height: 0;  
 }
 .btn {
     background-color: #c3362b !important;

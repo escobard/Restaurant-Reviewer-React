@@ -73,7 +73,7 @@ class RestaurantDetail extends Component {
 			
 			<article className="card">
 
-			    <img className="img-fluid" src="src/img/restaurant-detail.jpg" alt="Card image cap" />
+			    <img className="img-fluid" src={this.props.restaurant.image} alt={this.props.restaurant.alt} />
 
 			    <div className="card-block">
 
@@ -86,8 +86,6 @@ class RestaurantDetail extends Component {
             		</div>
 
             		<div className="detailContainer">
-
-						<img src={this.props.restaurant.image} />
 
 						<div className="starRating">
 							<StarRatingWidget rating={rating}/>
