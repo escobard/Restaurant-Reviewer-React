@@ -44,22 +44,20 @@ $ gulp create-bundle
 $ gulp build
 ```
 
-## Most Recent Update - v1.10a
-- added offline functionality
-- added mobile screen installation
-- added gulp production processes. 
-- added icon into the application title.
-- revised mobile and dom styling
+## Most Recent Update - v1.20
+- added and styled restaurant images
+- implemented scroll to top button, styled for all dimensions
+- scrolling to top when restaurant detail is expanded / closed.
+- changed date format on reviews.
+- updated service worker to work with new images.
 
 ## To Do's
 - Revise mobile dimensions.
-- Personalize / add new images for each restaurant.
 - Handle tile animation for filters.
 - Remove useless commentary within source files.
 - Add text validation for reviews.
 - Save reviews in external database.
 - Fix animation skipping issues on list / details. 
-- Add a scroll to top button on Mobile.
 
 ## Known Bugs
 - Application height is bugged on load due to boostrap animations in Chrome version 54+
