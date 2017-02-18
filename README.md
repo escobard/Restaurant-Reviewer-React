@@ -76,6 +76,8 @@ $ gulp build
 
 [FLATICON - for the favicon] (http://www.flaticon.com/)
 
+[pixabay] (https://pixabay.com/)
+
 ##  Tutorials
 
 [Udemy - Modern React with Redux] (https://www.udemy.com/react-redux/)
