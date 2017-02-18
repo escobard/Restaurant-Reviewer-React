@@ -107,7 +107,7 @@ class RestaurantList extends Component {
 
 		    <div className="view overlay hm-white-slight">
 		        <img src={restaurant.image} className="img-fluid" alt={restaurant.alt} />
-		        <a href="#">
+		        <a href="#" onClick={() => {this.props.selectRestaurant(restaurant); this.listHide();}}>
 		            <div className="mask restaurantDetails"></div>
 		        </a>
 		    </div>

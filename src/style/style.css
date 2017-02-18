@@ -120,6 +120,9 @@ button.btn:hover, button.btn:active {
     cursor: pointer;
     background-color: #0275d8 !important;
 }
+.mask {
+    margin: 1rem 0 !important;
+}
 /*===========================================================
 
     Restaurant Details Card Styles
