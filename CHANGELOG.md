@@ -1,8 +1,15 @@
 ** Changelog for Restaurant Reviewer
 
+v1.20
+- added and styled restaurant images
+- implemented scroll to top button, styled for all dimensions
+- scrolling to top when restaurant detail is expanded / closed.
+- changed date format on reviews.
+- updated service worker to work with new images.
+
 v1.10a
 - fixed offline functionality issues
-- prototype to fix rating filter semantics
+- fixed star rating semantics
 
 v1.10
 - added offline functionality

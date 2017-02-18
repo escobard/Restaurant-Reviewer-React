@@ -5,8 +5,8 @@
 ======================================*/
 
 
-// sets the cache name
-var staticCacheName = 'wa-static-v1.1';
+//sets the cache name
+var staticCacheName = 'rr-static-v1.3';
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
@@ -18,9 +18,17 @@ self.addEventListener('install', function(event) {
       './src/style/mdb.min.css',
       './src/style/style.css',
       './src/img/dish-512.png',
+      './src/img/up-arrow.png',
+      './src/img/broken-plate.jpg',
+      './src/img/khana-khazana.jpg',
+      './src/img/taj-mahal.jpg',
+      './src/img/golden-dragon.jpg',
+      './src/img/los-chilitos.jpg',
+      './src/img/pho-dac-biet.jpg',
+      './src/img/tacotime.jpg',
+      './src/img/shake-fries.jpg',
+      './src/img/fat-burger.jpg',
       './src/img/dish.png',
-      './src/img/restaurant-detail.jpg',
-      './src/img/restaurant-list.jpg',
       './src/img/user-female.png',
       './src/img/user-male.png',
       './bundle.js'

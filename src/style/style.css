@@ -29,7 +29,7 @@ footer {
     right: 0;
     bottom: -3px;
     left: 0;
-    background-color: #efefef;
+    background-color: #c3362b !important;
     text-align: center;
 }
 
@@ -56,13 +56,14 @@ main.container {
   display: none !important;
 }
 .heightHidden {
-  height: 0;
+  height: 0;  
 }
-
-
 .btn {
     background-color: #c3362b !important;
     border-color: #c3362b !important;
+}
+#scrollToTop {
+    margin-bottom: 3rem;
 }
 /*===========================================================
 
@@ -174,6 +175,11 @@ button.btn:hover, button.btn:active {
     float: right;
     font-weight: bold;
     font-size: 20px;
+}
+.return div {
+    position: initial !important;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 /*===========================================================
 
@@ -309,8 +315,13 @@ span.restaurantPrice {
 .card {
     margin-top: 2rem;
 }
+#scrollToTop {
+    width: 30px !important;
+    margin-right: -30px !important;
+    margin-bottom: 0.6rem !important;
 }
-@media screen and (max-width: 1000px){
+}
+@media screen and (max-width: 1024px){
   .restaurantCard{
     max-width: 100% !important;
     width: 100% !important;
@@ -364,5 +375,10 @@ span.restaurantPrice {
   nav.navbar.navbar-fixed-top.navbar-dark {
     margin: 0 !important;
     padding: 0;
+}
+#scrollToTop {
+    width: 47px;
+    margin-right: -28px;
+    margin-bottom: 0.6rem;
 }
 }
