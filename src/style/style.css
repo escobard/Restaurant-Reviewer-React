@@ -62,6 +62,9 @@ main.container {
     background-color: #c3362b !important;
     border-color: #c3362b !important;
 }
+#scrollToTop {
+    margin-bottom: 3rem;
+}
 /*===========================================================
 
     Restaurant List Styles
