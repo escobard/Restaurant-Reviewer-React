@@ -177,6 +177,8 @@ button.btn:hover, button.btn:active {
 }
 .return div {
     position: initial !important;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 /*===========================================================
 
