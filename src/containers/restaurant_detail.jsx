@@ -1,26 +1,15 @@
 // =============================================================
 // 
-// 	restaurant_detail.js
+// 	restaurant_detail.jsx
 //
 // =============================================================
 
-// since the book detail (meaning the area that displays the ACTIVE BOOK) makes use of this app's reducers, this is created as a 
-// CONTAINER not a component
-
 import React, { Component } from 'react';
-
-// since this component is a container, the connect function must be included
 import { connect } from 'react-redux';
-
-// imports star rating component
 import StarRatingWidget from '../components/star_rating_component';
-
-// imports review component
 import Reviews from '../components/reviews';
-
-// imports post container
 import PostReview from './restaurant_post_review';
-
+import ScrollToTop from 'react-scroll-up';
 
 class RestaurantDetail extends Component {
 
@@ -123,9 +112,11 @@ class RestaurantDetail extends Component {
 						<div className="detailBottom">
 
 							<span className="restaurantPrice">${this.props.restaurant.price} <small>avarage</small></span>
-
-						    <button className="btn btn-primary" onClick={() => this.restaurantHide()}>Return to selection</button>
-
+							<div className="return">
+							    <ScrollToTop showUnder={0}>
+									<button className="btn btn-primary" onClick={() => this.restaurantHide()}>Return to selection</button>
+								</ScrollToTop>
+							</div>
 						    <button className="btn btn-primary" onClick={event => this.postReview(event)}>Post a Review</button>
 
 						</div>
