@@ -130,13 +130,16 @@ button.btn:hover, button.btn:active {
 ===========================================================*/
 
 .restaurantDetails {margin: 2rem 0;}
-
+.reviewContainer section {
+    padding: 0 !important;
+}
 .detailBottom {
     border-top: solid 1px #ccc;
     margin-top: 2%;
-    padding-top: 2%;
+    padding-top: 0.8rem;
     display: inline-block;
     width: 100%;
+    padding-bottom: 1%;
 }
 .restaurantDetails img {
     padding: 1rem 1rem 0;
@@ -154,6 +157,7 @@ button.btn:hover, button.btn:active {
 
 .restaurantDetails .card-block {
     padding-top: 0;
+    padding-bottom: 0 !important;
 }
 .starRating {
     text-align: center;
@@ -168,6 +172,11 @@ button.btn:hover, button.btn:active {
     float: right;
     border-color: #731e17;
     background-color: #c3362b;
+}
+.restaurantDetails .card-block {}
+
+.detailBottom.first {
+    padding: 1rem 0 0rem;
 }
 .restaurantHours {
     display: block;

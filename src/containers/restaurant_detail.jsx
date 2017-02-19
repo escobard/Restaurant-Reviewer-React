@@ -103,13 +103,6 @@ class RestaurantDetail extends Component {
 						</div>
 
 						<div className="restaurantDescription"> {this.props.restaurant.ldescription} </div>
-						<div className="reviewContainer"> 
-							<h2>Reviews</h2>
-							{this.renderComments()} 
-							<div id="postReview" className="hidden animated">
-								<PostReview />
-							</div>
-						</div>
 						<div className="detailBottom first">
 
 							<span className="restaurantHours">Hours of operation: <small>{this.props.restaurant.hours}</small></span>
@@ -117,6 +110,14 @@ class RestaurantDetail extends Component {
 							<span className="restaurantAddress">Address: <small>{this.props.restaurant.address}</small></span>
 
 						</div>
+						<div className="reviewContainer"> 
+							<h2>Reviews</h2>
+							{this.renderComments()} 
+							<div id="postReview" className="hidden animated">
+								<PostReview />
+							</div>
+						</div>
+
 
 						<div className="detailBottom">
 
