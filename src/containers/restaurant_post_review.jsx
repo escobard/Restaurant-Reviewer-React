@@ -99,7 +99,7 @@ class PostReview extends Component {
 		var reviewContainer = document.querySelector('#reviewPost');
 		var ratingPicker = document.querySelector('#ratingPicker');
 		var revealReview = document.querySelector('#revealReview');
-		var postReview = document.querySelector('#postContent');
+		var postContent = document.querySelector('#postContent');
 
 		reviewPost.classList.remove('hidden');
 		reviewPost.classList.add('fadeInUp')
@@ -107,9 +107,9 @@ class PostReview extends Component {
 		revealReview.classList.remove('hidden', 'fadeOut');
 		revealReview.classList.add('fadeIn');
 
-		postReview.classList.remove('fadeInUp');
-		postReview.classList.add('fadeOutDown');
-		setTimeout(function(){postReview.classList.add('hidden')}, 500);
+		postContent.classList.remove('fadeInUp');
+		postContent.classList.add('fadeOutDown');
+		setTimeout(function(){postContent.classList.add('hidden')}, 500);
 	}
 	render() {
 		return (

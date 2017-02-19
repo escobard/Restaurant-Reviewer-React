@@ -55,6 +55,7 @@ class RestaurantDetail extends Component {
 		event.preventDefault();
 		var postReview = document.querySelector('#postReview');
 		var revealReview = document.querySelector('#revealReview');
+		var postContent = document.querySelector('#postContent');
 
 		postReview.classList.remove('hidden');
 		postReview.classList.add('fadeInUp');
@@ -62,6 +63,9 @@ class RestaurantDetail extends Component {
 		revealReview.classList.remove('fadeIn');
 		revealReview.classList.add('fadeOut');
 		setTimeout(function(){revealReview.classList.add('hidden')}, 500);
+
+		postContent.classList.remove('fadeOutDown', 'hidden');
+		postContent.classList.add('fadeInUp');
 
 	}
 	render(){
