@@ -291,8 +291,23 @@ select {
     border-top: solid 1px #ccc;
     padding: 2rem 0px 0 !important;
     margin: 2rem 0 0;
+    max-height: 600px;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    height: auto;
 }
-
+.postReview.hidden{
+  max-height: 0;
+  height: 0;
+      -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
 .postReview button {
     margin: 0.5rem 0;
 }
