@@ -61,7 +61,7 @@ class RestaurantDetail extends Component {
 		
 		revealReview.classList.remove('fadeIn');
 		revealReview.classList.add('fadeOut');
-		setTimeout(revealReview.classList.add('hidden'), 500);
+		setTimeout(function(){revealReview.classList.add('hidden')}, 500);
 
 	}
 	render(){
