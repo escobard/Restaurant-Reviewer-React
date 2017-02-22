@@ -14,7 +14,7 @@ html {
   height: 100%;
 }
 body {
-  position: absolute;
+  position: relative;
   min-height: 100%;
   box-sizing: inherit;
   display: inline-block;
@@ -333,7 +333,10 @@ select:hover {
     border-top: solid 1px #ccc;
     padding-top: 1rem;
 }
-
+#postReview {
+    max-height: 1000px;
+    transition: ease all 0.5s;
+}
 /*===========================================================
 
     Restaurant Detail Post review Styles
@@ -353,21 +356,11 @@ select {
     padding: 2rem 0px 0 !important;
     margin: 2rem 0 0;
     max-height: 600px;
-    -moz-transition: 0.5s;
-    -ms-transition: 0.5s;
-    -o-transition: 0.5s;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    height: auto;
+    transition: ease all 0.5s;
 }
 .postReview.hidden{
   max-height: 0;
-  height: 0;
-      -moz-transition: 0.5s;
-    -ms-transition: 0.5s;
-    -o-transition: 0.5s;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
+  transition: ease all 0.5s;
 }
 .postReview button {
     margin: 0.5rem 0;

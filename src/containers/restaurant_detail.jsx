@@ -77,7 +77,6 @@ class RestaurantDetail extends Component {
 		}, 500);
 	}
 	render(){
-		{this.resetHeight()}
 		if (!this.props.restaurant){
 			return (
 			
