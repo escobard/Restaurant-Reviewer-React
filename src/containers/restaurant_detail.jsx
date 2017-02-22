@@ -81,7 +81,7 @@ class RestaurantDetail extends Component {
 		const rating = parseInt(this.props.restaurant.rating);
 		return (
 		<div className="col-md-12 restaurantDetails animated fadeInDown">
-			<div className="returnButton" onClick={() => this.restaurantHide()}>
+			<div className="returnTop" onClick={() => this.restaurantHide()}>
 				<img src="src/img/left-arrow.png" alt="Return to restaurant list."/>	
 			</div>
 			<article className="card">

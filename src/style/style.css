@@ -179,6 +179,13 @@ button.btn:hover, button.btn:active {
 .detailBottom.first {
     padding: 1rem 0 0rem;
 }
+.returnTop {
+    position: absolute;
+    z-index: 3;
+    padding: 1rem;
+    cursor: pointer;
+}
+
 .restaurantHours {
     display: block;
     float: left;
