@@ -68,8 +68,15 @@ class RestaurantDetail extends Component {
 		postContent.classList.add('fadeInUp');
 
 	}
+	resetHeight() {
+		setTimeout(function(){
+			var body = document.body;
+			body.setAttribute("style", "position: relative"); // Multiple style properties
+			// console.log('HEIGHT RESET');
+		}, 1000);
+	}
 	render(){
-
+		{this.resetHeight()}
 		if (!this.props.restaurant){
 			return (
 			
@@ -122,7 +129,7 @@ class RestaurantDetail extends Component {
 						</div>
 
 
-						<div className="detailBottom">
+						<div className="detailBottom last">
 
 							<span className="restaurantPrice">${this.props.restaurant.price} <small>avarage</small></span>
 							<div className="return">

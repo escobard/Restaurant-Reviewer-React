@@ -15,7 +15,6 @@ html {
 }
 body {
   position: absolute;
-  padding-bottom: 6rem;
   min-height: 100%;
   box-sizing: inherit;
   display: inline-block;
@@ -26,7 +25,6 @@ footer {
     width: 100%;
     position: absolute;
     right: 0;
-    bottom: -3px;
     left: 0;
     background-color: #c3362b !important;
     text-align: center;
@@ -50,6 +48,7 @@ nav {
 main.container {
     max-height: 100%;
     display: block;
+    margin: 1rem auto 1.5rem;
 }
 .hidden {
   display: none !important;
