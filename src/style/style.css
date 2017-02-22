@@ -56,7 +56,9 @@ main.container {
   display: none !important;
 }
 .heightHidden {
-  height: 0;  
+  margin: 0 !important;
+  max-height: 0 !important;
+  transition: ease all 0.5s !important;
 }
 .btn {
     background-color: #c3362b !important;
@@ -132,7 +134,7 @@ button.btn:hover, button.btn:active {
 
 ===========================================================*/
 
-.restaurantDetails {margin: 2rem 0;}
+.restaurantDetails {margin: 2rem 0;max-height: 3000px;transition: ease all 0.5s;}
 .reviewContainer section {
     padding: 0 !important;
 }
