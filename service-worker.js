@@ -5,8 +5,8 @@
 ======================================*/
 
 
-/*sets the cache name
-var staticCacheName = 'rr-static-v1.3';
+//sets the cache name
+var staticCacheName = 'rr-static-v1.7';
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
@@ -19,6 +19,7 @@ self.addEventListener('install', function(event) {
       './src/style/style.css',
       './src/img/dish-512.png',
       './src/img/up-arrow.png',
+      './src/img/left-arrow.png',
       './src/img/broken-plate.jpg',
       './src/img/khana-khazana.jpg',
       './src/img/taj-mahal.jpg',
@@ -45,7 +46,7 @@ self.addEventListener('activate', function(event) {
     caches.keys().then(function(cacheNames) {
       return Promise.all(
         cacheNames.filter(function(cacheName) {
-          return cacheName.startsWith('wa-') &&
+          return cacheName.startsWith('rr-') &&
                  cacheName != staticCacheName;
         }).map(function(cacheName) {
           return caches.delete(cacheName);
@@ -89,4 +90,4 @@ self.addEventListener('message', function(event) {
   if (event.data.action === 'skipWaiting') {
     self.skipWaiting();
   }
-}); */
+});

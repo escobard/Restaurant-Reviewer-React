@@ -15,9 +15,7 @@ html {
 }
 body {
   position: relative;
-  padding-bottom: 6rem;
   min-height: 100%;
-  max-height: auto;
   box-sizing: inherit;
   display: inline-block;
   width: 100%;
@@ -27,7 +25,6 @@ footer {
     width: 100%;
     position: absolute;
     right: 0;
-    bottom: -3px;
     left: 0;
     background-color: #c3362b !important;
     text-align: center;
@@ -51,12 +48,15 @@ nav {
 main.container {
     max-height: 100%;
     display: block;
+    margin: 1rem auto 1.5rem;
 }
 .hidden {
   display: none !important;
 }
 .heightHidden {
-  height: 0;  
+  margin: 0 !important;
+  max-height: 0 !important;
+  transition: ease all 0.5s !important;
 }
 .btn {
     background-color: #c3362b !important;
@@ -132,7 +132,7 @@ button.btn:hover, button.btn:active {
 
 ===========================================================*/
 
-.restaurantDetails {margin: 2rem 0;}
+.restaurantDetails {margin: 2rem 0;max-height: 3000px;transition: ease all 0.5s;}
 .reviewContainer section {
     padding: 0 !important;
 }
@@ -333,7 +333,10 @@ select:hover {
     border-top: solid 1px #ccc;
     padding-top: 1rem;
 }
-
+#postReview {
+    max-height: 1000px;
+    transition: ease all 0.5s;
+}
 /*===========================================================
 
     Restaurant Detail Post review Styles
@@ -353,21 +356,11 @@ select {
     padding: 2rem 0px 0 !important;
     margin: 2rem 0 0;
     max-height: 600px;
-    -moz-transition: 0.5s;
-    -ms-transition: 0.5s;
-    -o-transition: 0.5s;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    height: auto;
+    transition: ease all 0.5s;
 }
 .postReview.hidden{
   max-height: 0;
-  height: 0;
-      -moz-transition: 0.5s;
-    -ms-transition: 0.5s;
-    -o-transition: 0.5s;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
+  transition: ease all 0.5s;
 }
 .postReview button {
     margin: 0.5rem 0;
