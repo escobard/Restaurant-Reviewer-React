@@ -51,7 +51,6 @@ $ gulp build
 - added display handler for first post review button
 - fixed height issue on the main page
 
-
 ## To Do's
 - Handle tile animation for filters.
 - Remove useless commentary within source files.
@@ -62,6 +61,7 @@ $ gulp build
 
 ## Known Bugs
 - Application live version showing an error due to bundle.js compression.
+- Service worker addition bugs height on refresh on some mobile devices.
 
 ## Libraries, Frameworks
 
