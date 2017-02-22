@@ -98,9 +98,18 @@ class PostReview extends Component {
 		// console.log("Current state date:" + this.state.date);
 		var reviewContainer = document.querySelector('#reviewPost');
 		var ratingPicker = document.querySelector('#ratingPicker');
+		var revealReview = document.querySelector('#revealReview');
+		var postContent = document.querySelector('#postContent');
+
 		reviewPost.classList.remove('hidden');
 		reviewPost.classList.add('fadeInUp')
+		
+		revealReview.classList.remove('hidden', 'fadeOut');
+		revealReview.classList.add('fadeIn');
 
+		postContent.classList.remove('fadeInUp');
+		postContent.classList.add('fadeOutDown');
+		setTimeout(function(){postContent.classList.add('hidden')}, 500);
 	}
 	render() {
 		return (
@@ -108,7 +117,7 @@ class PostReview extends Component {
 					<section id="reviewPost" className="col-md-12 hidden animated">
 						{this.renderReview()}
 					</section>
-					<section className="col-md-12 postReview">
+					<section id="postContent" className="col-md-12 animated postReview">
 						
 						<div className="form-group">
 							<form id="">

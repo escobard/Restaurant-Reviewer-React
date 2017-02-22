@@ -104,10 +104,9 @@ class RestaurantList extends Component {
 			<article className="restaurantCard card col-md-4"
 				key={restaurant.title} 
 			>
-
 		    <div className="view overlay hm-white-slight">
 		        <img src={restaurant.image} className="img-fluid" alt={restaurant.alt} />
-		        <a href="#">
+		        <a href="#" onClick={() => {this.props.selectRestaurant(restaurant); this.listHide();}}>
 		            <div className="mask restaurantDetails"></div>
 		        </a>
 		    </div>
@@ -164,7 +163,8 @@ class RestaurantList extends Component {
 								onChange={event => this.categoryFilterChange(event)}
 							>
 								<option value="">Select a Category</option>
-								<option value="oriental">Oriental</option>
+								<option value="vietnamese">Vietnamese</option>
+								<option value="chinese">Chinese</option>								
 								<option value="fast food">Fast Food</option>
 								<option value="mexican">Mexican</option>
 								<option value="indian">Indian</option>

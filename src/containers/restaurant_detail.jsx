@@ -54,8 +54,19 @@ class RestaurantDetail extends Component {
 	postReview(event){
 		event.preventDefault();
 		var postReview = document.querySelector('#postReview');
+		var revealReview = document.querySelector('#revealReview');
+		var postContent = document.querySelector('#postContent');
+
 		postReview.classList.remove('hidden');
 		postReview.classList.add('fadeInUp');
+		
+		revealReview.classList.remove('fadeIn');
+		revealReview.classList.add('fadeOut');
+		setTimeout(function(){revealReview.classList.add('hidden')}, 500);
+
+		postContent.classList.remove('fadeOutDown', 'hidden');
+		postContent.classList.add('fadeInUp');
+
 	}
 	render(){
 
@@ -70,7 +81,10 @@ class RestaurantDetail extends Component {
 		const rating = parseInt(this.props.restaurant.rating);
 		return (
 		<div className="col-md-12 restaurantDetails animated fadeInDown">
-			
+			<div className="returnTop" onClick={() => this.restaurantHide()}>
+				<img src="src/img/left-arrow.png" alt="Return to restaurant list."/>
+				<span className="tooltiptext">Return to selection</span>
+			</div>
 			<article className="card">
 
 			    <img className="img-fluid" src={this.props.restaurant.image} alt={this.props.restaurant.alt} />
@@ -79,7 +93,7 @@ class RestaurantDetail extends Component {
 
 			        <div className="col-md-12 restaurantTitle">
 
-                		<h1 className="h1-responsive">{this.props.restaurant.title} 
+                		<h1 className="h1-responsive">{this.props.restaurant.title} <br />
                     		<small className="text-muted"> {this.props.restaurant.category}</small>
                 		</h1>
 
@@ -92,13 +106,6 @@ class RestaurantDetail extends Component {
 						</div>
 
 						<div className="restaurantDescription"> {this.props.restaurant.ldescription} </div>
-						<div className="reviewContainer"> 
-							<h2>Reviews</h2>
-							{this.renderComments()} 
-							<div id="postReview" className="hidden animated">
-								<PostReview />
-							</div>
-						</div>
 						<div className="detailBottom first">
 
 							<span className="restaurantHours">Hours of operation: <small>{this.props.restaurant.hours}</small></span>
@@ -106,6 +113,14 @@ class RestaurantDetail extends Component {
 							<span className="restaurantAddress">Address: <small>{this.props.restaurant.address}</small></span>
 
 						</div>
+						<div className="reviewContainer"> 
+							<h2>Reviews</h2>
+							{this.renderComments()} 
+							<div id="postReview" className="hidden animated">
+								<PostReview />
+							</div>
+						</div>
+
 
 						<div className="detailBottom">
 
@@ -115,7 +130,7 @@ class RestaurantDetail extends Component {
 									<button className="btn btn-primary" onClick={() => this.restaurantHide()}>Return to selection</button>
 								</ScrollToTop>
 							</div>
-						    <button className="btn btn-primary" onClick={event => this.postReview(event)}>Post a Review</button>
+						    <button id="revealReview" className="btn btn-primary animated" onClick={event => this.postReview(event)}>Post a Review</button>
 
 						</div>
 
