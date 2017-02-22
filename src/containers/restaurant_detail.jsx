@@ -66,6 +66,7 @@ class RestaurantDetail extends Component {
 
 		postContent.classList.remove('fadeOutDown', 'hidden');
 		postContent.classList.add('fadeInUp');
+		this.resetHeight();
 
 	}
 	resetHeight() {
@@ -73,7 +74,7 @@ class RestaurantDetail extends Component {
 			var body = document.body;
 			body.setAttribute("style", "position: relative"); // Multiple style properties
 			// console.log('HEIGHT RESET');
-		}, 1000);
+		}, 500);
 	}
 	render(){
 		{this.resetHeight()}
