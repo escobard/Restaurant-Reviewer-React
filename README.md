@@ -57,7 +57,8 @@ $ gulp build
 - Remove useless commentary within source files.
 - Add text validation for reviews.
 - Save reviews in external database.
-- Fix animation skipping issues on list / details. 
+- Fix animation skipping issues.
+- Refactor all dependable view elements into an individual component for global use. 
 
 ## Known Bugs
 - Application height is bugged on load due to boostrap animations in Chrome version 54+

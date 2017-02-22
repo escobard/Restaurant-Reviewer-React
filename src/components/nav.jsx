@@ -8,7 +8,7 @@ import React, { Component } from 'react';
 
 export default class Nav extends Component {
   checkState(){
-  	
+  	var restaurantDetails = document.querySelector('restaurantDetails');
   }
   render() {
     return (
