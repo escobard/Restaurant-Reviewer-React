@@ -104,7 +104,9 @@ class RestaurantList extends Component {
 			<article className="restaurantCard card col-md-4"
 				key={restaurant.title} 
 			>
-
+			<div className="returnButton">
+				
+			</div>
 		    <div className="view overlay hm-white-slight">
 		        <img src={restaurant.image} className="img-fluid" alt={restaurant.alt} />
 		        <a href="#" onClick={() => {this.props.selectRestaurant(restaurant); this.listHide();}}>

@@ -133,6 +133,7 @@ button.btn:hover, button.btn:active {
 .reviewContainer section {
     padding: 0 !important;
 }
+
 .detailBottom {
     border-top: solid 1px #ccc;
     margin-top: 2%;
@@ -244,7 +245,7 @@ select:hover {
 }
 /*===========================================================
 
-    Reviews Styles
+    Restaurant Detail Reviews Styles
 
 ===========================================================*/
 
@@ -253,6 +254,9 @@ select:hover {
     padding: 2rem 0 0;
     display: block;
     border-top: solid 1px #ccc;
+}
+#postContent {
+    padding-top: 2rem !important;
 }
 .userDetails {
     display: block;
@@ -284,7 +288,7 @@ select:hover {
 
 /*===========================================================
 
-    Post review  Styles
+    Restaurant Detail Post review Styles
 
 ===========================================================*/
 
