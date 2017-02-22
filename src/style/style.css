@@ -375,30 +375,33 @@ select {
 
 ===========================================================*/
 @media screen and (max-width: 768px){
-span.restaurantPrice {
-    width: 100%;
-}
+  span.restaurantPrice {
+      width: 100%;
+  }
 
-.restaurantOpen {
-    width: 100%;
-}
-.navbar-brand span {
-    display: none;
-}
+  .restaurantOpen {
+      width: 100%;
+  }
+  .navbar-brand span {
+      display: none;
+  }
 
-.navbar-brand img {
-    margin: 3px 0;
-}
+  .navbar-brand img {
+      margin: 3px 0;
+  }
 
-.card {
-    margin-top: 2rem;
-}
-#scrollToTop {
-    width: 30px !important;
-    margin-right: -30px !important;
-    margin-bottom: 0.6rem !important;
-}
-}
+  .card {
+      margin-top: 2rem;
+  }
+  #scrollToTop {
+      width: 30px !important;
+      margin-right: -30px !important;
+      margin-bottom: 0.6rem !important;
+  }
+  .returnTop img {
+      width: 80px !important;
+  }
+  }
 @media screen and (max-width: 1024px){
   .restaurantCard{
     max-width: 100% !important;
@@ -406,7 +409,29 @@ span.restaurantPrice {
   }
   small {
     display: block;
-}
+  }
+  .card {
+      margin-top: 1rem;
+  }
+  .returnTop {
+      padding: 0.5rem;
+  }
+  .returnTop img {
+      width: 120px;
+  }
+  .restaurantDetails .restaurantHours {
+      padding-left: 0;
+  }
+
+  .restaurantDetails .restaurantAddress {
+      padding-right: 0;
+  }
+  .restaurantDetails .restaurantPrice {
+      padding-left: 0;
+  }
+  .return {
+      padding-right: 0;
+  }
   .restaurantCard img{
     float:none;
     display: block;
@@ -453,10 +478,16 @@ span.restaurantPrice {
   nav.navbar.navbar-fixed-top.navbar-dark {
     margin: 0 !important;
     padding: 0;
-}
-#scrollToTop {
-    width: 47px;
-    margin-right: -28px;
-    margin-bottom: 0.6rem;
-}
+  }
+  #scrollToTop {
+      width: 47px;
+      margin-right: -28px;
+      margin-bottom: 0.6rem;
+  }
+  .returnTop .tooltiptext {
+    display: none;
+  }
+  h1 small, h4 small {
+    padding: 1rem 0 0;
+  }
 }
