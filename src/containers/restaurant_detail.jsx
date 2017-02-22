@@ -82,15 +82,12 @@ class RestaurantDetail extends Component {
 		return (
 		<div className="col-md-12 restaurantDetails animated fadeInDown">
 			<div className="returnTop" onClick={() => this.restaurantHide()}>
-				<img src="src/img/left-arrow.png" alt="Return to restaurant list."/>	
+				<img id="backArrow" src="src/img/left-arrow.png" alt="Return to restaurant list."/>
+				<span className="tooltiptext">Tooltip text</span>
 			</div>
 			<article className="card">
-				<div className="view overlay hm-white-slight">
-			    	<img className="img-fluid" src={this.props.restaurant.image} alt={this.props.restaurant.alt} />
-			        <a href="#">
-			            <div className="mask restaurantDetails"></div>
-			        </a>
-		    	</div>
+
+			    <img className="img-fluid" src={this.props.restaurant.image} alt={this.props.restaurant.alt} />
 
 			    <div className="card-block">
 

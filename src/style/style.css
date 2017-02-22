@@ -205,6 +205,25 @@ button.btn:hover, button.btn:active {
     opacity: 1 !important;
     visibility: visible !important;
 }
+.returnTop .tooltiptext {
+    opacity: 0;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    transition: ease all 0.5s;
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.returnTop:hover .tooltiptext {
+    transition: ease all 0.5s;
+    opacity: 1;
+}
 /*===========================================================
 
     Restaurant Intro Styles
