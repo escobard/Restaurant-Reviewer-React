@@ -8,7 +8,12 @@ import React, { Component } from 'react';
 
 export default class Nav extends Component {
   checkState(){
-  	var restaurantDetails = document.querySelector('restaurantDetails');
+  	var restaurantDetails = document.querySelector('.restaurantDetails');
+  	if (restaurantDetails.classList.contains('hidden')) {
+  		console.log('HIDDEN');
+  	} else {
+  		console.log('NOT HIDDEN');
+  	}
   }
   render() {
     return (
