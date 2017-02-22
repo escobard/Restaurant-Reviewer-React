@@ -133,7 +133,9 @@ button.btn:hover, button.btn:active {
 .reviewContainer section {
     padding: 0 !important;
 }
-
+.restaurantDetails .overlay a {
+    cursor: default;
+}
 .detailBottom {
     border-top: solid 1px #ccc;
     margin-top: 2%;

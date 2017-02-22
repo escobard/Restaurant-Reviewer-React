@@ -85,8 +85,12 @@ class RestaurantDetail extends Component {
 				<img src="src/img/left-arrow.png" alt="Return to restaurant list."/>	
 			</div>
 			<article className="card">
-
-			    <img className="img-fluid" src={this.props.restaurant.image} alt={this.props.restaurant.alt} />
+				<div className="view overlay hm-white-slight">
+			    	<img className="img-fluid" src={this.props.restaurant.image} alt={this.props.restaurant.alt} />
+			        <a href="#">
+			            <div className="mask restaurantDetails"></div>
+			        </a>
+		    	</div>
 
 			    <div className="card-block">
 
