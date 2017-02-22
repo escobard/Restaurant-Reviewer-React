@@ -170,11 +170,23 @@ button.btn:hover, button.btn:active {
 }
 .restaurantDetails .restaurantPrice {
     font-size: 20px;
+    padding-left: 1rem;
 }
 .detailBottom .btn {
     float: right;
     border-color: #731e17;
     background-color: #c3362b;
+}
+.restaurantDetails .restaurantHours {
+    padding-left: 1rem;
+}
+
+.restaurantDetails .restaurantAddress {
+    padding-right: 1rem;
+}
+
+.return {
+    padding-right: 1rem;
 }
 .restaurantDetails .card-block {}
 
