@@ -164,7 +164,8 @@ class RestaurantList extends Component {
 								onChange={event => this.categoryFilterChange(event)}
 							>
 								<option value="">Select a Category</option>
-								<option value="oriental">Oriental</option>
+								<option value="vietnamese">Vietnamese</option>
+								<option value="chinese">Chinese</option>								
 								<option value="fast food">Fast Food</option>
 								<option value="mexican">Mexican</option>
 								<option value="indian">Indian</option>

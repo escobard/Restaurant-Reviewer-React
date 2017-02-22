@@ -1,11 +1,11 @@
 ** Changelog for Restaurant Reviewer
 
 v1.25
-- prototype to link images to restaurant detail
+- images linked to restaurant detail
 - prototype to add a navigation link at the top of the page to return form restaurant detail
-- prototype to hide post review button once post button has been clicked
-- prototype to fix height issue caused by animation
-- prototype to fix 
+- hide posts when post review button is clicked
+- added display handler for first post review button.
+- prototype to fix height issue caused by animation on main page
 
 v1.20
 - added and styled restaurant images
