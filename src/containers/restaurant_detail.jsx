@@ -90,7 +90,7 @@ class RestaurantDetail extends Component {
 
 			        <div className="col-md-12 restaurantTitle">
 
-                		<h1 className="h1-responsive">{this.props.restaurant.title} 
+                		<h1 className="h1-responsive">{this.props.restaurant.title} <br />
                     		<small className="text-muted"> {this.props.restaurant.category}</small>
                 		</h1>
 

@@ -7,6 +7,9 @@
 import React, { Component } from 'react';
 
 export default class Nav extends Component {
+  checkState(){
+  	
+  }
   render() {
     return (
     	<header>
