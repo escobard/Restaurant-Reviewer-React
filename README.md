@@ -44,24 +44,23 @@ $ gulp create-bundle
 $ gulp build
 ```
 
-## Most Recent Update - v1.20
-- added and styled restaurant images
-- implemented scroll to top button, styled for all dimensions
-- scrolling to top when restaurant detail is expanded / closed.
-- changed date format on reviews.
-- updated service worker to work with new images.
+## Most Recent Update - v1.30
+- images linked to restaurant detail
+- added handler to return users to selection at the top of the page
+- hide posts when post review button is clicked
+- added display handler for first post review button
+- fixed height issue on the main page
+
 
 ## To Do's
-- Revise mobile dimensions.
 - Handle tile animation for filters.
 - Remove useless commentary within source files.
 - Add text validation for reviews.
 - Save reviews in external database.
-- Fix animation skipping issues.
+- Fix animation skipping issues with review posting.
 - Refactor all dependable view elements into an individual component for global use. 
 
 ## Known Bugs
-- Application height is bugged on load due to boostrap animations in Chrome version 54+
 - Application live version showing an error due to bundle.js compression.
 
 ## Libraries, Frameworks

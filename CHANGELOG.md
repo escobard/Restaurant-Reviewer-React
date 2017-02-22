@@ -2,10 +2,10 @@
 
 v1.30
 - images linked to restaurant detail
-- added handler to return users to selection at the top of the page.
+- added handler to return users to selection at the top of the page
 - hide posts when post review button is clicked
-- added display handler for first post review button.
-- prototype to fix height issue caused by animation on main page
+- added display handler for first post review button
+- fixed height issue on the main page
 
 v1.20
 - added and styled restaurant images
