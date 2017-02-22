@@ -14,10 +14,9 @@ html {
   height: 100%;
 }
 body {
-  position: relative;
+  position: absolute;
   padding-bottom: 6rem;
   min-height: 100%;
-  max-height: auto;
   box-sizing: inherit;
   display: inline-block;
   width: 100%;

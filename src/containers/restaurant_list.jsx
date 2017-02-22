@@ -94,9 +94,15 @@ class RestaurantList extends Component {
 		}, 1000);
 		
 	}
-	
+	resetHeight() {
+		setTimeout(function(){
+			var body = document.body;
+			body.setAttribute("style", "position: relative"); // Multiple style properties
+			// console.log('HEIGHT RESET');
+		}, 1000);
+	}
 	renderList() {
-
+		{this.resetHeight()}
 		return this.state.currentlySelected.map((restaurant) => {
 
 			const rating = parseInt(restaurant.rating);
