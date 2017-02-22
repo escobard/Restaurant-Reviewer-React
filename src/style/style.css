@@ -79,6 +79,9 @@ main.container {
     max-width: 32.3% !important;
     text-align: center;
 }
+.restaurantCard .return {
+    padding: 0;
+}
 .restaurantCard .card-title span {
     text-transform: capitalize;
 }

@@ -2,7 +2,7 @@
 
 v1.25
 - images linked to restaurant detail
-- prototype to add a navigation link at the top of the page to return form restaurant detail
+- added handler to return users to selection at the top of the page.
 - hide posts when post review button is clicked
 - added display handler for first post review button.
 - prototype to fix height issue caused by animation on main page
