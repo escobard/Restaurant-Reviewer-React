@@ -219,16 +219,21 @@ button.btn:hover, button.btn:active {
 }
 .returnTop .tooltiptext {
     opacity: 0;
-    width: 120px;
-    background-color: black;
+    width: 100%;
+    background-color: #c3362b;
     color: #fff;
     text-align: center;
     padding: 5px 0;
+    top: 75px;
     border-radius: 6px;
     transition: ease all 0.5s;
     /* Position the tooltip text - see examples below! */
     position: absolute;
     z-index: 1;
+    left: 163px;
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.16);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.16);
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.48);
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */

@@ -83,7 +83,7 @@ class RestaurantDetail extends Component {
 		<div className="col-md-12 restaurantDetails animated fadeInDown">
 			<div className="returnTop" onClick={() => this.restaurantHide()}>
 				<img id="backArrow" src="src/img/left-arrow.png" alt="Return to restaurant list."/>
-				<span className="tooltiptext">Tooltip text</span>
+				<span className="tooltiptext">Return to selection</span>
 			</div>
 			<article className="card">
 
