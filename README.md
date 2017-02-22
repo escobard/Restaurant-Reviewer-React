@@ -11,7 +11,7 @@ This application was created as a restaurant reviewer, with a special focus on s
 
 ## Demo
 
-![desktop image](https://onlinedevelopers.ca/udacity/restaurant-reviewer/src/img/read-me/proj3-collage.jpg)
+![desktop image](https://onlinedevelopers.ca/udacity/restaurant-reviewer/src/img/read-me/proj-3-collage.jpg)
 
 [To view the application live click here] (https://onlinedevelopers.ca/udacity/restaurant-reviewer/)
 
