@@ -1,6 +1,6 @@
 ** Changelog for Restaurant Reviewer
 
-v1.25
+v1.30
 - images linked to restaurant detail
 - added handler to return users to selection at the top of the page.
 - hide posts when post review button is clicked
