@@ -83,9 +83,7 @@ class RestaurantList extends Component {
 		restaurantList.classList.remove('fadeInUp');
 
 		// handles restaurantHide classes
-		restaurantDetails.classList.remove('hidden');
-		restaurantDetails.classList.remove('heightHidden');
-		restaurantDetails.classList.remove('fadeOut');
+		restaurantDetails.classList.remove('hidden', 'heightHidden', 'fadeOut');
 		restaurantDetails.classList.add('fadeInDown');
 
 		// hides from the dom after animation is over
