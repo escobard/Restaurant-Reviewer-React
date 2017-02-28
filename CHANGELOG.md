@@ -1,5 +1,8 @@
 ** Changelog for Restaurant Reviewer
 
+v1.30a
+- refactored mapStateToProps and mapDispatchToProps react methods for a shorter method
+
 v1.30
 - images linked to restaurant detail
 - added handler to return users to selection at the top of the page
