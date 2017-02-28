@@ -7,7 +7,6 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import selectRestaurant from '../actions/select_restaurant'
 import _ from 'lodash';
 import StarRatingWidget from '../components/star_rating_component';
@@ -226,16 +225,4 @@ function mapStateToProps(state) {
 
 };
 
-function mapDispatchToProps(dispatch) {
-
-	return bindActionCreators({ 
-
-		selectRestaurant: 
-
-		selectRestaurant },
-
-		dispatch)
-
-}
-
-export default connect(mapStateToProps, mapDispatchToProps) (RestaurantList);
+export default connect(mapStateToProps, {selectRestaurant}) (RestaurantList);

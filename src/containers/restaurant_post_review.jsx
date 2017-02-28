@@ -7,7 +7,6 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import postReview from '../actions/post_review';
 
 import Reviews from '../components/reviews';
@@ -165,11 +164,4 @@ class PostReview extends Component {
 
 };
 
-function mapDispatchToProps(dispatch) {
-	return bindActionCreators({ 
-		postReview: 
-		postReview },
-		dispatch)
-}
-
-export default connect(null, mapDispatchToProps) (PostReview);
+export default connect(null, {postReview}) (PostReview);
