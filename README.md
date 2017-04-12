@@ -46,7 +46,9 @@ $ gulp create-bundle
 $ gulp build
 ```
 
-## Most Recent Update - v1.30
+## Most Recent Update - v1.30a
+- refactored mapStateToProps and mapDispatchToProps react methods for a shorter method
+- fixed height issue with boostrap animations by setting main min-height
 - images linked to restaurant detail
 - added handler to return users to selection at the top of the page
 - hide posts when post review button is clicked
@@ -60,10 +62,10 @@ $ gulp build
 - Save reviews in external database.
 - Fix animation skipping issues with review posting.
 - Refactor all dependable view elements into an individual component for global use. 
+- Refactor all css to SASS or LESS into individual components and compress through pipeline process
 
 ## Known Bugs
 - Application live version showing an error due to bundle.js compression.
-- Service worker addition bugs height on refresh on some mobile devices.
 
 ## Libraries, Frameworks
 

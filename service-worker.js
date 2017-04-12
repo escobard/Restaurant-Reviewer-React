@@ -5,8 +5,8 @@
 ======================================*/
 
 
-//sets the cache name
-var staticCacheName = 'rr-static-v1.7';
+/*sets the cache name
+var staticCacheName = 'rr-static-v1.8';
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
@@ -90,4 +90,4 @@ self.addEventListener('message', function(event) {
   if (event.data.action === 'skipWaiting') {
     self.skipWaiting();
   }
-});
+}); */

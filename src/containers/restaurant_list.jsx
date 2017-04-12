@@ -7,7 +7,6 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import selectRestaurant from '../actions/select_restaurant'
 import _ from 'lodash';
 import StarRatingWidget from '../components/star_rating_component';
@@ -83,9 +82,7 @@ class RestaurantList extends Component {
 		restaurantList.classList.remove('fadeInUp');
 
 		// handles restaurantHide classes
-		restaurantDetails.classList.remove('hidden');
-		restaurantDetails.classList.remove('heightHidden');
-		restaurantDetails.classList.remove('fadeOut');
+		restaurantDetails.classList.remove('hidden', 'heightHidden', 'fadeOut');
 		restaurantDetails.classList.add('fadeInDown');
 
 		// hides from the dom after animation is over
@@ -228,16 +225,4 @@ function mapStateToProps(state) {
 
 };
 
-function mapDispatchToProps(dispatch) {
-
-	return bindActionCreators({ 
-
-		selectRestaurant: 
-
-		selectRestaurant },
-
-		dispatch)
-
-}
-
-export default connect(mapStateToProps, mapDispatchToProps) (RestaurantList);
+export default connect(mapStateToProps, {selectRestaurant}) (RestaurantList);
