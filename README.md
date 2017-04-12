@@ -62,6 +62,7 @@ $ gulp build
 - Save reviews in external database.
 - Fix animation skipping issues with review posting.
 - Refactor all dependable view elements into an individual component for global use. 
+- Refactor all css to SASS or LESS into individual components and compress through pipeline process
 
 ## Known Bugs
 - Application live version showing an error due to bundle.js compression.
