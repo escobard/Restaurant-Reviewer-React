@@ -13,7 +13,7 @@ This application was created as a restaurant reviewer, with a special focus on s
 
 ![desktop image](https://onlinedevelopers.ca/udacity/restaurant-reviewer/src/img/read-me/proj-3-collage.jpg)
 
-[To view the application live click here] (https://onlinedevelopers.ca/udacity/restaurant-reviewer/)
+[To view the application live click here](https://onlinedevelopers.ca/udacity/restaurant-reviewer/)
 
 To download, please follow the instructions below.
 
@@ -21,7 +21,9 @@ To download, please follow the instructions below.
 
 Clone the repository from: 
 ```
+
 $ git clone https://github.com/escobard/Restaurant-Reviewer-React.git
+
 ```
 
 Install NPM dependencies:
@@ -44,7 +46,9 @@ $ gulp create-bundle
 $ gulp build
 ```
 
-## Most Recent Update - v1.30
+## Most Recent Update - v1.30a
+- refactored mapStateToProps and mapDispatchToProps react methods for a shorter method
+- fixed height issue with boostrap animations by setting main min-height
 - images linked to restaurant detail
 - added handler to return users to selection at the top of the page
 - hide posts when post review button is clicked
@@ -61,27 +65,26 @@ $ gulp build
 
 ## Known Bugs
 - Application live version showing an error due to bundle.js compression.
-- Service worker addition bugs height on refresh on some mobile devices.
 
 ## Libraries, Frameworks
 
 [React](https://facebook.github.io/react/)
 
-[Redux] (http://redux.js.org/docs/introduction/)
+[Redux](http://redux.js.org/docs/introduction/)
 
-[ReduxSimpleStarter] (https://github.com/StephenGrider/ReduxSimpleStarter)
+[ReduxSimpleStarter](https://github.com/StephenGrider/ReduxSimpleStarter)
 
-[Material Design for Bootstrap] (https://mdbootstrap.com/material-design-for-bootstrap/)
+[Material Design for Bootstrap](https://mdbootstrap.com/material-design-for-bootstrap/)
 
-[FLATICON - for the favicon] (http://www.flaticon.com/)
+[FLATICON - for the favicon](http://www.flaticon.com/)
 
-[pixabay] (https://pixabay.com/)
+[pixabay](https://pixabay.com/)
 
 ##  Tutorials
 
-[Udemy - Modern React with Redux] (https://www.udemy.com/react-redux/)
+[Udemy - Modern React with Redux](https://www.udemy.com/react-redux/)
 
-[Udacity - Senior Web Developer Nanodegree] (https://www.udacity.com/course/senior-web-developer-nanodegree-by-google--nd802)
+[Udacity - Senior Web Developer Nanodegree](https://www.udacity.com/course/senior-web-developer-nanodegree-by-google--nd802)
 ## Contribution
 
 Feel free to contribute to this repository. All files in this repository are protected under the MIT license, but feel free to contribute, fork, star, or share this application as you see fit.
