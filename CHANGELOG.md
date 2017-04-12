@@ -2,6 +2,7 @@
 
 v1.30a
 - refactored mapStateToProps and mapDispatchToProps react methods for a shorter method
+- fixed height issue with boostrap animations by setting main min-height
 
 v1.30
 - images linked to restaurant detail
