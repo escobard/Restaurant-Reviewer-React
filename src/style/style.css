@@ -15,7 +15,7 @@ html {
 }
 body {
   position: relative;
-  min-height: 100%;
+  min-height: 100vh;
   box-sizing: inherit;
   display: inline-block;
   width: 100%;
@@ -46,7 +46,7 @@ nav {
     margin-right: 1rem;
 }
 main.container {
-    max-height: 100%;
+    min-height: 88vh;
     display: block;
     margin: 1rem auto 1.5rem;
 }
