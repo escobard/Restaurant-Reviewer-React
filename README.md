@@ -11,7 +11,7 @@ This application was created as a restaurant reviewer, with a special focus on s
 
 ## Demo
 
-![desktop image](https://odevs.ca/portfolio/restaurant-reviews/)
+![desktop image](http://odevs.ca/portfolio/restaurant-reviews/)
 
 [To view the application live click here](https://odevs.ca/portfolio/restaurant-reviews/)
 
